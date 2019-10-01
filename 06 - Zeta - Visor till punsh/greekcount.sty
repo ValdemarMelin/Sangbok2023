@@ -1,0 +1,32 @@
+\ProvidesPackage{greekcount}
+
+% \greek{<counter>} för numrering med grekiska bokstäver:
+% \greekspelled{<counter>} för samma sak skrivet
+% Exempel:
+%
+% \newcounter{ct}\setcounter{ct}{2}
+% \greek{ct} => \beta
+% \greekspelled{ct} => beta
+
+\makeatletter
+\newcommand*{\greek}[1]{%
+  \expandafter\@greek\csname c@#1\endcsname
+}
+\newcommand*{\greekspelled}[1]{%
+\expandafter\@greekspelled\csname c@#1\endcsname%
+}
+\newcommand*{\@greek}[1]{%
+  $\ifcase#1\or\alpha\or\beta\or\gamma\or\delta\or\varepsilon
+    \or\zeta\or\eta\or\theta\or\iota\or\kappa\or\lambda
+    \or\mu\or\nu%\or\xi
+				\or o%\or\pi\or\varrho\or\tau\or\upsilon\or\phi\or\chi\or\psi
+    \or\sigma\or\omega
+    \else\@ctrerr\fi$
+}
+\newcommand*{\@greekspelled}[1]{%
+\ifcase#1\or alfa\or beta\or gamma\or delta\or epsilon\or zeta\or eta\or theta\or iota\or kappa\or lambda\or my\or ny%\or xi
+\or omikron%\or pi\or rho\or tau\or upsilon\or phi\or chi\or psi
+\or sigma\or omega\fi%
+}
+\makeatother
+
