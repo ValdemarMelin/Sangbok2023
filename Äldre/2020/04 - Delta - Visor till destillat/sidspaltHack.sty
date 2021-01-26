@@ -1,0 +1,66 @@
+%!TEX root = sidospalt.tex
+
+\ProvidesPackage{sidspaltHack}
+
+\RequirePackage{greekcount}
+
+\RequirePackage{everypage}
+\RequirePackage{forloop,ifthen}
+\RequirePackage{changepage}
+\RequirePackage{tikz}
+\RequirePackage[margin=0.3in]{geometry}
+\usetikzlibrary{fit,calc}
+
+% Vertical step between chapter marks
+\newcommand\ystep{0.9cm}
+% Y coordinate of current chapter label
+\newcommand\y{-\value{ct}*\ystep}
+% With of box around current chapter
+\newcommand\w{1.3cm}
+% Offset of the text with regards to the center of the box
+\newcommand\dx{0.01cm}
+
+\makeatletter
+\newcommand\@song{1}
+\newcommand\@chapter{1}
+\newcommand\nysida[2]{\newpage\renewcommand\@chapter{#1}\renewcommand\@song{#2}}
+
+\newcommand\chaptertext[3][gray]{%
+\draw[#1] (-\dx,\y) node {#2};
+\draw[#1] (-\dx,\y-.3*\ystep) node {#3};
+}
+
+\newcommand\otherchapter[1][gray]{%
+\chaptertext[#1]{\greek{ct}}{\greekspelled{ct}}%
+}
+\newcommand\thischapter{%
+\fill[gray] (-\dx-.5*\w,\y+.4*\ystep) -- (.5*\w,\y+.4*\ystep) -- (.5*\w,\y-.6*\ystep) -- (-\dx-.5*\w,\y-.6*\ystep);
+\chaptertext[white]{\greek{ct}\@song}{\greekspelled{ct}}
+}
+
+\newcommand\allchapters{%
+\begin{tikzpicture}%
+\forloop{ct}{1}{\value{ct}<17 and \value{ct}>0}{\ifthenelse{\@chapter=\value{ct}}{\thischapter}{	\otherchapter}}%
+\end{tikzpicture}%
+}
+\newcommand\onlycurrentchapter{%
+\begin{tikzpicture}%
+\forloop{ct}{1}{\value{ct}<17 and \value{ct}>0}{\ifthenelse{\@chapter=\value{ct}}{\thischapter}{	\otherchapter[white]}}%
+\end{tikzpicture}%
+}
+\newcounter{ct}
+
+\AddEverypageHook{%
+\checkoddpage%
+\ifoddpage%
+\begin{tikzpicture}[overlay, remember picture]%
+\node[xshift=-.5*\w,yshift=-1in-.36\textheight] at (current page.north east) {\allchapters};%
+\end{tikzpicture}%
+\else
+\begin{tikzpicture}[overlay, remember picture]%
+\node[xshift=.50*\w,yshift=-1in-.35\textheight] at (current page.north west) {\onlycurrentchapter};%
+\end{tikzpicture}%
+\fi%
+}
+
+\makeatother
