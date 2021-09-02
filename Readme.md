@@ -2,6 +2,12 @@
 
 ## Loggbok
 
+### Standardisering (2021)
+För att underlätta parsing, är det bra om saker är standardiserade. Denna branch har därför ändrat:
+* Alla titlar, så att bokstäver efteråt hamnar _efter_ dollartecknena, och att `\Large` är en för-modifier, utan måsvingar.
+* Bytt namn Jesus lever till Ny-18 (Ny-17 var dubblett.).
+* Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
+
 ### Uppdateringar 2021:
 Förutom de vanliga årliga uppdateringarna har "Matematikhatarvisan" ($$\mu\pi$$) och "Jesus lever" ($$\nu 18$$) införts i sångboken. Kapitlet sigma finns liksom senaste två åren med i sångboken, men saknar detta år innehåll. Tanken är att en ska kunna köpa till detta kapitel åren som kommer och själv sätta in.
 
