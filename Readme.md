@@ -1,4 +1,5 @@
 # Fysiksektionens sångbok
+Denna branch är enbart för utveckling.
 
 ## Loggbok
 
