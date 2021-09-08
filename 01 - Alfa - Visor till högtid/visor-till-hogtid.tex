@@ -9,7 +9,11 @@
 \usepackage{../sidspaltHack}
 
 \newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
-
+\newcommand{\auth}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+\newcommand{\songtitle}[2]{\Large{#1. #2}\\}
+\newcommand{\songsubtitle}[1]{\large{#1}\\}
+\newcommand{\sheetmusicnotice}[1]{\small{\textit{#1}}}
+\newenvironment{lyrics}{}{} % Only for parsing.
 
 \setlength{\oddsidemargin}{-0.37in}
 \setlength{\textwidth}{215pt}
@@ -20,12 +24,12 @@
 \noindent
 \huge{A$\alpha$ Visor till högtid}
 \begin{center}
-\vspace{0in}
-\Large $\alpha1$. Du gamla du fria \\ 
-\large (Till svenska fosterjorden) \\
-\small\textit{Noter till blandad kör finns i notkapitlet.}
+\songtitle{$\alpha1$}{Du gamla du fria}
+\songsubtitle{(Till svenska fosterjorden)}
+\sheetmusicnotice{Noter till blandad kör finns i notkapitlet.}
 \end{center}
-\small Du gamla du fria, du fjällhöga nord. \\
+\small\begin{lyrics}
+Du gamla du fria, du fjällhöga nord. \\
 Du tysta, du glädjerika sköna. \\
 Jag hälsar dig vänaste land uppå jord.\\
 $\|$: Din sol, din himmel, dina ängder gröna. :$\|$\\
@@ -44,16 +48,16 @@ $\|$: Ja, jag vill leva jag vill dö i Norden. :$\|$\\
 %för Sverige, den kära fosterjorden.\\
 %Jag byter Dig ej, mot allt i en värld\\
 %$\|$: Nej, jag vill leva jag vill dö i Norden!. :$\|$\\
-\begin{flushright}
-\textit{Text: Rikard Dybeck} 
-\end{flushright}
+\end{lyrics}
+\auth{Text: Rikard Dybeck}
 
 \nysida{1}{2}
 \setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\alpha2$. Kungssången (Hymn)\\
+\songtitle{$\alpha2$}{Kungssången (Hymn)}
 \footnotesize \textit{Noter till manskör finns i notkapitlet}
 \end{center}
+\begin{lyrics}
 Ur svenska hjärtans djup en gång.\\
 En samfälld och en enkel sång\\
 som går till Kungen fram.\\
@@ -69,16 +73,16 @@ Det gamla lynnets art igen\\
 hos sveakungen och hans män,\\
 Och låt den ande vila än\\
 utöver nordanland.\\
-\begin{flushright}
-\textit{Text: C. V. A. Strandberg\\Musik: Otto Lindblad.}
-\end{flushright} 
+\end{lyrics}
+\auth{Text: C. V. A. Strandberg\\Musik: Otto Lindblad.}
 
 \nysida{1}{3}
 \setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\alpha3$. Sveriges flagga\\
-\small\textit{Noter finns i notkapitlet.}
+\songtitle{$\alpha3$}{Sveriges flagga}
+\sheetmusicnotice{Noter finns i notkapitlet.}
 \end{center}
+\begin{lyrics}
 Flamma stolt mot dunkla skyar\\
 lik en glimt av sommarns sol.\\
 Över Sveriges skogar, berg och byar,\\
@@ -96,10 +100,8 @@ Sveriges flagga, Sveriges ära,\\
 fornklenod och framtids tolk:\\
 Gud är med oss, Gud är med oss\\
 Hen skall bära starkt vårt fria svenska folk. 
-\begin{flushright}
-\textit{Text: KG Ossiannilsson\\
-Musik: Hugo Alvén}
-\end{flushright}
+\end{lyrics}
+\auth{Text: KG Ossiannilsson\\Musik: Hugo Alfvén}
 \vspace{20pt}
 \begin{figure}[!h]
 \centering
@@ -109,8 +111,9 @@ Musik: Hugo Alvén}
 \nysida{1}{4}
 \setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\alpha4$. Internationalen \\
+\songtitle{$\alpha4$}{Internationalen}
 \end{center}
+\begin{lyrics}
 Upp trälar uti alla stater, \\
 som hungern bojor lagt uppå. \\
 Det dånar uti maktens krater, \\
@@ -190,18 +193,18 @@ Upp slå ned allt det gamla,\\
 tålamodet är slut!\\
 För frihet vi oss samla,\\
 förgöra våldets krut!
-\begin{flushright}
-\textit{Originaltext: Eugène Pottier\\
+\end{lyrics}
+\auth{Originaltext: Eugène Pottier\\
 Musik: Pierre Degeyter\\
 Svensk text: Henrik Menander}
-\end{flushright}
 
 \nysida{1}{5}
 \setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\alpha5$. Auld lang syne \\
+\songtitle{$\alpha5$}{Auld lang syne}
 %\small\textit{Noter finns i notkapitlet.}
 \end{center}
+\begin{lyrics}
 Should auld acquaintance be forgot, \\
 And never brought to mind? \\
 Should auld acquaintance be forgot, \\
@@ -209,8 +212,8 @@ And days o' lang syne? \\
 For auld lang syne my dear, \\
 For auld lang syne, \\
 We'll take a cup o' kindness yet \\
-For auld lang syne. 
-\vspace{5pt}\\
+For auld lang syne. \\
+\newline
 And there's a hand, my trusty friend, \\
 And gie's a hand o' thine \\
 We'll take a cup o' kindness yet \\
@@ -218,12 +221,13 @@ For auld lang syne. \\
 For auld lang syne my dear, \\
 For auld lang syne, \\
 We'll take a cup o' kindness yet \\
-For auld lang syne. 
+For auld lang syne.
+\end{lyrics}
 
 \nysida{1}{}
 \setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\large Ordningsregler för gasque enl. fkm*
+\large Ordningsregler för gasque enl. fkm*% TODO: Add fkm* logo
 \end{center}
 \small
 1. Gasquer börjar klockan 19. Om annat anges börjar festen ändå klockan 19 eftersom det är då gästerna kommer. \vspace{5pt} \\
