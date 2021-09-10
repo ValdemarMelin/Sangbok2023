@@ -1,0 +1,29 @@
+% Denna fil innehåller definitioner av kommandon som används för att enklare kunna generera lyrics.json-filen från tex-filerna.
+% Framöver kan den även med fördel användas för att standardisera sångbokens utseende.
+
+\ProvidesPackage{../digital}
+
+\RequirePackage{comment}
+
+%
+% Allmänt
+%
+\newcommand{\chaptertitle}[2]{\huge{#1 #2}\\}
+
+%
+% Sånger
+%
+\newcommand{\songtitle}[2]{\Large{#1. #2}\\}
+\newcommand{\songsubtitle}[1]{\large{#1}\\}
+
+% Två storlekar förekommer på notkapitels-notiser...
+\newcommand{\sheetmusicnotice}[1]{\small{\textit{#1}}}
+\newcommand{\sheetmusicnoticenormal}[1]{\textit{#1}}
+
+\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
+\newcommand{\auth}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+\newenvironment{lyrics}{}{} % Only for parsing.
+
+% When the LaTeX is too dirty to parse, this provides a parser-readable version of the song.
+% It is parsed just like the lyrics environment, but not displayed when rendering the LaTeX.
+\newenvironment{digitallyrics}{\begin{comment}}{\end{comment}}

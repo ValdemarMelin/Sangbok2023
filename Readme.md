@@ -7,5 +7,10 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Bytt namn Jesus lever till Ny-18 (Ny-17 var dubblett.).
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
-## Att göra
-* Slå ihop `innehall.tex` och `innehall2.tex`
+### Användbar RegEx
+(För manuell ändring till digital version.)
+* `\\huge{(\w{0,2}(\$.*?\$)?) (.*)}` - kapiteltitel
+* `\\Large\s([\$]\\[a-z]+?[,\d\.]*?\$[a-z]?)\.\s([^\\]*).*` => `\songtitle{$1}{$2}` - vanliga låttitlar (akta blanksteg på slutet)
+* `[\$]\\[\w\/]+?\\[a-z]+?\$\.` - numrerade med specialsymboler
+* `o\d+?[a-z]?\. ` - omikron
+* `\\begin\{flushright\}\n?\s{0,8}\\textit\{(.*)\}\n?\\end\{flushright\}` => `\auth{$1}` - upphovsperson
