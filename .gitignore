@@ -1,3 +1,5 @@
 .vscode
 *.log
 *.aux
+*.pyc
+*.synctex.gz
