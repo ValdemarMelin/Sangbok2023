@@ -5,7 +5,7 @@ from classes import *
 from preprocessors import *
 from typing import Union
 
-def parse(path: str) -> Chapter:
+def parse(path: str, none_on_warn = False) -> Chapter:
     chapter = None
     with open(path, "r") as file:
         # Match uncommented \songtitle commands.
@@ -16,13 +16,14 @@ def parse(path: str) -> Chapter:
         if chapter_title is None:
             raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
         chapter = Chapter(*[clean_latex(chapter_title.group(i)) for i in [1,2]])
-        chapter.songs = [parse_song(song_raw) for song_raw in songs_raw[1:]]
+        chapter.songs = [parse_song(song_raw, none_on_warn=none_on_warn) for song_raw in songs_raw[1:]]
     return chapter
 
-def parse_song(song_raw: str) -> Union[Song]:
+# TODO: Cleanup
+def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
     title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle cannot be more than one line...
     song = Song(*[clean_latex(title_raw.group(i)) for i in [1,2]])
-    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*)\n?(\\end\{lyrics\})", song_raw)
+    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*?)\n?(\\end\{lyrics\})", song_raw)
     if lyrics_raw is None:
         lyrics_digital = re.search(r"(\\begin\{comment\}@digitallyrics\n)(.+(?:\n+.+)*)\n?(\\end\{comment\})", song_raw)
         if lyrics_digital is None:
@@ -34,6 +35,12 @@ def parse_song(song_raw: str) -> Union[Song]:
         song.text = clean_lyrics(lyrics_raw.group(2))
     if "\\auth" in song.text:
         print("[\033[33mWARNING\033[m] Author tag in lyrics environment for song {} - {}.".format(song.prefix, song.title))
+        if none_on_warn:
+            return None
+    if len(song.text) < 3:
+        print("[\033[33mWARNING\033[m] Lyrics is broken for song {} - {}.".format(song.prefix, song.title))
+        if none_on_warn:
+            return None
     return song
 
 # Run through all files and run parse() on each one.

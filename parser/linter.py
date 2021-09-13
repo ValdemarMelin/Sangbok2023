@@ -11,7 +11,7 @@ if __name__ == "__main__":
             # print("[\033[36mINFO\033[m] Reading chapter {}.".format(int(d[0:2])))
             for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
-                    unparseable_song_count += sum(s is None for s in parse("../" + d + "/" + f).songs)
+                    unparseable_song_count += sum(s is None for s in parse("../" + d + "/" + f, none_on_warn = True).songs)
     if unparseable_song_count > 0:
         print("[\033[31mERROR\033[m] Unparseable songs: {}".format(unparseable_song_count))
         sys.exit(1)
