@@ -32,5 +32,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: out.json
-          path: |
-            parser/out.json
+          path: parser/out.json
