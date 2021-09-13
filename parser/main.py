@@ -8,7 +8,8 @@ from typing import Union
 def parse(path: str) -> Chapter:
     chapter = None
     with open(path, "r") as file:
-        songs_raw = file.read().split("\\songtitle")
+        # Match uncommented \songtitle commands.
+        songs_raw = re.split(r"\n[^%\n]*\\songtitle", file.read())
 
         # Parse chapter title
         chapter_title = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", songs_raw[0])
@@ -21,7 +22,7 @@ def parse(path: str) -> Chapter:
 def parse_song(song_raw: str) -> Union[Song]:
     title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle cannot be more than one line...
     song = Song(title_raw.group(1), title_raw.group(2))
-    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n.+)+)\n?(\\end\{lyrics\})", song_raw)
+    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*)\n?(\\end\{lyrics\})", song_raw)
     if lyrics_raw is None:
         print("[\033[33mWARNING\033[m] Could not parse lyrics for {} - {}. Skipping.".format(song.prefix, song.title))
         return None

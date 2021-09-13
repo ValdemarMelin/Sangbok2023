@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 if f.lower().endswith(".tex"):
                     unparseable_song_count += sum(s is None for s in parse("../" + d + "/" + f).songs)
     if unparseable_song_count > 0:
-        print("Unparseable songs: {}".format(unparseable_song_count))
+        print("[\033[31mERROR\033[m] Unparseable songs: {}".format(unparseable_song_count))
         sys.exit(1)
     else:
         print("All clean, no warnings.")
