@@ -2,32 +2,43 @@
 
 import os, re
 from classes import *
+from preprocessors import *
+from typing import Union
 
 def parse(path: str) -> Chapter:
-    state: ParserState = ParserState.GENERIC
-    current_song = None
     chapter = None
     with open(path, "r") as file:
-        for line in file:
-            if line.strip().startswith("%"):
-                continue
-            elif line.strip().startswith("\chaptertitle"):
-                params = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", line)
-                chapter = Chapter(params.group(1), params.group(2))
-            elif line.strip().startswith("\songtitle"):
-                if current_song is not None:
-                    assert chapter is not None
-                    chapter.songs.append(current_song)
-                params = re.search(r"\\songtitle\{(.*)\}\{(.*)\}", line)
-                current_song = Song(params.group(1), params.group(2))
+        songs_raw = file.read().split("\\songtitle")
+
+        # Parse chapter title
+        chapter_title = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", songs_raw[0])
+        if chapter_title is None:
+            raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
+        chapter = Chapter(chapter_title.group(1), chapter_title.group(2))
+        chapter.songs = [parse_song(song_raw) for song_raw in songs_raw[1:]]
     return chapter
 
+def parse_song(song_raw: str) -> Union[Song]:
+    title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle cannot be more than one line...
+    song = Song(title_raw.group(1), title_raw.group(2))
+    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n.+)+)\n?(\\end\{lyrics\})", song_raw)
+    if lyrics_raw is None:
+        print("[\033[33mWARNING\033[m] Could not parse lyrics for {} - {}. Skipping.".format(song.prefix, song.title))
+        return None
+    else:
+        song.text = cleanLyrics(lyrics_raw.group(2))
+        return song
+
+# Run through all files and run parse() on each one.
 if __name__ == "__main__":
     chapters: [Chapter] = []
     for d in sorted(os.listdir("..")):
-        if d[0:2].isdigit() and int(d[0:2]) > 0 and os.path.isdir("../"+d):
+        if d[0:2].isdigit() and 0 < int(d[0:2]) < 16 and os.path.isdir("../"+d):
+            print("[\033[36mINFO\033[m] Reading chapter {}.".format(int(d[0:2])))
             for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
                     chapters.append(parse("../" + d + "/" + f))
-    print("[" + ",".join([c.toJSON() for c in chapters if c is not None]) + "]")
+    with open("out.json", "w") as f:
+        print("[\033[36mINFO\033[m] Exporting to out.json (overwrite mode).")
+        f.write("[\n" + ",".join([c.toJSON() for c in chapters if c is not None]) + "\n]")
     

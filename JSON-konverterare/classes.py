@@ -1,10 +1,3 @@
-from enum import Enum
-
-class ParserState(Enum):
-    GENERIC = 1
-    LYRICS = 2
-    AUTHOR = 3
-
 class Song:
     """Represents a Song."""
     title:  str
@@ -14,16 +7,20 @@ class Song:
     text:   str
 
     def __init__(self, prefix: str, title: str):
-        self.title = title
+        self.title  = title
         self.prefix = prefix
         self.author = ""
         self.melody = ""
-        self.text = ""
+        self.text   = ""
     
-    def toJSON(self) -> str:
-        return r"{" + \
-            self.title + \
-            r"}"
+    def toJSON(self) -> str: # TODO: Escape formatted strings
+        return "\t\t\t{\n" + \
+            '\t\t\t\t"title": "' + self.title + '",\n' + \
+            '\t\t\t\t"author": "' + self.author + '",\n' + \
+            '\t\t\t\t"melody": "' + self.melody + '",\n' + \
+            '\t\t\t\t"lyrics": "' + self.text + '",\n' + \
+            '\t\t\t\t"index": "' + self.prefix + '"\n' + \
+            "\t\t\t}"
 
 class Chapter():
     name:   str
@@ -40,4 +37,4 @@ class Chapter():
     
     def toJSON(self) -> str:
         # TODO: Escape formatted strings
-        return r"{" + "chapter: \'{}\', prefix: \'{}\', songs: [{}]".format(self.name, self.prefix, ",".join([s.toJSON() for s in self.songs])) + r"}"
+        return "\t{" + "\n\t\t\"chapter\": \"{}\",\n\t\t\"prefix\": \"{}\",\n\t\t\"songs\": [\n{}\t\t\n]".format(self.name, self.prefix, ",\n".join([s.toJSON() for s in self.songs if s is not None])) + r"}"

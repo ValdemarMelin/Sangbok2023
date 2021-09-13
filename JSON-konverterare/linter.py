@@ -1,35 +1,20 @@
 #!/usr/bin/env python3
 
-import os, re
-
-warning_count = 0
-
-# TODO: add check for font size changes inside of tags, as well as manual vspaces.
-# TODO: Search for "% TODO: Digitalize"
-# Perhaps also look for noindents
-# Note that this does not catch everything. (eg. missing lyrics tags, etc.)
-def analyze(path: str):
-    global warning_count
-    with open(path, "r") as file:
-        i = 0
-        for line in file:
-            i += 1
-            if re.search(r"\\huge{(\w{0,2}(\$.*?\$)?) (.*)}", line) is not None:
-                print(path+":"+str(i), "\t-\tChapter title uses old syntax: ", line.strip())
-                warning_count += 1
-            elif (re.search(r"\\Large\s([\$]\\[a-z]+?[,\d\.]*?\$[a-z]?)\.\s([^\\]*).*", line) is not None)\
-                or (re.search(r"\\Large\s[\$]\\[\w\/]+?\\[a-z]+?\$\.", line) is not None)\
-                or (re.search(r"\\Large\so\d+?[a-z]?\. ", line) is not None):
-                print(path+":"+str(i), "\t-\tSong title uses old syntax: ", line.strip())
-                warning_count += 1
-            elif re.search(r"\\begin\{flushright\}", line) is not None:
-                print(path+":"+str(i), "\t-\tAuthor probably uses old syntax (see the next line): ", line.strip())
-                warning_count += 1
+import os, re, sys
+from main import *
 
 if __name__ == "__main__":
+    unparseable_song_count = 0
+    chapters: [Chapter] = []
     for d in sorted(os.listdir("..")):
-        if d[0:2].isdigit() and int(d[0:2]) > 0 and os.path.isdir(d):
-            for f in os.listdir(d):
+        if d[0:2].isdigit() and 0 < int(d[0:2]) < 16 and os.path.isdir("../"+d):
+            print("[\033[36mINFO\033[m] Reading chapter {}.".format(int(d[0:2])))
+            for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
-                    analyze(d+"/"+f)
-    print("Total warnings: ", warning_count)
+                    unparseable_song_count += sum(s is None for s in parse("../" + d + "/" + f).songs)
+    if unparseable_song_count > 0:
+        print("Unparseable songs: {}".format(unparseable_song_count))
+        sys.exit(1)
+    else:
+        print("All clean, no warnings.")
+    
