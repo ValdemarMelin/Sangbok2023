@@ -24,11 +24,15 @@ def parse_song(song_raw: str) -> Union[Song]:
     song = Song(title_raw.group(1), title_raw.group(2))
     lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*)\n?(\\end\{lyrics\})", song_raw)
     if lyrics_raw is None:
-        print("[\033[33mWARNING\033[m] Could not parse lyrics for {} - {}. Skipping.".format(song.prefix, song.title))
-        return None
+        lyrics_digital = re.search(r"(\\begin\{comment\}@digitallyrics\n)(.+(?:\n+.+)*)\n?(\\end\{comment\})", song_raw)
+        if lyrics_digital is None:
+            print("[\033[33mWARNING\033[m] Could not parse lyrics for {} - {}. Skipping.".format(song.prefix, song.title))
+            return None
+        else:
+            song.text = clean_lyrics(lyrics_digital.group(2))
     else:
-        song.text = cleanLyrics(lyrics_raw.group(2))
-        return song
+        song.text = clean_lyrics(lyrics_raw.group(2))
+    return song
 
 # Run through all files and run parse() on each one.
 if __name__ == "__main__":

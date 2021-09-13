@@ -1,7 +1,7 @@
 # Fysiksektionens sångbok
 [![Build LaTeX documents](https://github.com/oskarr/Sangbok/actions/workflows/compile.yml/badge.svg)](https://github.com/oskarr/Sangbok/actions/workflows/compile.yml) [![Parse into JSON](https://github.com/oskarr/Sangbok/actions/workflows/json-parse.yml/badge.svg)](https://github.com/oskarr/Sangbok/actions/workflows/json-parse.yml)
 
-Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksektionen/Sangbok). Detta repo är enbart för privat bruk, då Overleaf enbart kan pulla från main-branchen (vilken jag inte vill röra i originalrepot).
+Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksektionen/Sangbok). Detta repo är enbart för privat bruk, då Overleaf enbart kan pulla från main-branchen (vilken jag inte vill röra i originalrepot). Notera att "Parse into JSON" ovan enbart beskriver om alla låtar kunde läsas av, inte om de lästes av korrekt.
 
 ## Att fixa
 * Omega

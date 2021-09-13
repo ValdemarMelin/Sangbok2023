@@ -5,23 +5,24 @@ name: Parse into JSON
 # Controls when the workflow will run
 on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  syntax-check:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Syntax-check TeX files
         run: |
           cd parser 
           python3 linter.py
-      
+
+  parse-to-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
       - name: Run JSON converter (experimental)
         run: |
           cd parser 
