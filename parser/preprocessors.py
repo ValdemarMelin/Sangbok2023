@@ -18,10 +18,13 @@ MATHMODE_LOOKUP = {
     "\\lambda": "λ",
     "\\mu": "μ",
     "\\nu": "ν",
-    "\\pi": " π",
+    "\\pi": "π",
+    "\\tau": "τ",
+    "\\phi": "ϕ",
     "\\Sigma": "Σ",
     "\\sigma": "σ",
     "\\infty": "∞",
+    "\\emptyset": "∅",
     "\\|": "||"
 }
 
@@ -41,12 +44,14 @@ LATEX_LOOKUP = {
     "\"": "\\\"",
     "\\noindent": "",
     "\\newpage": "",
+    "\\indent": "\\t",
     }
 
 LATEX_REPLACEMENTS = {# Regex substitutions
     r"\\vspace{\dpt}": r"\\n",
     r"\\vspace{\d\dpt}": r"\\n\\n",
     r"(\\begin\{center\})\n?(.+(?:\n+.+)*)\n?(\\end\{center\})": r"\1", #Ignore for now. Alt: r"<span style='text-align: center'>\2</span>",
+    r"(\\textit\{)\n?(.+(?:\n+.+)*)\n?(\})": r"<i>\2</i>", # TODO: This will fail if bracketed commands are used inside of the \textit command.
     r"(\\textbf\{)\n?(.+(?:\n+.+)*)\n?(\})": r"<b>\2</b>", # TODO: This will fail if bracketed commands are used inside of the \textbf command.
 }
 
