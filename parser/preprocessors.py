@@ -25,7 +25,13 @@ MATHMODE_LOOKUP = {
     "\\|": "||"
 }
 
-LATEX_IGNORES = [r"\\small", r"\\Large", r"\\setlength{\\oddsidemargin}{-?\d+(\.\d+)?in}", r"\\vspace{-\d+pt}"] # TODO: Handle better.
+LATEX_IGNORES = [
+    r"%.*\n",
+    r"\\small",
+    r"\\Large",# TODO: Handle better.
+    r"\\setlength{\\oddsidemargin}{-?\d+(\.\d+)?in}",
+    r"\\vspace{-\d+pt}"
+] 
 
 # TODO: Double-check \n count in output
 LATEX_LOOKUP = {

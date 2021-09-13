@@ -5,6 +5,8 @@ Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksek
 
 ## Att fixa
 * Parsing av tabeller
+* Vissa sångindex (delta) läses inte av ordentligt (math-mode parsern är destruktiv).
+* Inläsning av upphovsperson och melodi.
 * CI-Kompileringen av innehåll ser helt kaos ut, men funkar ok i Overleaf (som använder en äldre version av pdfTeX).
 * Formatet för Système International är ej standardiserat.
 
