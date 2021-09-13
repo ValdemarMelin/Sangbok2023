@@ -57,8 +57,8 @@ def clean_latex(latex: str) -> str:
     out = latex
     for ignore in LATEX_IGNORES:
         out = re.sub(ignore, "", out)
-    for match in re.finditer(r"\$(.*?)\$", latex):
-        out = out.replace(match.string, clean_mathmode(match.group(1)))
+    for match in re.finditer(r"(\$(.*?)\$)", latex):
+        out = out.replace(match.group(1), clean_mathmode(match.group(2)) + "") + ""
     for (find, replacement) in LATEX_LOOKUP.items():
         out = out.replace(find, replacement)
     for (find, substitute) in LATEX_REPLACEMENTS.items():
@@ -66,7 +66,7 @@ def clean_latex(latex: str) -> str:
     return out.strip()
 
 def clean_mathmode(mm: str) -> str:
-    out = mm
+    out = mm + ""
     for (find, replacement) in MATHMODE_LOOKUP.items():
-        out = out.replace(find, replacement)
+        out = out.replace(find, replacement) + ""
     return out

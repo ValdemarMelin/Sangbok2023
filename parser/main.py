@@ -38,7 +38,7 @@ def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
         if none_on_warn:
             return None
     if len(song.text) < 3:
-        print("[\033[33mWARNING\033[m] Lyrics is broken for song {} - {}.".format(song.prefix, song.title))
+        print("[\033[33mWARNING\033[m] Lyrics for song {} - {} was definitely incorrectly parsed.".format(song.prefix, song.title))
         if none_on_warn:
             return None
     return song
