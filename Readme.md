@@ -4,7 +4,7 @@
 Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksektionen/Sangbok). Detta repo är enbart för privat bruk, då Overleaf enbart kan pulla från main-branchen (vilken jag inte vill röra i originalrepot). Notera att "Parse into JSON" ovan enbart beskriver om alla låtar kunde läsas av, inte om de lästes av korrekt.
 
 ## Att fixa
-* Omega
+* Parsing av tabeller
 * CI-Kompileringen av innehåll ser helt kaos ut, men funkar ok i Overleaf (som använder en äldre version av pdfTeX).
 * Formatet för Système International är ej standardiserat.
 

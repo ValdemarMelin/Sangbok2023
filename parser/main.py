@@ -15,13 +15,13 @@ def parse(path: str) -> Chapter:
         chapter_title = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", songs_raw[0])
         if chapter_title is None:
             raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
-        chapter = Chapter(chapter_title.group(1), chapter_title.group(2))
+        chapter = Chapter(*[clean_latex(chapter_title.group(i)) for i in [1,2]])
         chapter.songs = [parse_song(song_raw) for song_raw in songs_raw[1:]]
     return chapter
 
 def parse_song(song_raw: str) -> Union[Song]:
     title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle cannot be more than one line...
-    song = Song(title_raw.group(1), title_raw.group(2))
+    song = Song(*[clean_latex(title_raw.group(i)) for i in [1,2]])
     lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*)\n?(\\end\{lyrics\})", song_raw)
     if lyrics_raw is None:
         lyrics_digital = re.search(r"(\\begin\{comment\}@digitallyrics\n)(.+(?:\n+.+)*)\n?(\\end\{comment\})", song_raw)
@@ -32,6 +32,8 @@ def parse_song(song_raw: str) -> Union[Song]:
             song.text = clean_lyrics(lyrics_digital.group(2))
     else:
         song.text = clean_lyrics(lyrics_raw.group(2))
+    if "\\auth" in song.text:
+        print("[\033[33mWARNING\033[m] Author tag in lyrics environment for song {} - {}.".format(song.prefix, song.title))
     return song
 
 # Run through all files and run parse() on each one.
