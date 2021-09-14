@@ -1,19 +1,37 @@
 name: Build LaTeX documents
-on: 
+
+on:
   workflow_dispatch:
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Run compile.sh
+
+      - name: Compile LaTeX to PDF
         uses: dante-ev/latex-action@latest
         with:
           entrypoint: ./compile.sh
-      - name: Archive production artifacts
+
+      - name: Archive pdf:s
         uses: actions/upload-artifact@v2
         with:
           name: pdfs
           path: |
             **/*.pdf
+
+      # We build a bunch of low-res png:s in order to compare them to the original ones.
+      - name: Install pdftoppm
+        run: sudo apt-get install -y poppler-utils
+
+      - name: Generate png:s from pdf:s
+        run: ./.github/scripts/img.sh
+
+      - name: Archive png:s
+        uses: actions/upload-artifact@v2
+        with:
+          name: pngs
+          path: |
+            **/*.pdf-*.png
