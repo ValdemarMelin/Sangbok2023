@@ -23,8 +23,8 @@ jobs:
             **/*.pdf
 
       # We build a bunch of low-res png:s in order to compare them to the original ones.
-      - name: Install pdftoppm
-        run: sudo apt-get install -y poppler-utils
+      - name: Install image utils
+        run: sudo apt-get install -y poppler-utils imagemagick
 
       - name: Generate png:s from pdf:s
         run: ./.github/scripts/img.sh
@@ -35,3 +35,6 @@ jobs:
           name: pngs
           path: |
             **/*.pdf-*.png
+      
+      - name: Compare png:s to original png:s
+        run: ./.github/scripts/img_cmp.sh
