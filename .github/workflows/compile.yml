@@ -24,13 +24,13 @@ jobs:
         with:
           name: pdfs
           path: |
-            **/*.pdf
+            ./*/*.pdf
       - name: Archive texlive logs
         uses: actions/upload-artifact@v2
         with:
           name: texlive-logs
           path: |
-            **/*.log
+            ./*/*.log
 
   # We build a bunch of low-res png:s in order to compare them to the original ones.
   generate-pngs:

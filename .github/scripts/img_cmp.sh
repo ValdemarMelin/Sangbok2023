@@ -2,7 +2,7 @@
 
 echo -e "\e[1;36mExtraherar\e[0m originalbilder...";
 mkdir cmp/
-tar -xJ -C cmp/ -f .github/assets/original.png.txz
+tar -xJ -C cmp/ -f .github/assets/original.90c.txz
 
 AE_TOT=0
 FILE_COUNT=0
@@ -22,7 +22,7 @@ do
 
     if [[ "$AE" -gt 0 ]]; then
         echo -e "\e[35mFil:\e[0m $file "
-        if [[ "$AE" -gt 5000 ]]; then
+        if [[ "$AE" -gt 20000 ]]; then
             echo -e "  Absolut fel: \e[31m$AE\e[0m"
         else
             echo "  Absolut fel: $AE"
