@@ -13,7 +13,7 @@ do
     for file in *.pdf
     do
         echo -e " - \e[35mBearbetar fil:\e[0m $dir$file"
-        pdftoppm $file $file -png -r 45
+        pdftoppm $file $file -png -r 90
     done;
     cd ..;
 done
