@@ -1,20 +1,22 @@
 name: Build LaTeX documents
 
 on:
+  push:
+    paths:
+      - '**.tex'
+      - '*/compile.yml'
   workflow_dispatch:
 
 jobs:
-  build_latex:
+  build-latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-
       - name: Compile LaTeX to PDF
         uses: dante-ev/latex-action@latest
         with:
           entrypoint: ./compile.sh
-
       - name: Archive pdf:s
         uses: actions/upload-artifact@v2
         with:
@@ -22,19 +24,45 @@ jobs:
           path: |
             **/*.pdf
 
-      # We build a bunch of low-res png:s in order to compare them to the original ones.
-      - name: Install image utils
-        run: sudo apt-get install -y poppler-utils imagemagick
-
+  # We build a bunch of low-res png:s in order to compare them to the original ones.
+  generate-pngs:
+    runs-on: ubuntu-latest
+    needs: build-latex 
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Install poppler-utils
+        run: sudo apt-get install -y poppler-utils
+      - name: Fetch generated pdf:s
+        uses: actions/download-artifact@v2
+        with:
+          name: pdfs
       - name: Generate png:s from pdf:s
         run: ./.github/scripts/img.sh
-
       - name: Archive png:s
         uses: actions/upload-artifact@v2
         with:
           name: pngs
           path: |
             **/*.pdf-*.png
-      
+
+  compare-pngs:
+    runs-on: ubuntu-latest
+    needs: generate-pngs 
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Install imagemagick
+        run: sudo apt-get install -y imagemagick
+      - name: Fetch generated png:s
+        uses: actions/download-artifact@v2
+        with:
+          name: pngs
       - name: Compare png:s to original png:s
         run: ./.github/scripts/img_cmp.sh
+      - name: Archive diff png:s
+        uses: actions/upload-artifact@v2
+        with:
+          name: diff-pngs
+          path: |
+            **/*.diff.png

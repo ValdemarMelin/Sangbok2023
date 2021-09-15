@@ -3,7 +3,12 @@
 name: Parse into JSON
 
 # Controls when the workflow will run
-on: [push]
+on:
+  push:
+    paths:
+      - '**.tex'
+      - '**.py'
+      - '*/json-parse.yml'
 
 jobs:
   syntax-check:
