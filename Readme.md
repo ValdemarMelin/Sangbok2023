@@ -8,7 +8,8 @@ Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksek
 * Inläsning av upphovsperson och melodi.
 * Fixa MathMode-ersättningar för ODE till en husvagn.
 * Idiotsäkra parsningen av fetstilt och kursiv text, samt gör något liknande för `\mcode{...}`.
-* CI-Kompileringen av innehåll ser helt kaos ut, men funkar ok i Overleaf (som använder en äldre version av pdfTeX).
+* CI-Kompileringen av innehållet är inte helt som originalet.
+ * sidspaltHack fungerar ej.
 * Formatet för Système International är ej standardiserat.
 
 ## Förändringar

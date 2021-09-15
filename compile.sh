@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export TEXINPUTS=::$(pwd)
+
 # This script compiles all .tex-files in the main directory (that is, not in Äldre/)
 for dir in *\ -\ */
 do
