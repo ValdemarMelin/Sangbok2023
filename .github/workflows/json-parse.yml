@@ -8,7 +8,7 @@ on:
     paths:
       - '**.tex'
       - '**.py'
-      - '*/json-parse.yml'
+      - '**/json-parse.yml'
 
 jobs:
   syntax-check:
