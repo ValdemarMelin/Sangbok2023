@@ -9,3 +9,4 @@ out.json
 
 *.pdf-*.png
 *.diff.png
+cmp

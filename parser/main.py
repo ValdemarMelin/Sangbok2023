@@ -14,7 +14,9 @@ def parse(path: str, none_on_warn = False) -> Chapter:
         # Parse chapter title
         chapter_title = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", songs_raw[0])
         if chapter_title is None:
-            raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
+            chapter_title = re.search(r"\\chaptertitlenobr\{(.*)\}\{(.*)\}", songs_raw[0])
+            if chapter_title is None:
+                raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
         chapter = Chapter(*[clean_latex(chapter_title.group(i)) for i in [1,2]])
         chapter.songs = [parse_song(song_raw, none_on_warn=none_on_warn) for song_raw in songs_raw[1:]]
     return chapter
