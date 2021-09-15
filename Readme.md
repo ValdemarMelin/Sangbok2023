@@ -3,6 +3,9 @@
 
 Du letar förmodligen efter [Fysiksektionen/Sangbok](https://github.com/Fysiksektionen/Sangbok). Detta repo är enbart för privat bruk, då Overleaf enbart kan pulla från main-branchen (vilken jag inte vill röra i originalrepot). Notera att "Parse into JSON" ovan enbart beskriver om alla låtar kunde läsas av, inte om de lästes av korrekt.
 
+## Användning
+Skriptet `compile.sh` kompilerar alla .tex-filer i huvudmappens direkta undermappar (dvs. inte de som är i Äldre-mappen). Notera att då detta repo _inte_ innehåller .aux-filer, måste allt kompileras **2 gånger** för att sidspalten ska komma med ordentligt om det görs manuellt (du behöver dock inte tänka på detta om du använder `compile.sh`).
+
 ## Att fixa
 * Parsing av tabeller
 * Inläsning av upphovsperson och melodi.
