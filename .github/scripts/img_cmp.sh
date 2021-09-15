@@ -10,7 +10,6 @@ NF_FILE_COUNT=0
 
 for file in *\ -\ */*.pdf-*.png
 do
-    echo -e "\e[35mBearbetar fil:\e[0m $file"
     if [ ! -f "cmp/$file" ]; then
         echo -e "  \e[31mFEL:\e[0m Antalet png-filer skiljer sig från originalet."
         NF_FILE_COUNT=$((NF_FILE_COUNT + 1))
@@ -18,14 +17,26 @@ do
     fi
 
     AE=$(compare -metric AE "$file" "cmp/$file" "$file.diff.png" &> /dev/stdout)
-    echo "  Absolute error: $AE"
     AE_TOT=$((AE_TOT + AE))
     FILE_COUNT=$((FILE_COUNT + 1))
+
+    if [[ "$AE" -gt 0 ]]; then
+        echo -e "\e[35mFil:\e[0m $file "
+        if [[ "$AE" -gt 5000 ]]; then
+            echo -e "  Absolut fel: \e[31m$AE\e[0m"
+        else
+            echo "  Absolut fel: $AE"
+        fi
+    else
+        rm "$file.diff.png"
+    fi
+
 done;
+
 echo "Files checked: $FILE_COUNT"
 echo "Files not found in original: $NF_FILE_COUNT"
 echo "Total Absolute Error: $AE_TOT"
 
-# if [[ "$NF_FILE_COUNT" -gt 1 ]]; then
-#     exit 1
-# fi
+if [[ "$NF_FILE_COUNT" -gt 1 ]]; then
+    exit 1
+fi
