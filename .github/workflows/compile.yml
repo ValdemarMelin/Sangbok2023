@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '**.tex'
+      - '**.sty'
+      - '**.cls'
       - '**/compile.yml'
   workflow_dispatch:
 
