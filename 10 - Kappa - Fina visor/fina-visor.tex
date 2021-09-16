@@ -20,7 +20,6 @@
 \noindent
 \chaptertitlenobr{K$\kappa$}{Fina visor}
 \small
-
 \begin{center}
 \songtitle{$\kappa1$}{Festen skall börjas} 
 \mel{Vårvindar friska}
@@ -112,6 +111,9 @@ slagit ut på ängen!\\
 Gullviva, mandelblom, kattfot och blå viol. 
 \end{lyrics}
 \auth{Evert Taube}
+% TODO: There is a bug where if \nysida is called within the lyrics environment, it stops having an effect after \end{lyrics}
+% Hence we need to renew the sidspaltindex here.
+\sidindex{10}{3}
 
 \nysida{10}{4}
 \noindent
@@ -539,6 +541,8 @@ Men tiden glömmer aldrig \\
 detta kärlekspar.
 \end{lyrics}
 \auth{Tomi Ylinen, F-01}
+% TODO: Sidindex-bugg, see TODO for Sjösala vals.
+\sidindex{10}{14}
 
 \nysida{10}{15}
 \noindent
