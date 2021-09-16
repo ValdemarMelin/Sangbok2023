@@ -25,7 +25,9 @@
 \makeatletter
 \newcommand\@song{1}
 \newcommand\@chapter{1}
-\newcommand\nysida[2]{\newpage\renewcommand\@chapter{#1}\renewcommand\@song{#2}}
+% Equivalent to nysida, but without newpage.
+\newcommand\sidindex[2]{\renewcommand\@chapter{#1}\renewcommand\@song{#2}}
+\newcommand\nysida[2]{\newpage\sidindex{#1}{#2}}
 
 \newcommand\chaptertext[3][gray]{%
 \draw[#1] (-\dx,\y) node {#2};

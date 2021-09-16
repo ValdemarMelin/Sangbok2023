@@ -14,11 +14,13 @@ Skriptet `compile.sh` kompilerar alla .tex-filer i huvudmappens direkta undermap
 * CI-Kompileringen av innehållet är inte helt som originalet.
  * sidspaltHack fungerar ej.
 * Formatet för Système International är ej standardiserat.
+* Intro, My och Sigmas sidmarginaler är följer ej standarden.
 
 ## Förändringar
 För att underlätta parsing, är det bra om saker är standardiserade. Denna branch har därför ändrat:
 * Alla titlar, så att bokstäver efteråt hamnar _efter_ dollartecknena, och att `\Large` är en för-modifier, utan måsvingar.
 * Bytt namn Jesus lever till Ny-18 (Ny-17 var dubblett.).
+* Textregistrets sida 2, samt namnregistrets sida 2 och 4 har nu samma marginal som resten av sidorna i registret.
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
 ### Användbar RegEx

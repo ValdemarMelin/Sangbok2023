@@ -43,6 +43,10 @@ def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
         print("[\033[33mWARNING\033[m] \\small in lyrics environment for song {} - {}. This may cause problems when compiling LaTeX -> PDF.".format(song.prefix, song.title))
         if none_on_warn:
             return None
+    if lyrics_raw is not None and "\\nysida" in lyrics_raw.group(2):
+        print("[\033[33mWARNING\033[m] \\nysida in lyrics environment for song {} - {}. This may cause sidspaltHack to fail when compiling LaTeX -> PDF.".format(song.prefix, song.title))
+        if none_on_warn:
+            return None
     if len(song.text) < 3:
         print("[\033[33mWARNING\033[m] Lyrics for song {} - {} was definitely incorrectly parsed.".format(song.prefix, song.title))
         if none_on_warn:
