@@ -24,9 +24,21 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Textregistrets sida 2, samt namnregistrets sida 2 och 4 har nu samma marginal som resten av sidorna i registret.
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
-## Kapitel som i princip färdoga
+## Kapitel som i princip färdiga
 * Alfa - Hugo Alvén ändrad till Hugo Alfvén
 * Beta - har en sidmarginal-bugg på första sidan.
+* Gamma
+* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt.
+* Epsilon, Zeta, Eta
+* Theta - 11b har nu kursiv källreferens.
+* Iota, Kappa
+* Lambda - 9 skrevs av A. de la Halle, inte Hale
+
+## Kapitel med konstiga buggar
+* My - Mariginalerna är förmodligen ur balans då en ny sida insatts mitt i.
+* Ny - Oklar ändring av radavstånd på de sista sidorna.
+* Omikron - Överföhssång har en radbrytning som inte finns i originalet.
+* Sigma - Följde inte mariginalstandarden innan (alla sidor hade -0.47in marginal)
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)
