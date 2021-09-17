@@ -24,6 +24,10 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Textregistrets sida 2, samt namnregistrets sida 2 och 4 har nu samma marginal som resten av sidorna i registret.
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
+## Kapitel som i princip färdoga
+* Alfa - Hugo Alvén ändrad till Hugo Alfvén
+* Beta - har en sidmarginal-bugg på första sidan.
+
 ### Användbar RegEx
 (För manuell ändring till digital version.)
 * `\\huge\{(\w{0,2}(\$.*?\$)?)\s(.*)\}` => `\chaptertitle{$1}{$3}` - kapiteltitel
