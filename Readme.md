@@ -12,10 +12,7 @@ Skriptet `compile.sh` kompilerar alla .tex-filer i huvudmappens direkta undermap
 * Fixa MathMode-ersättningar för ODE till en husvagn.
 * Idiotsäkra parsningen av fetstilt och kursiv text, samt gör något liknande för `\mcode{...}`.
 * CI-Kompileringen av innehållet är inte helt som originalet.
- * sidspaltHack fungerar ej.
 * Formatet för Système International är ej standardiserat.
-* Intro, My och Sigmas sidmarginaler är följer ej standarden.
-* Jämförelse med original-pdf:erna kan hitta fel som png-diffsen inte hittar nu (t.ex. första sidan av beta.)
 
 ## Förändringar
 För att underlätta parsing, är det bra om saker är standardiserade. Denna branch har därför ändrat:
