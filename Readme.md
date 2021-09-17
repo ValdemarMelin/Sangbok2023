@@ -22,13 +22,16 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
 ## Kapitel som i princip färdiga
-* Alfa - Hugo Alvén ändrad till Hugo Alfvén
+* Alfa - Auld lang syne har inkorrekt radhöjd (Hugo Alvén ändrad till Hugo Alfvén)
 * Beta - har en sidmarginal-bugg på första sidan.
 * Gamma
-* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt.
-* Epsilon, Zeta, Eta
+* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt. (Lättare radbrytningsbugg på första sidan)
+* Epsilon
+* Zeta - (Lättare radbrytningsbugg på sista sidan)
+* Eta
 * Theta - 11b har nu kursiv källreferens.
-* Iota, Kappa
+* Iota - (Lättare radbrytningsbugg på sista sidan)
+* Kappa
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
 
 ## Kapitel med konstiga buggar
