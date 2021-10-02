@@ -25,7 +25,7 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Alfa - Auld lang syne har inkorrekt radhöjd (Hugo Alvén ändrad till Hugo Alfvén)
 * Beta - har en sidmarginal-bugg på första sidan.
 * Gamma
-* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt. (Lättare radbrytningsbugg på första sidan)
+* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt. Mera Skåne har fått "beklagd" utbytt mot bleklagd. Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet". (Kapitlet har en lättare radbrytningsbugg på första sidan)
 * Epsilon
 * Zeta - (Lättare radbrytningsbugg på sista sidan)
 * Eta
