@@ -21,24 +21,33 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Textregistrets sida 2, samt namnregistrets sida 2 och 4 har nu samma marginal som resten av sidorna i registret.
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
-## Kapitel som i princip färdiga
-* Alfa - Auld lang syne har inkorrekt radhöjd (Hugo Alvén ändrad till Hugo Alfvén)
-* Beta - har en sidmarginal-bugg på första sidan.
+## Ändringar per kapitel
+### Visuellt oförändrade kapitel
 * Gamma
-* Delta - 7b har nu ett mellanslag efter indexet, och 14e har en punkt. Mera Skåne har fått "beklagd" utbytt mot bleklagd. Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet". (Kapitlet har en lättare radbrytningsbugg på första sidan)
 * Epsilon
-* Zeta - (Lättare radbrytningsbugg på sista sidan)
 * Eta
-* Theta - 11b har nu kursiv källreferens.
-* Iota - (Lättare radbrytningsbugg på sista sidan)
 * Kappa
-* Lambda - 9 skrevs av A. de la Halle, inte Hale
+* Omikron
 
-## Kapitel med konstiga buggar
-* My - Mariginalerna är förmodligen ur balans då en ny sida insatts mitt i.
-* Ny - Oklar ändring av radavstånd på de sista sidorna.
-* Omikron - Överföhssång har en radbrytning som inte finns i originalet.
-* Sigma - Följde inte mariginalstandarden innan (alla sidor hade -0.47in marginal)
+### Mindre layout-ändringar
+* Alfa - Auld lang syne har försumbart ändrat marginalavstånd
+* Beta - har en radbrytnings-bugg på första sidan, som är fixad på ett rätt fult sätt.
+* Delta - Supreglerna på första sidan radbryts på fel ställen (fyllehundar, middagstupplur, ordinarie)
+* Zeta - På sista sidan radbryts "sittningar" på fel ställe.
+* Iota - ODE till en husvagn har radbrytning i friktion, till skillnad från innan.
+* My - Ändrad så att den följer marginalstandarden (när matematikhatarvisan insattes, hamnade marginalerna ur synk).
+* Ny - Radavståndet något ändrat på sidan 16 och 18. Mariginalen är justerad på sista sidan.
+* Sigma - Ändrad så att den följer marginalstandarden.
+
+### Mindre innehållsändringar
+* Alfa - Hugo Alvén ändrad till Hugo Alfvén
+* Delta
+    * 7b har nu ett mellanslag efter indexet.
+    * 14e har en punkt efter indexet.
+    * Mera Skåne har fått "beklagd" utbytt mot "bleklagd".
+    * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
+* Theta - 11b har nu kursiv källreferens.
+* Lambda - 9 skrevs av A. de la Halle, inte Hale
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)
