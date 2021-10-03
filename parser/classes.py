@@ -1,3 +1,5 @@
+import json
+
 class Song:
     """Represents a Song."""
     title:  str
@@ -14,13 +16,16 @@ class Song:
         self.text   = ""
     
     def toJSON(self) -> str: # TODO: Escape formatted strings
-        return "\t\t\t{\n" + \
-            '\t\t\t\t"title": "' + self.title + '",\n' + \
-            '\t\t\t\t"author": "' + self.author + '",\n' + \
-            '\t\t\t\t"melody": "' + self.melody + '",\n' + \
-            '\t\t\t\t"lyrics": "' + self.text + '",\n' + \
-            '\t\t\t\t"index": "' + self.prefix + '"\n' + \
-            "\t\t\t}"
+        return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
+
+    def toDict(self) -> dict:
+        return {
+            "title": self.title,
+            "author": self.author,
+            "melody": self.melody,
+            "text": self.text,
+            "index": self.prefix
+        }
 
 class Chapter():
     name:   str
@@ -36,5 +41,11 @@ class Chapter():
         return "Chapter: " + self.prefix + " " + self.name + " with " + str(len(self.songs)) + " songs."
     
     def toJSON(self) -> str:
-        # TODO: Escape formatted strings
-        return "\t{" + "\n\t\t\"chapter\": \"{}\",\n\t\t\"prefix\": \"{}\",\n\t\t\"songs\": [\n{}\t\t\n]".format(self.name, self.prefix, ",\n".join([s.toJSON() for s in self.songs if s is not None])) + r"}"
+        return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
+    
+    def toDict(self) -> dict:
+        return {
+            "chapter": self.name,
+            "prefix": self.prefix,
+            "songs": [s.toDict() for s in self.songs if s is not None]
+        }

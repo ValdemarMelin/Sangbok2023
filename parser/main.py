@@ -23,8 +23,15 @@ def parse(path: str, none_on_warn = False) -> Chapter:
 
 # TODO: Cleanup
 def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
-    title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle cannot be more than one line...
+    title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle, melody, author, etc. cannot be more than one line...
     song = Song(*[clean_latex(title_raw.group(i)) for i in [1,2]])
+
+    melody_raw = re.search(r"\\mel\{(.*)\}", song_raw)
+    song.melody = clean_latex(melody_raw.group(1)) if melody_raw is not None else ""
+
+    author_raw = re.search(r"\\auth\{\n?(.+(?:\n+.+)*?)\n?\}", song_raw)
+    song.author = clean_latex(author_raw.group(1)) if author_raw is not None else ""
+
     lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*?)\n?(\\end\{lyrics\})", song_raw)
     if lyrics_raw is None:
         lyrics_digital = re.search(r"(\\begin\{comment\}@digitallyrics\n)(.+(?:\n+.+)*)\n?(\\end\{comment\})", song_raw)
@@ -35,22 +42,22 @@ def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
             song.text = clean_lyrics(lyrics_digital.group(2))
     else:
         song.text = clean_lyrics(lyrics_raw.group(2))
-    if "\\auth" in song.text:
-        print("[\033[33mWARNING\033[m] Author tag in lyrics environment for song {} - {}.".format(song.prefix, song.title))
-        if none_on_warn:
-            return None
-    if lyrics_raw is not None and "\\small" in lyrics_raw.group(2):
-        print("[\033[33mWARNING\033[m] \\small in lyrics environment for song {} - {}. This may cause problems when compiling LaTeX -> PDF.".format(song.prefix, song.title))
-        if none_on_warn:
-            return None
-    if lyrics_raw is not None and "\\nysida" in lyrics_raw.group(2):
-        print("[\033[33mWARNING\033[m] \\nysida in lyrics environment for song {} - {}. This may cause sidspaltHack to fail when compiling LaTeX -> PDF.".format(song.prefix, song.title))
-        if none_on_warn:
-            return None
-    if len(song.text) < 3:
-        print("[\033[33mWARNING\033[m] Lyrics for song {} - {} was definitely incorrectly parsed.".format(song.prefix, song.title))
-        if none_on_warn:
-            return None
+    # if "\\auth" in song.text:
+    #     print("[\033[33mWARNING\033[m] Author tag in lyrics environment for song {} - {}.".format(song.prefix, song.title))
+    #     if none_on_warn:
+    #         return None
+    # if lyrics_raw is not None and "\\small" in lyrics_raw.group(2):
+    #     print("[\033[33mWARNING\033[m] \\small in lyrics environment for song {} - {}. This may cause problems when compiling LaTeX -> PDF.".format(song.prefix, song.title))
+    #     if none_on_warn:
+    #         return None
+    # if lyrics_raw is not None and "\\nysida" in lyrics_raw.group(2):
+    #     print("[\033[33mWARNING\033[m] \\nysida in lyrics environment for song {} - {}. This may cause sidspaltHack to fail when compiling LaTeX -> PDF.".format(song.prefix, song.title))
+    #     if none_on_warn:
+    #         return None
+    # if len(song.text) < 3:
+    #     print("[\033[33mWARNING\033[m] Lyrics for song {} - {} was definitely incorrectly parsed.".format(song.prefix, song.title))
+    #     if none_on_warn:
+    #         return None
     return song
 
 # Run through all files and run parse() on each one.
