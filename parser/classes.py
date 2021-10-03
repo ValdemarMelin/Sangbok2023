@@ -3,19 +3,35 @@ from utils import warning, err
 
 class Song:
     """Represents a Song."""
-    title:  str
-    prefix: str
-    author: str
-    melody: str
-    text:   str
+    title:            str
+    prefix:           str
+    author:           str
+    melody:           str
+    text:             str
+    subtitle:         str
+    sheetmusicnotice: str
 
     def __init__(self, prefix: str, title: str):
-        self.title  = title
-        self.prefix = prefix
-        self.author = ""
-        self.melody = ""
-        self.text   = ""
-    
+        self.title            = title
+        self.prefix           = prefix
+        self.author           = ""
+        self.melody           = ""
+        self.text             = ""
+        self.subtitle         = ""
+        self.sheetmusicnotice = ""
+
+    def toJSON(self) -> str: # TODO: Escape formatted strings
+        return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
+
+    def toDict(self) -> dict:
+        return {
+            "title": self.title,
+            "author": self.author,
+            "melody": "\n".join(filter(lambda x: len(x) > 0, [self.subtitle, self.melody, self.sheetmusicnotice])),
+            "text": self.text,
+            "index": self.prefix
+        }
+
     def setLyrics(self, text) -> bool:
         if len(self.text) == 0:
             self.text = text
@@ -34,17 +50,21 @@ class Song:
         else:
             err("Tried to assign author to a song with non-empty author: " + self.prefix)
 
-    def toJSON(self) -> str: # TODO: Escape formatted strings
-        return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
+    def setSheetMusicNotice(self, sheetmusicnotice) -> bool:
+        if len(self.sheetmusicnotice) == 0:
+            self.sheetmusicnotice = sheetmusicnotice
+        else:
+            err("Tried to assign sheetmusicnotice to a song with non-empty sheetmusicnotice: " + self.prefix)
 
-    def toDict(self) -> dict:
-        return {
-            "title": self.title,
-            "author": self.author,
-            "melody": self.melody,
-            "text": self.text,
-            "index": self.prefix
-        }
+    def setSubtitle(self, subtitle) -> bool:
+        if len(self.subtitle) == 0:
+            self.subtitle = subtitle
+        else:
+            err("Tried to assign subtitle to a song with non-empty subtitle: " + self.prefix)
+
+
+
+
 
 class Chapter():
     name:   str

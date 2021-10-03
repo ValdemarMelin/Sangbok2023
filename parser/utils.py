@@ -6,4 +6,4 @@ def info(msg: str):
 
 def err(msg: str):
     print("[\033[31mERROR\033[m]\t" + msg)
-    exit(1)
+    #exit(1)

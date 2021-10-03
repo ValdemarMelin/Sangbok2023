@@ -1,11 +1,11 @@
 [
 {
 	"chapter": "Visor till högtid",
-	"prefix": "Αα",
+	"prefix": "Aα",
 	"songs": [
 		{
 			"title": "Du gamla du fria",
-			"author": "Rikard Dybeck",
+			"author": "Text: Rikard Dybeck",
 			"melody": "Till svenska fosterjorden\nNoter till blandad kör finns i notkapitlet.",
 			"text": "Du gamla du fria, du fjällhöga nord\nDu tysta, du glädjerika sköna\nJag hälsar dig vänaste land uppå jord\n||: Din sol, din himmel, dina ängder gröna :||\n\nDu tronar på minnen från fornstora dar\nDå ärat ditt namn flög över jorden\nJag vet att du är och du blir vad du var\n||: Ja, jag vill leva jag vill dö i Norden :||\n\nJag städs vill dig tjäna mitt älskade land,\nDig trohet till döden vill jag svära.\nDin rätt skall jag värna med håg och med hand,\n||: Din fana, högt din bragderika bära. :||\n\nMed Gud skall jag kämpa, för hem och för härd,\nför Sverige, den kära fosterjorden.\nJag byter Dig ej, mot allt i en värld\n||: Nej, jag vill leva jag vill dö i Norden!:||",
 			"index": "α1"
@@ -42,7 +42,7 @@
 },
 {
 	"chapter": "Visor till gasque",
-	"prefix": "Ββ",
+	"prefix": "Bβ",
 	"songs": [
 		{
 			"title": "Porthos visa",
@@ -62,7 +62,7 @@
 			"title": "Härjavisan",
 			"author": "Text: Hans Alfredsson\nLundaspexet Djingis Khan 1954",
 			"melody": "Gärdebylåten",
-			"text": "Hurra nu ska man äntligen få röra på benen,\nhela stammen jublar och det spritter i grenen.\nTänk att än en gång få spränga fram på Brunte i galopp.\n\nDin doft o kära Brunte är trots brist i hygienen\nför en vild mongol minst lika ljuv som syrenen.\nTänk att på din rygg få rida runt i stan och spela topp!\n\nJa, nu skall vi ut och härja\nsupa och slåss och svärja,\nbränna röda stugor,\nslå små barn och säga fula ord\nMed blod ska vi stäppen färga\nnu änteligen lär jag\nkunna dra nån riktig nytta\nav min Hermodskurs i mord.\n\nJa, mordbränder är klämmiga, ta fram fotogenen\neftersläckningen tillhör just de fenomenen,\ninom brandmansyrket som jag tycker det är nån nytta med.\n\nJag målar för mitt inre upp den härliga scenen\nblodrött mitt i brandgult, ej ens prins Eugen, en\nlika mustig vy kan måla, ens om han målade med sked.\n\nJa, nu skall vi ut och härja...\n\nLiksom våra fäder,\nvikingarna i Norden\ndrar vi riket runt och super oss under borden.\nBrännvinet har blivit ett elixir för kropp såväl som själ.\n\nKänner du dig liten och är ynklig på jorden\nväxer du med supen och blir stor uti orden,\nslår dig för ditt håriga bröst och blir så tuff från hår till häl.\n\nJa, nu skall vi ut och härja...",
+			"text": "Hurra nu ska en äntligen få röra på benen,\nhela stammen jublar och det spritter i grenen.\nTänk att än en gång få spränga fram på Brunte i galopp.\n\nDin doft o kära Brunte är trots brist i hygienen\nför en vild mongol minst lika ljuv som syrenen.\nTänk att på din rygg få rida runt i stan och spela topp!\n\nJa, nu skall vi ut och härja\nsupa och slåss och svärja,\nbränna röda stugor,\nslå små barn och säga fula ord\nMed blod ska vi stäppen färga\nnu änteligen lär jag\nkunna dra nån riktig nytta\nav min Hermodskurs i mord.\n\nJa, mordbränder är klämmiga, ta fram fotogenen\neftersläckningen tillhör just de fenomenen,\ninom brandmansyrket som jag tycker det är nån nytta med.\n\nJag målar för mitt inre upp den härliga scenen\nblodrött mitt i brandgult, ej ens prins Eugen, en\nlika mustig vy kan måla, ens om han målade med sked.\n\nJa, nu skall vi ut och härja...\n\nLiksom våra fäder,\nvikingarna i Norden\ndrar vi riket runt och super oss under borden.\nBrännvinet har blivit ett elixir för kropp såväl som själ.\n\nKänner du dig liten och är ynklig på jorden\nväxer du med supen och blir stor uti orden,\nslår dig för ditt håriga bröst och blir så tuff från hår till häl.\n\nJa, nu skall vi ut och härja...",
 			"index": "β3"
 		},
 		{
@@ -138,7 +138,7 @@
 			"title": "Strejk på Pripps",
 			"author": "",
 			"melody": "I natt jag drömde",
-			"text": "I natt jag drömde något som\njag aldrig drömt förut.\nJag drömde det var strejk på Pripps\noch alla ölen var slut.\n\nJag drömde om en jättesal\ndär ölen stod på rad.\nJag drack så där en femton öl\noch reste mig och sa:\n\n\"Man kan ha roligt utan sprit\nMen det är dumt att chansa!\"",
+			"text": "I natt jag drömde något som\njag aldrig drömt förut.\nJag drömde det var strejk på Pripps\noch alla ölen var slut.\n\nJag drömde om en jättesal\ndär ölen stod på rad.\nJag drack så där en femton öl\noch reste mig och sa:\n\n\"En kan ha roligt utan sprit\nMen det är dumt att chansa!\"",
 			"index": "γ2"
 		},
 		{
@@ -277,7 +277,7 @@
 			"title": "Helan gick",
 			"author": "",
 			"melody": "Amanda Lundbom",
-			"text": "Helan gick i vänstra foten,\nbom-faderia, faderareralla.\nGudskelov, så vet jag boten,\nbom-faderi, faderallanlej!\nHalvan ställer saken rätt,\nbom-faderi, faderallanlej\nHugg i!\nPå nubbar blir man aldrig mätt,\nbom-faderi, faderallanlej!",
+			"text": "Helan gick i vänstra foten,\nbom-faderia, faderareralla.\nGudskelov, så vet jag boten,\nbom-faderi, faderallanlej!\nHalvan ställer saken rätt,\nbom-faderi, faderallanlej\nHugg i!\nPå nubbar blir en aldrig mätt,\nbom-faderi, faderallanlej!",
 			"index": "δ2d"
 		},
 		{
@@ -312,7 +312,7 @@
 			"title": "Planksaft (Längtan till baren)",
 			"author": "",
 			"melody": "Längtan till landet",
-			"text": "Törsten rasar uti våra strupar,\ntungan hänger torr och styv och stel.\nMen snart vankas stora långa supar,\nvar och en får sin beskärda del.\nSnapsen kommer, den vi vilja tömma,\ndenna nektar lik Olympens saft\nkommer oss att våra sorger glömma.\nSnapsen skänker hälsa, liv och kraft.\n\nFordom odlade man vindruvsrankor\nav vars saft man bryggde ädelt vin,\nNu man pressar saften ur en planka,\ndoftande av äkta terpentin.\nHöj nu bägaren o broder, syster,\nlåt den svenska skogen rinna kall,\ngenom strupen och om du är dyster,\nlåt oss dricka upp en liten tall.\n\nHelan tänder helig eld i själen,\nhalvan rosar livet som en sky,\ntersen känns från hjässan ned i hälen,\nkvarten gör en som en männska ny.\nLåt oss skåla med varandra go' vänner\nskål för vår levnads glada hopp\nTörstens eld på nytt i strupen bränner.\nLeve livet skål och botten opp!",
+			"text": "Törsten rasar uti våra strupar,\ntungan hänger torr och styv och stel.\nMen snart vankas stora långa supar,\nvar och en får sin beskärda del.\nSnapsen kommer, den vi vilja tömma,\ndenna nektar lik Olympens saft\nkommer oss att våra sorger glömma.\nSnapsen skänker hälsa, liv och kraft.\n\nFordom odlade en vindruvsrankor\nav vars saft en bryggde ädelt vin,\nNu en pressar saften ur en planka,\ndoftande av äkta terpentin.\nHöj nu bägaren o broder, syster,\nlåt den svenska skogen rinna kall,\ngenom strupen och om du är dyster,\nlåt oss dricka upp en liten tall.\n\nHelan tänder helig eld i själen,\nhalvan rosar livet som en sky,\ntersen känns från hjässan ned i hälen,\nkvarten gör en som en männska ny.\nLåt oss skåla med varandra go' vänner\nskål för vår levnads glada hopp\nTörstens eld på nytt i strupen bränner.\nLeve livet skål och botten opp!",
 			"index": "δ4a"
 		},
 		{
@@ -522,21 +522,21 @@
 			"title": "Moose:en",
 			"author": "",
 			"melody": "Månvisa",
-			"text": "Det satt en älg i en klyvartopp\nförklädd i älgjaktens månad\nBefjädrad var han från tå till topp\nskepparn blev rätt förvånad\n\"Jag är en mås, goa skepparn!\", ljög den\nförklädda älgen, därefter flög den\nMjukt föll den sen, på skepparen",
+			"text": "Det satt en älg i en klyvartopp\nförklädd i älgjaktens månad\nBefjädrad var hen från tå till topp\nskepparn blev rätt förvånad\n\"Jag är en mås, goa skepparn!\", ljög den\nförklädda älgen, därefter flög den\nMjukt föll den sen, på skepparen",
 			"index": "δ10f"
 		},
 		{
 			"title": "När jag är fuller",
 			"author": "Sångartäflan 1942",
 			"melody": "Månvisa",
-			"text": "När jag är fuller, då är jag glad,\nfan vet om jag ej är vacker.\nDå går jag runt i vår lilla stad,\nibland lyxhus och baracker.\nJag sjunger stilla en serenad,\ndet gör jag bara när jag är glad,\noch full och vacker, och full och vacker.\n\nNär jag är fuller då är jag stark,\nfan vet om jag ej är modig.\nDå kan jag slå vem som helst i mark,\nså hen blir trasig och blodig.\nJag välter träden uti vår park,\ndet gör jag bara när jag är stark,\noch full och modig, och full och modig.\n\nNär jag är fuller då är jag rik,\nfan vet om jag ej är snille.\nOch dör jag blir jag ett vackert lik,\nbegravd med gravöl och gille.\nI himlen möts jag av hornmusik,\ndet gör man bara när man är rik,\noch är ett snille, och är ett snille.\n\nMen om jag kvicknar till ett litet slag,\ni något enkelrum med galler.\nDå känner jag mig så rysligt svag,\noch avskyr bråk och kravaller.\nMin mage krånglar och är ur lag,\noch fan ska veta att jag idag\när bakom galler, är bakom galler.",
+			"text": "När jag är fuller, då är jag glad,\nfan vet om jag ej är vacker.\nDå går jag runt i vår lilla stad,\nibland lyxhus och baracker.\nJag sjunger stilla en serenad,\ndet gör jag bara när jag är glad,\noch full och vacker, och full och vacker.\n\nNär jag är fuller då är jag stark,\nfan vet om jag ej är modig.\nDå kan jag slå vem som helst i mark,\nså hen blir trasig och blodig.\nJag välter träden uti vår park,\ndet gör jag bara när jag är stark,\noch full och modig, och full och modig.\n\nNär jag är fuller då är jag rik,\nfan vet om jag ej är snille.\nOch dör jag blir jag ett vackert lik,\nbegravd med gravöl och gille.\nI himlen möts jag av hornmusik,\ndet gör en bara när en är rik,\noch är ett snille, och är ett snille.\n\nMen om jag kvicknar till ett litet slag,\ni något enkelrum med galler.\nDå känner jag mig så rysligt svag,\noch avskyr bråk och kravaller.\nMin mage krånglar och är ur lag,\noch fan ska veta att jag idag\när bakom galler, är bakom galler.",
 			"index": "δ10g"
 		},
 		{
 			"title": "Mesen",
 			"author": "",
 			"melody": "Månvisa",
-			"text": "Det satt en mes i en klyvarmast\ndär sågs han ragla och svaja\nför trots att frön var hans enda last\nvar han nu full som en kaja.\n\"Vad har du gjort!\" hördes skepparn stöna\noch mesen svarte: \"Jag rökte fröna!\nI egen holk, i egen holk\"",
+			"text": "Det satt en mes i en klyvarmast\ndär sågs hen ragla och svaja\nför trots att frön var hens enda last\nvar hen nu full som en kaja.\n\"Vad har du gjort!\" hördes skepparn stöna\noch mesen svarte: \"Jag rökte fröna!\nI egen holk, i egen holk\"",
 			"index": "δ10h"
 		},
 		{
@@ -645,7 +645,7 @@
 			"index": "δ13a"
 		},
 		{
-			"title": "Till supen så tager man sill",
+			"title": "Till supen så tager en sill",
 			"author": "",
 			"melody": "Daggstänkta berg",
 			"text": "Till supen så tager en sill, sill, sill,\nmen också ansjovis om en vill, vill, vill.\n||: Och om en är oviss om sillen är ansjovis,\nså tar en bara några supar till, till, till. :||",
@@ -697,7 +697,7 @@
 			"title": "Självmördarvisan",
 			"author": "",
 			"melody": "Hej tomtegubbar",
-			"text": "Hej, tomtegubbar, vrid på gasen\noch ta er själva av daga.\nRödsprit vi hällt i alla glasen\noch fjäriln vinglar på Haga.\nAv akvavit man får kolik\noch alla tomtar skola-sto-lik.\nHej, tomtegubbar, vrid på gasen\noch ta er själva av daga.",
+			"text": "Hej, tomtegubbar, vrid på gasen\noch ta er själva av daga.\nRödsprit vi hällt i alla glasen\noch fjäriln vinglar på Haga.\nAv akvavit en får kolik\noch alla tomtar skola-sto-lik.\nHej, tomtegubbar, vrid på gasen\noch ta er själva av daga.",
 			"index": "δ14d"
 		},
 		{
@@ -1523,7 +1523,7 @@
 			"title": "Den blomstertid",
 			"author": "Isak Kolmodin",
 			"melody": "",
-			"text": "Den blomstertid nu kommer\nmed lust och fägring stor:\nDu nalkas ljuva sommar,\nDå gräs och gröda gror.\nMed blid och livlig värma\nTill allt som varit dött,\nSig solen strålar närma,\nOch allt blir återfött.\n\nDe fagra blomsterängar\nOch åkerns ädla säd,\nde rika örtesängar\nOch lundens gröna träd,\nDe skola oss påminna\nGuds godhets rikedom,\nAtt vi den nåd besinna,\nSom räcker året om.\n\nMan hörer fåglar sjunga\nmed mångahanda ljud:\nSkall icke då vår tunga\nlovsäga Herren Gud?\nMin själ, upphöj Guds ära,\nstäm upp din glädjesång\ntill den som vill oss nära\noch fröjda på en gång.",
+			"text": "Den blomstertid nu kommer\nmed lust och fägring stor:\nDu nalkas ljuva sommar,\nDå gräs och gröda gror.\nMed blid och livlig värma\nTill allt som varit dött,\nSig solen strålar närma,\nOch allt blir återfött.\n\nDe fagra blomsterängar\nOch åkerns ädla säd,\nde rika örtesängar\nOch lundens gröna träd,\nDe skola oss påminna\nGuds godhets rikedom,\nAtt vi den nåd besinna,\nSom räcker året om.\n\nEn hörer fåglar sjunga\nmed mångahanda ljud:\nSkall icke då vår tunga\nlovsäga Herren Gud?\nMin själ, upphöj Guds ära,\nstäm upp din glädjesång\ntill den som vill oss nära\noch fröjda på en gång.",
 			"index": "λ5"
 		},
 		{

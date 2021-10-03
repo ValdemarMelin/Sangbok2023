@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os#, re
+import os, re
 from typing import Union
 from utils import warning, info, err
 
@@ -32,8 +32,9 @@ ctx.add_context_category(
     ],
     environments=[
         ms.EnvironmentSpec("lyrics", ""),
-    ],
+    ]
 )
+
 def parse(path: str) -> Chapter:
     global ctx
     chapter = None
@@ -41,7 +42,15 @@ def parse(path: str) -> Chapter:
     with open(path, "r") as file:
         curSong = None
 
-        w = lw.LatexWalker(file.read(), latex_context=ctx)
+        raw = file.read()
+        raw = re.sub(r"\\\\\n", r"\n", raw)
+        raw = re.sub(r"\\newline", r"\n", raw)
+        raw = re.sub(r"\\newpage", r"\n", raw)
+        raw = re.sub(r"\\vspace{\dpt}", r"\n", raw)
+        raw = re.sub(r"\\vspace{\d\dpt}", r"\n\n", raw)
+        raw = raw.replace('\|', "||")
+
+        w = lw.LatexWalker(raw, latex_context=ctx)
         (nodelist, pos, len_) = w.get_latex_nodes(pos=0)
         root = getFirstEnvNode(nodelist)
         for node in root.nodelist:
@@ -61,6 +70,8 @@ def parse(path: str) -> Chapter:
                     if newSong is not None:
                         if curSong is not None:
                             chapter.songs.append(curSong)
+                            if len(curSong.text) == 0:
+                                err("Song " + curSong.prefix + " has unparseable lyrics.")
                         curSong = newSong
                     else:
                         warning("Found a center environment that is not a song header. It will be ignored for now.")
@@ -72,8 +83,13 @@ def parse(path: str) -> Chapter:
                     warning("Handler for environment " + node.environmentname + " is not implemented.")
                 else:
                     warning("Unhandled environment: " + node.environmentname)
+
+    if curSong is not None:
+        chapter.songs.append(curSong)
     
     return chapter
+
+
 
 def parse_song_header(node: lw.LatexEnvironmentNode) -> Song:
     assert node.environmentname == 'center'
@@ -88,22 +104,30 @@ def parse_song_header(node: lw.LatexEnvironmentNode) -> Song:
                 else:
                     warning("Cannot assign melody to empty song.")
             elif n.macroname.startswith('songsubtitle'):
-                pass
+                song.setSubtitle(parse_singular_macro_node(n).strip('()'))
             elif n.macroname.startswith('sheetmusicnotice'):
-                pass
+                song.setSheetMusicNotice(parse_singular_macro_node(n))
     return song
 
 def parse_singular_macro_node(node: lw.LatexMacroNode) -> str:
-    return l2t.LatexNodes2Text().node_to_text(node.nodeargd.argnlist[0])
+    return l2t.LatexNodes2Text().node_to_text(node.nodeargd.argnlist[0]).replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
 
 def parse_song_lyrics(node: lw.LatexEnvironmentNode) -> str:
-    return l2t.LatexNodes2Text().node_to_text(node).strip()
+    return l2t.LatexNodes2Text().node_to_text(node).strip().replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
 
 def parse_chapter_title(node: lw.LatexMacroNode) -> Chapter:
     return Chapter(*map(l2t.LatexNodes2Text().node_to_text, node.nodeargd.argnlist))
 
 def parse_song_title(node: lw.LatexMacroNode) -> Song:
-    return Song(*map(l2t.LatexNodes2Text().node_to_text, node.nodeargd.argnlist))
+    n2t = l2t.LatexNodes2Text().node_to_text
+    regex = r"\s\((.*)\)"
+
+    title = n2t(node.nodeargd.argnlist[1])
+    song = Song(n2t(node.nodeargd.argnlist[0]), re.sub(regex, "", title))
+    subtitle_raw = re.search(regex, title)
+    if subtitle_raw is not None:
+        song.setSubtitle(subtitle_raw.group(1))
+    return song
 
 def getFirstEnvNode(nodelist):
     for node in nodelist:

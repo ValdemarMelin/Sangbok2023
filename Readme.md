@@ -40,14 +40,30 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Sigma - Ändrad så att den följer marginalstandarden.
 
 ### Mindre innehållsändringar
-* Alfa - Hugo Alvén ändrad till Hugo Alfvén
+* Alfa - Hugo Alvén ändrad till Hugo Alfvén.
+    * Internationalen - 
+        * "slå oss bi" -> "stå oss bi"
+        * "han" -> "hen"
+        * Fixad typo i "lättingen"
 * Delta
     * 7b har nu ett mellanslag efter indexet.
     * 14e har en punkt efter indexet.
     * Mera Skåne har fått "beklagd" utbytt mot "bleklagd".
     * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
 * Theta - 11b har nu kursiv källreferens.
+* Zeta - 3 "fårä" -> "får"
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
+
+## Parser-skillnader
+Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
+* Alfa
+    * I den digitala sångboken är brodersbandet ersatt med systrabandet (men inte i den fysiska). Parsern tar ej hänsyn till detta.
+    * I övrigt skiljer sig enbart punktuationer och versaliseringar mellan de två versionerna.
+    * Alfa har fler verser i den digitala.
+* Beta
+    * 1, 7 - saknar citationstecken
+    * 3 - Den fysiska upplagan har av-grabbifierats.
+
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)
