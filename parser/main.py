@@ -31,7 +31,7 @@ ctx.add_context_category(
         
     ],
     environments=[
-        ms.EnvironmentSpec("lyrics", ""),
+        ms.EnvironmentSpec("lyrics", "")
     ]
 )
 

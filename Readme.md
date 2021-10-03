@@ -23,8 +23,6 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 
 ## Ändringar per kapitel
 ### Visuellt oförändrade kapitel
-* Gamma
-* Epsilon
 * Eta
 * Kappa
 * Omikron
@@ -45,25 +43,47 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
         * "slå oss bi" -> "stå oss bi"
         * "han" -> "hen"
         * Fixad typo i "lättingen"
+* Beta
+    * Härjavisan "då värdig" -> "så tuff" (tre stavelser på två toner är lite so-so...)
 * Delta
+    * 2a - "förtära" -> "dricka" (passar bättre med antalet stavelser)
+    * 3a - "bordspartner" -> "bordsvän" (passar bättre med antalet stavelser)
     * 7b har nu ett mellanslag efter indexet.
     * 14e har en punkt efter indexet.
+    * Måsen lyfter "nu", inte "ny".
+    * Mesen är full som en kaja "trots" fröna, inte "trot".
     * Mera Skåne har fått "beklagd" utbytt mot "bleklagd".
     * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
+    * Vodka, vodka - "Från våran stat" -> "vill jag dricka" (mer grammatiskt korrekt), "kamrat" -> "männ'ska" (kamrat är betonat på fel stavelse)
+* Gamma
+    * 5 - "Gudagott är ölen på fat." -> "Öl är gudagott att dricka." (Passar bättre med betoningarna)
+* Epsilon - 9 "enn" -> "en"
 * Theta - 11b har nu kursiv källreferens.
 * Zeta - 3 "fårä" -> "får"
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
 
-## Parser-skillnader
+## Parser
 Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
 * Alfa
-    * I den digitala sångboken är brodersbandet ersatt med systrabandet (men inte i den fysiska). Parsern tar ej hänsyn till detta.
     * I övrigt skiljer sig enbart punktuationer och versaliseringar mellan de två versionerna.
-    * Alfa har fler verser i den digitala.
+    * 1 har fler verser i den digitala.
 * Beta
     * 1, 7 - saknar citationstecken
-    * 3 - Den fysiska upplagan har av-grabbifierats.
+    * 8 - Olle är inte längre ickebinär, precis som i den fysiska upplagan (good or bad, let me know)
+* Delta
+    * Vodka, vodka - extra verser läses inte in.
+    * Inre dialog - försångare/alla läses inte in.
 
+## Ändringar av de digitala texterna
+(Någon bör ta ställning till dessa. Mindre, uppenbara, genusändringar har utelämnats.)
+* Alfa
+    * Internationalen "systrabandet" -> "brodersbandet" (finns det ingen könsneutral variant?)
+* Beta
+    * Härjavisan "håriga bröst" -> "stolta bröst"
+* Gamma
+    * 5 - könsneutraliserad efter den fysiska upplagan. Dock sker en del betoningsfel, så ev. bör val av "vännen", "kamrat", etc. ses över. 
+* Delta
+    * 2e - Plask omges nu av ett bindestreck istället för 3.
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)

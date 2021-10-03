@@ -22,7 +22,7 @@ def compare_lyrics(lyrics1: str, lyrics2: str) -> bool:
     elif n1.replace("\n", "").replace(" ", "") == n2.replace("\n", "").replace(" ", ""):
         info("Spacing issue for: " + tgt_song["index"] + ". " + tgt_song["title"])
     elif gender_neutralize(n1) == gender_neutralize(n2):
-        info("Gender neutralization inconsistency for: " + tgt_song["index"] + ". " + tgt_song["title"])
+        info("Pronoun inconsistency for: " + tgt_song["index"] + ". " + tgt_song["title"])
     elif n1.startswith(n2) or n2.startswith(n1):
         warning("Missing verses for song: " + tgt_song["index"] + ". " + tgt_song["title"])
     else:
@@ -41,5 +41,6 @@ for (tgt_chapter, out_chapter) in zip(target, output):
             out_song = next(filter(lambda s: s["index"]==tgt_song["index"], out_chapter["songs"]))
         except StopIteration:
             err("Index not found: " + tgt_song["index"])
+            continue
             
         compare_lyrics(tgt_song["text"], out_song["text"])
