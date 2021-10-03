@@ -1,75 +1,125 @@
 #!/usr/bin/env python3
 
-import os, re
-from classes import *
-from preprocessors import *
+import os#, re
 from typing import Union
+from utils import warning, info, err
 
-def parse(path: str, none_on_warn = False) -> Chapter:
+from classes import *
+
+import pylatexenc.latexwalker as lw
+import pylatexenc.macrospec as ms
+import pylatexenc.latex2text as l2t
+
+ctx = lw.get_default_latex_context_db()
+ctx.add_context_category(
+    'digital',
+    prepend=True,
+    macros=[
+        ms.MacroSpec("chaptertitle", r"{{"),
+        ms.MacroSpec("chaptertitlenobr", r"{{"),
+
+        ms.MacroSpec("songtitle", r"{{"),
+        ms.MacroSpec("songsubtitle", "{"),
+        ms.MacroSpec("songsubtitlelarge", "{"),
+        
+        ms.MacroSpec("sheetmusicnotice", "{"),
+        ms.MacroSpec("sheetmusicnoticenormal", "{"),
+        ms.MacroSpec("sheetmusicnoticefootnote", "{"),
+
+        ms.MacroSpec("mel", "{"),
+        ms.MacroSpec("auth", "{"),
+        
+    ],
+    environments=[
+        ms.EnvironmentSpec("lyrics", ""),
+    ],
+)
+def parse(path: str) -> Chapter:
+    global ctx
     chapter = None
-    with open(path, "r") as file:
-        # Match uncommented \songtitle commands.
-        songs_raw = re.split(r"\n[^%\n]*\\songtitle", file.read())
 
-        # Parse chapter title
-        chapter_title = re.search(r"\\chaptertitle\{(.*)\}\{(.*)\}", songs_raw[0])
-        if chapter_title is None:
-            chapter_title = re.search(r"\\chaptertitlenobr\{(.*)\}\{(.*)\}", songs_raw[0])
-            if chapter_title is None:
-                raise Exception("Chapter title cannot be parsed from: {}".format(songs_raw[0]))
-        chapter = Chapter(*[clean_latex(chapter_title.group(i)) for i in [1,2]])
-        chapter.songs = [parse_song(song_raw, none_on_warn=none_on_warn) for song_raw in songs_raw[1:]]
+    with open(path, "r") as file:
+        curSong = None
+
+        w = lw.LatexWalker(file.read(), latex_context=ctx)
+        (nodelist, pos, len_) = w.get_latex_nodes(pos=0)
+        root = getFirstEnvNode(nodelist)
+        for node in root.nodelist:
+            if node.isNodeType(lw.LatexMacroNode):
+                if node.macroname.startswith('chaptertitle'):
+                    chapter = parse_chapter_title(node)
+                elif node.macroname == 'auth':
+                    if curSong is not None:
+                        curSong.setAuthor(parse_singular_macro_node(node))
+                    else:
+                        warning("Tried to set the author of curSong, which is set to None.")
+                elif node.macroname == 'mel':
+                    pass
+            elif node.isNodeType(lw.LatexEnvironmentNode):
+                if node.environmentname == 'center':
+                    newSong = parse_song_header(node)
+                    if newSong is not None:
+                        if curSong is not None:
+                            chapter.songs.append(curSong)
+                        curSong = newSong
+                    else:
+                        warning("Found a center environment that is not a song header. It will be ignored for now.")
+                elif node.environmentname == 'lyrics':
+                    curSong.setLyrics(parse_song_lyrics(node))
+                elif node.environmentname in ['figure', 'minipage']: # Check that this works properly. Not sure if its JS or Python it won't work in.
+                    warning("Handler for environment " + node.environmentname + " is not implemented.")
+                elif node.environmentname == 'comment':
+                    warning("Handler for environment " + node.environmentname + " is not implemented.")
+                else:
+                    warning("Unhandled environment: " + node.environmentname)
+    
     return chapter
 
-# TODO: Cleanup
-def parse_song(song_raw: str, none_on_warn = False) -> Union[Song, None]:
-    title_raw = re.search(r"\{(.*)\}\{(.*)\}", song_raw) # TODO: This means that songtitle, melody, author, etc. cannot be more than one line...
-    song = Song(*[clean_latex(title_raw.group(i)) for i in [1,2]])
-
-    melody_raw = re.search(r"\\mel\{(.*)\}", song_raw)
-    song.melody = clean_latex(melody_raw.group(1)) if melody_raw is not None else ""
-
-    author_raw = re.search(r"\\auth\{\n?(.+(?:\n+.+)*?)\n?\}", song_raw)
-    song.author = clean_latex(author_raw.group(1)) if author_raw is not None else ""
-
-    lyrics_raw = re.search(r"(\\begin\{lyrics\})\n?(.+(?:\n+.+)*?)\n?(\\end\{lyrics\})", song_raw)
-    if lyrics_raw is None:
-        lyrics_digital = re.search(r"(\\begin\{comment\}@digitallyrics\n)(.+(?:\n+.+)*)\n?(\\end\{comment\})", song_raw)
-        if lyrics_digital is None:
-            print("[\033[33mWARNING\033[m] Could not parse lyrics for {} - {}. Skipping.".format(song.prefix, song.title))
-            return None
-        else:
-            song.text = clean_lyrics(lyrics_digital.group(2))
-    else:
-        song.text = clean_lyrics(lyrics_raw.group(2))
-    # if "\\auth" in song.text:
-    #     print("[\033[33mWARNING\033[m] Author tag in lyrics environment for song {} - {}.".format(song.prefix, song.title))
-    #     if none_on_warn:
-    #         return None
-    # if lyrics_raw is not None and "\\small" in lyrics_raw.group(2):
-    #     print("[\033[33mWARNING\033[m] \\small in lyrics environment for song {} - {}. This may cause problems when compiling LaTeX -> PDF.".format(song.prefix, song.title))
-    #     if none_on_warn:
-    #         return None
-    # if lyrics_raw is not None and "\\nysida" in lyrics_raw.group(2):
-    #     print("[\033[33mWARNING\033[m] \\nysida in lyrics environment for song {} - {}. This may cause sidspaltHack to fail when compiling LaTeX -> PDF.".format(song.prefix, song.title))
-    #     if none_on_warn:
-    #         return None
-    # if len(song.text) < 3:
-    #     print("[\033[33mWARNING\033[m] Lyrics for song {} - {} was definitely incorrectly parsed.".format(song.prefix, song.title))
-    #     if none_on_warn:
-    #         return None
+def parse_song_header(node: lw.LatexEnvironmentNode) -> Song:
+    assert node.environmentname == 'center'
+    song = None
+    for n in node.nodelist:
+        if n.isNodeType(lw.LatexMacroNode):
+            if n.macroname == 'songtitle':
+                song = parse_song_title(n)
+            elif n.macroname == 'mel':
+                if song is not None:
+                    song.setMelody(parse_singular_macro_node(n))
+                else:
+                    warning("Cannot assign melody to empty song.")
+            elif n.macroname.startswith('songsubtitle'):
+                pass
+            elif n.macroname.startswith('sheetmusicnotice'):
+                pass
     return song
+
+def parse_singular_macro_node(node: lw.LatexMacroNode) -> str:
+    return l2t.LatexNodes2Text().node_to_text(node.nodeargd.argnlist[0])
+
+def parse_song_lyrics(node: lw.LatexEnvironmentNode) -> str:
+    return l2t.LatexNodes2Text().node_to_text(node).strip()
+
+def parse_chapter_title(node: lw.LatexMacroNode) -> Chapter:
+    return Chapter(*map(l2t.LatexNodes2Text().node_to_text, node.nodeargd.argnlist))
+
+def parse_song_title(node: lw.LatexMacroNode) -> Song:
+    return Song(*map(l2t.LatexNodes2Text().node_to_text, node.nodeargd.argnlist))
+
+def getFirstEnvNode(nodelist):
+    for node in nodelist:
+        if node.isNodeType(lw.LatexEnvironmentNode) and node.environmentname == 'document':
+            return node
 
 # Run through all files and run parse() on each one.
 if __name__ == "__main__":
     chapters: [Chapter] = []
     for d in sorted(os.listdir("..")):
         if d[0:2].isdigit() and 0 < int(d[0:2]) < 16 and os.path.isdir("../"+d):
-            print("[\033[36mINFO\033[m] Reading chapter {}.".format(int(d[0:2])))
+            info("Reading chapter {}.".format(int(d[0:2])))
             for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
                     chapters.append(parse("../" + d + "/" + f))
     with open("out.json", "w") as f:
-        print("[\033[36mINFO\033[m] Exporting to out.json (overwrite mode).")
+        info("Exporting to out.json (overwrite mode).")
         f.write("[\n" + ",".join([c.toJSON() for c in chapters if c is not None]) + "\n]")
     

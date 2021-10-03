@@ -11,28 +11,16 @@ on:
       - '**/json-parse.yml'
 
 jobs:
-  syntax-check:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Syntax-check TeX files
-        run: |
-          cd parser 
-          python3 linter.py
-
   parse-to-json:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Install pylatexenc
+        run: sudo pip3 install pylatexenc
       - name: Run JSON converter (experimental)
-        run: |
-          cd parser 
-          python3 main.py
-      
+        run: python3 main.py
+        working-directory: parser
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
