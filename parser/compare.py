@@ -13,20 +13,21 @@ def gender_neutralize(lyrics: str) -> str:
 def compare_lyrics(lyrics1: str, lyrics2: str) -> bool:
     n1 = normalize_lyrics(lyrics1)
     n2 = normalize_lyrics(lyrics2)
+    id = tgt_song["index"] + ". " + tgt_song["title"]
     if n1 == n2:
         return
     elif len(n1) == 0 or 0 == len(n2):
-        err("Empty lyrics for: " + tgt_song["index"] + ". " + tgt_song["title"])
+        err(id + " has \033[31mempty\033[m lyrics.")
     elif n1.replace("\n", "") == n2.replace("\n", ""):
-        info("Improper linebreak for: " + tgt_song["index"] + ". " + tgt_song["title"])
+        info(id + " has \033[34mline-break\033[m problems.")
     elif n1.replace("\n", "").replace(" ", "") == n2.replace("\n", "").replace(" ", ""):
-        info("Spacing issue for: " + tgt_song["index"] + ". " + tgt_song["title"])
+        info(id + " has \033[34mspacing\033[m problems.")
     elif gender_neutralize(n1) == gender_neutralize(n2):
-        info("Pronoun inconsistency for: " + tgt_song["index"] + ". " + tgt_song["title"])
+        info(id + " has \033[34mpronoun\033[m inconsistencies.")
     elif n1.startswith(n2) or n2.startswith(n1):
-        warning("Missing verses for song: " + tgt_song["index"] + ". " + tgt_song["title"])
+        warning(id + " has missing \033[36mverses\033[m.")
     else:
-        warning("Lyrics are not equivalent for song: " + tgt_song["index"] + ". " + tgt_song["title"])
+        warning(id + " has some \033[33mother\033[m problem.")
 
 with open("target.json", "r") as file:
     target = json.load(file)

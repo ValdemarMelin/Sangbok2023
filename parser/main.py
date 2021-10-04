@@ -11,7 +11,6 @@ import pylatexenc.macrospec as ms
 import pylatexenc.latex2text as l2t
 from contexts import LW_CTX, L2T_CTX
 
-
 def parse(path: str) -> Chapter:
     global LW_CTX
     chapter = None
@@ -38,22 +37,13 @@ def parse(path: str) -> Chapter:
     return chapter
 
 # May mutate chapter & song.
+# Have you ever seen such beautiful code? <3
 def recurse_node(node, chapter, song) -> (Chapter, Song):
     if node.isNodeType(lw.LatexMacroNode):
         if node.macroname.startswith('chaptertitle'):
             chapter = parse_chapter_title(node)
-        elif node.macroname == 'auth':
-            if song is not None:
-                song.setAuthor(parse_singular_macro_node(node))
-            else:
-                warning("Tried to set the author of song, which is set to None.")
-        elif node.macroname == 'mel':
-            err('mel macro found at root level. This is inappropriate.')
-        elif node.macroname == 'digitalonly':
-            chapter, song = recurse_node(node.nodeargd.argnlist[0], chapter, song)
-    elif node.isNodeType(lw.LatexEnvironmentNode):
-        if node.environmentname == 'center':
-            newSong = parse_song_header(node)
+        elif node.macroname == 'songtitle':
+            newSong = parse_song_title(node)
             if newSong is not None:
                 if song is not None:
                     chapter.songs.append(song)
@@ -61,10 +51,30 @@ def recurse_node(node, chapter, song) -> (Chapter, Song):
                         err("Song " + song.prefix + " has unparseable lyrics.")
                 song = newSong
             else:
-                warning("Found a center environment that is not a song header. It will be ignored for now.")
-        elif node.environmentname == 'lyrics':
+                err("Unparseable songtitle.")
+        elif node.macroname.startswith('songsubtitle'):
+            song.setSubtitle(parse_singular_macro_node(node).strip('()'))
+        elif node.macroname.startswith('sheetmusicnotice'):
+            song.setSheetMusicNotice(parse_singular_macro_node(node))
+        # TODO: A lot of these are very similar (redundant).
+        elif node.macroname == 'auth':
+            if song is not None:
+                song.setAuthor(parse_singular_macro_node(node))
+            else:
+                warning("Tried to set the author of song, which is set to None.")
+        elif node.macroname == 'mel':
+            if song is not None:
+                song.setMelody(parse_singular_macro_node(node))
+            else:
+                warning("Cannot assign melody to empty song.")
+        elif node.macroname == 'digitalonly':
+            chapter, song = recurse_node(node.nodeargd.argnlist[0], chapter, song)
+        elif node.macroname == 'course':
+            song.setCourse(parse_singular_macro_node(node))
+    elif node.isNodeType(lw.LatexEnvironmentNode):
+        if node.environmentname == 'lyrics':
             song.setLyrics(parse_song_lyrics(node))
-        elif node.environmentname in ['figure', 'minipage', 'subfigure', 'table']:
+        elif node.environmentname in ['figure', 'minipage', 'subfigure', 'table', 'center']:
             for n in node.nodelist:
                 chapter, song = recurse_node(n, chapter, song)
         elif node.environmentname in ['flushright']:
@@ -88,24 +98,6 @@ def recurse_node(node, chapter, song) -> (Chapter, Song):
 
 
 L2T = l2t.LatexNodes2Text(L2T_CTX)
-
-def parse_song_header(node: lw.LatexEnvironmentNode) -> Song:
-    assert node.environmentname == 'center'
-    song = None
-    for n in node.nodelist:
-        if n.isNodeType(lw.LatexMacroNode):
-            if n.macroname == 'songtitle':
-                song = parse_song_title(n)
-            elif n.macroname == 'mel':
-                if song is not None:
-                    song.setMelody(parse_singular_macro_node(n))
-                else:
-                    warning("Cannot assign melody to empty song.")
-            elif n.macroname.startswith('songsubtitle'):
-                song.setSubtitle(parse_singular_macro_node(n).strip('()'))
-            elif n.macroname.startswith('sheetmusicnotice'):
-                song.setSheetMusicNotice(parse_singular_macro_node(n))
-    return song
 
 def parse_singular_macro_node(node: lw.LatexMacroNode) -> str:
     return L2T.node_to_text(node.nodeargd.argnlist[0]).replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")

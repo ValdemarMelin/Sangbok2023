@@ -63,7 +63,14 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Theta - 11b har nu kursiv källreferens.
 * Zeta - 3 "fårä" -> "får"
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
-* My - 2 - "Osquristina" -> "Osquarulda" (vet inte vilket som är bättre, men har en känsla av att det sistnämnda är vanligare när den väl sjungs)
+* My
+    * 2 - "Osquristina" -> "Osquarulda" (vet inte vilket som är bättre, men har en känsla av att det sistnämnda är vanligare när den väl sjungs)
+    * 7 - justerade pronomenfel "jag" -> "hen", etc.
+* Ny
+    * Hallen luta - "alldles" -> "alld'les"
+    * Älska dig själv - "dig" -> "dej" (en måste vara konsekvent)
+
+<!--TODO: Find mänska -> männ'ska, etc.-->
 
 ## Parser
 Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
