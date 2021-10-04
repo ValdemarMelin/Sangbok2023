@@ -55,12 +55,15 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
     * Mera Skåne har fått "beklagd" utbytt mot "bleklagd".
     * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
     * Vodka, vodka - "Från våran stat" -> "vill jag dricka" (mer grammatiskt korrekt), "kamrat" -> "männ'ska" (kamrat är betonat på fel stavelse)
+    * 13a - "ock" -> "och"
+    * 13c - "bröder" -> "vänner", "näsan är röder" -> "näsan den ränner"
 * Gamma
     * 5 - "Gudagott är ölen på fat." -> "Öl är gudagott att dricka." (Passar bättre med betoningarna)
 * Epsilon - 9 "enn" -> "en"
 * Theta - 11b har nu kursiv källreferens.
 * Zeta - 3 "fårä" -> "får"
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
+* My - 2 - "Osquristina" -> "Osquarulda" (vet inte vilket som är bättre, men har en känsla av att det sistnämnda är vanligare när den väl sjungs)
 
 ## Parser
 Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
@@ -83,7 +86,7 @@ Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
 * Gamma
     * 5 - könsneutraliserad efter den fysiska upplagan. Dock sker en del betoningsfel, så ev. bör val av "vännen", "kamrat", etc. ses över. 
 * Delta
-    * 2e - Plask omges nu av ett bindestreck istället för 3.
+    * 2e - Plask omges nu av ett bindestreck (–) istället för 3.
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)
