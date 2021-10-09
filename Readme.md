@@ -23,7 +23,6 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 
 ## Ändringar per kapitel
 ### Visuellt oförändrade kapitel
-* Eta
 * Kappa
 * Omikron
 
@@ -37,7 +36,7 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Ny - Radavståndet något ändrat på sidan 16 och 18. Mariginalen är justerad på sista sidan.
 * Sigma - Ändrad så att den följer marginalstandarden.
 
-### Mindre innehållsändringar
+### Innehållsändringar
 * Alfa - Hugo Alvén ändrad till Hugo Alfvén.
     * Internationalen - 
         * "slå oss bi" -> "stå oss bi"
@@ -55,13 +54,18 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
     * Mera Skåne har fått "beklagd" utbytt mot "bleklagd".
     * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
     * Vodka, vodka - "Från våran stat" -> "vill jag dricka" (mer grammatiskt korrekt), "kamrat" -> "männ'ska" (kamrat är betonat på fel stavelse)
+    * 11d - "längst" -> "längs", "ju bättre" -> "blir bättre"
     * 13a - "ock" -> "och"
     * 13c - "bröder" -> "vänner", "näsan är röder" -> "näsan den ränner"
+    * 15a - nu "könsneutral" (fårn den digitala versionen).
 * Gamma
     * 5 - "Gudagott är ölen på fat." -> "Öl är gudagott att dricka." (Passar bättre med betoningarna)
 * Epsilon - 9 "enn" -> "en"
 * Theta - 11b har nu kursiv källreferens.
-* Zeta - 3 "fårä" -> "får"
+* Zeta
+    * 3 "fårä" -> "får"
+    * 7 "nån förnäm" -> "fin", "det kanske" -> "om det"
+* Eta 1 - Vattenfysikalen Shakespeare var 1990 (enl. deras hemsida).
 * Lambda - 9 skrevs av A. de la Halle, inte Hale
 * My
     * 2 - "Osquristina" -> "Osquarulda" (vet inte vilket som är bättre, men har en känsla av att det sistnämnda är vanligare när den väl sjungs)
@@ -91,9 +95,14 @@ Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
 * Beta
     * Härjavisan "håriga bröst" -> "stolta bröst"
 * Gamma
-    * 5 - könsneutraliserad efter den fysiska upplagan. Dock sker en del betoningsfel, så ev. bör val av "vännen", "kamrat", etc. ses över. 
+    * 5 - könsneutraliserad efter den fysiska upplagan. Dock sker en del betoningsfel, så ev. bör val av "vännen", "kamrat", etc. ses över.
+* Iota - ODE till en husvagn har nu symboler istället för text. Detta kan påverka generatorn.
 * Delta
     * 2e - Plask omges nu av ett bindestreck (–) istället för 3.
+* Epsilon 3 - könsneutral.
+### Dialogändringar
+Dvs. texter där vem som sjunger noterats med bokstäver i den digitala, vilket ändrats till fetstilt.
+* Delta 9d, 11g
 
 ### Användbar RegEx
 (För manuell ändring till digital version.)

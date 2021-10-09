@@ -11,6 +11,7 @@ class Song:
     subtitle:         str
     sheetmusicnotice: str
     course:           str
+    instruction:      str
 
     def __init__(self, prefix: str, title: str):
         self.title            = title
@@ -21,6 +22,7 @@ class Song:
         self.subtitle         = ""
         self.sheetmusicnotice = ""
         self.course           = ""
+        self.instruction      = ""
 
     def toJSON(self) -> str: # TODO: Escape formatted strings
         return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
@@ -29,11 +31,12 @@ class Song:
         return {
             "title": self.title,
             "author": self.author,
-            "melody": "\n".join(filter(lambda x: len(x) > 0, [self.course, self.subtitle, self.melody, self.sheetmusicnotice])),
+            "melody": "\n".join(filter(lambda x: len(x) > 0, [self.course, self.subtitle, self.melody, self.sheetmusicnotice, self.instruction])),
             "text": self.text,
             "index": self.prefix
         }
 
+    # TODO: The below functions are VERY redundant.
     def setLyrics(self, text) -> bool:
         if len(self.text) == 0:
             self.text = text
@@ -69,6 +72,12 @@ class Song:
             self.course = course
         else:
             err("Tried to assign course to a song with non-empty course: " + self.prefix)
+    
+    def setInstruction(self, instruction) -> bool:
+        if len(self.instruction) == 0:
+            self.instruction = instruction
+        else:
+            err("Tried to assign instruction to a song with non-empty instruction: " + self.prefix)
 
 
 

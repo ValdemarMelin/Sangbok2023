@@ -71,6 +71,8 @@ def recurse_node(node, chapter, song) -> (Chapter, Song):
             chapter, song = recurse_node(node.nodeargd.argnlist[0], chapter, song)
         elif node.macroname == 'course':
             song.setCourse(parse_singular_macro_node(node))
+        elif node.macroname == 'instruction':
+            song.setInstruction(parse_singular_macro_node(node))
     elif node.isNodeType(lw.LatexEnvironmentNode):
         if node.environmentname == 'lyrics':
             song.setLyrics(parse_song_lyrics(node))
@@ -103,7 +105,9 @@ def parse_singular_macro_node(node: lw.LatexMacroNode) -> str:
     return L2T.node_to_text(node.nodeargd.argnlist[0]).replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
 
 def parse_song_lyrics(node: lw.LatexEnvironmentNode) -> str:
-    return L2T.node_to_text(node).strip().replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
+    out = L2T.node_to_text(node).strip().replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
+    out = out.replace("_2", "₂").replace("^2", "²").replace("^3", "³").replace("^∘","°").replace("_n", "ₙ") # TODO: Do some other way
+    return out
 
 def parse_chapter_title(node: lw.LatexMacroNode) -> Chapter:
     return Chapter(*map(L2T.node_to_text, node.nodeargd.argnlist))

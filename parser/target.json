@@ -478,9 +478,9 @@
 		},
 		{
 			"title": "Inre dialog",
-			"author": "Text: Mikael Segersten, E-76",
-			"melody": "An der schönen blauen Donau\nF: Försångare\nA: Alla",
-			"text": "F: Jag vill inte ha - A: en nubbe till!\nF: Jag mår inte bra - A: en nubbe till!\nF: Om ni ger mig mer - A: en nubbe till!\nF: ser jag er som fler - A: en nubbe till!\nF: Min mage är sjuk - A: en nubbe till!\nF: Min hjärna är mjuk - A: en nubbe till!\nA: Jag kan inte tänka så bra,\nså jag får väl nubben ta - hurra!",
+			"author": "Mikael Segersten (E-76)",
+			"melody": "An der schönen blauen Donau\nFörsångare / Alla",
+			"text": "Jag vill inte ha - en nubbe till!\nJag mår inte bra - en nubbe till!\nOm ni ger mig mer - en nubbe till!\nser jag er som fler - en nubbe till!\n\nMin mage är sjuk - en nubbe till!\nMin hjärna är mjuk - en nubbe till!\nJag kan inte tänka så bra,\nså jag får väl nubben ta - hurra!",
 			"index": "δ9d"
 		},
 		{
@@ -529,7 +529,7 @@
 			"title": "När jag är fuller",
 			"author": "Sångartäflan 1942",
 			"melody": "Månvisa",
-			"text": "När jag är fuller, då är jag glad,\nfan vet om jag ej är vacker.\nDå går jag runt i vår lilla stad,\nibland lyxhus och baracker.\nJag sjunger stilla en serenad,\ndet gör jag bara när jag är glad,\noch full och vacker, och full och vacker.\n\nNär jag är fuller då är jag stark,\nfan vet om jag ej är modig.\nDå kan jag slå vem som helst i mark,\nså hen blir trasig och blodig.\nJag välter träden uti vår park,\ndet gör jag bara när jag är stark,\noch full och modig, och full och modig.\n\nNär jag är fuller då är jag rik,\nfan vet om jag ej är snille.\nOch dör jag blir jag ett vackert lik,\nbegravd med gravöl och gille.\nI himlen möts jag av hornmusik,\ndet gör en bara när man är rik,\noch är ett snille, och är ett snille.\n\nMen om jag kvicknar till ett litet slag,\ni något enkelrum med galler.\nDå känner jag mig så rysligt svag,\noch avskyr bråk och kravaller.\nMin mage krånglar och är ur lag,\noch fan ska veta att jag idag\när bakom galler, är bakom galler.",
+			"text": "När jag är fuller, då är jag glad,\nfan vet om jag ej är vacker.\nDå går jag runt i vår lilla stad,\nibland lyxhus och baracker.\nJag sjunger stilla en serenad,\ndet gör jag bara när jag är glad,\noch full och vacker, och full och vacker.\n\nNär jag är fuller då är jag stark,\nfan vet om jag ej är modig.\nDå kan jag slå vem som helst i mark,\nså hen blir trasig och blodig.\nJag välter träden uti vår park,\ndet gör jag bara när jag är stark,\noch full och modig, och full och modig.\n\nNär jag är fuller då är jag rik,\nfan vet om jag ej är snille.\nOch dör jag blir jag ett vackert lik,\nbegravd med gravöl och gille.\nI himlen möts jag av hornmusik,\ndet gör en bara när en är rik,\noch är ett snille, och är ett snille.\n\nMen om jag kvicknar till ett litet slag,\ni något enkelrum med galler.\nDå känner jag mig så rysligt svag,\noch avskyr bråk och kravaller.\nMin mage krånglar och är ur lag,\noch fan ska veta att jag idag\när bakom galler, är bakom galler.",
 			"index": "δ10g"
 		},
 		{
@@ -598,8 +598,8 @@
 		{
 			"title": "Kalla små nubbar",
 			"author": "",
-			"melody": "Kalle på spången\nF: Försångare\nA: Alla",
-			"text": "F: Vad är det som gör\natt en skojare trivs?\nA: Jo, kalla, kalla, kalla, kalla\nsmå nubbar.\nF: Vad är det som först\nuppå festen väl givs?\nA: Jo, kalla, kalla, kalla, kalla\nsmå nubbar.\nF: Dom skänker oss alla\nett solljust humör,\noch även för kroppen\nstor nytta dom gör.\nMen skall en ta nubbar\nsom regel dom bör\nVa' kalla\nA: Mycket kalla\nF: Ja, kalla\nA: Mycket kalla\nJa, kalla, kalla, kalla, kalla\nsmå nubbar.",
+			"melody": "Kalle på spången\nFörsångare / Alla",
+			"text": "Vad är det som gör\natt en skojare trivs?\nJo, kalla, kalla, kalla, kalla\nsmå nubbar.\n\nVad är det som först\nuppå festen väl givs?\nJo, kalla, kalla, kalla, kalla\nsmå nubbar.\n\nDom skänker oss alla\nett solljust humör,\noch även för kroppen\nstor nytta dom gör.\nMen skall en ta nubbar\nså regel dom bör\nva' kalla.\nMycket kalla.\n\nJa, kalla.\nMycket kalla.\nJa, kalla, kalla, kalla, kalla\nsmå nubbar.",
 			"index": "δ11g"
 		},
 		{
@@ -729,9 +729,9 @@
 			"index": "δ15c"
 		},
 		{
-			"title": "Månen (En gång i månan)",
+			"title": "Månen",
 			"author": "",
-			"melody": "Mors lilla Olle",
+			"melody": "En gång i månan\nMors lilla Olle",
 			"text": "En gång i månan är månen full,\nmen aldrig jag sett henom ramla omkull.\nStum av beundran hur mycket hen tål,\nhöja vi glasen och dricka hens skål.",
 			"index": "δ15d"
 		},
@@ -798,10 +798,10 @@
 			"index": "ε2"
 		},
 		{
-			"title": "Vinvisa (Har ni sett på attan)",
+			"title": "Vinvisa",
 			"author": "",
 			"melody": "Amanda Lundbom",
-			"text": "Har ni sett på attan gubbar.\nBomfaderi och bomfaderalla\nHär serveras inga nubbar\nBomfaderi faderallanlej\n\nVi som väntat brännevin\nBom faderi faderallanlej,\nUj-uj\nMen glasen fylls med vanligt vin\nBom faderi faderallanlej.\n\nMen det kanske går att dricka\nBomfaderi och bomfaderalla\nOch ej giver någon hicka\nBomfaderi faderallanlej\n\nAlla säkert drycken tål\nBom faderi faderallanlej,\nHugg i\nSå dricka vi nu allas skål\nBom faderi faderallanlej.",
+			"text": "Här ska ni allt få chockeras.\nBomfaderi och bomfaderalla!\nInga nubbar här serveras.\nBomfaderi faderallanlej!\n\nVi som väntat brännevin.\nBom faderi faderallanlej!\nUj-uj!\nMen glasen fylls med vanligt vin.\nBom faderi faderallanlej!\n\nMen det kanske går att dricka.\nBomfaderi och bomfaderalla!\nOch ej giver någon hicka.\nBomfaderi faderallanlej!\n\nAlla säkert drycken tål.\nBom faderi faderallanlej!\nHugg i!\nSå dricka vi nu allas skål.\nBom faderi faderallanlej!",
 			"index": "ε3"
 		},
 		{
@@ -821,8 +821,8 @@
 		{
 			"title": "Elysisk längtan",
 			"author": "",
-			"melody": "An die Freude (Beethovens 10:e symfoni)",
-			"text": "Aftonrodnan svalka sprider\nSkymningen sig sänker fin\nOch likt dimridåer sprider\nDoften av det rena vin\n\n||: Låt det hjälpa mig till att segla\nRakt in i rusets röda tröst\nNatten flyrr på gryningsvingar\nVärmen flammar i mitt bröst :||\nHEJ!!!",
+			"melody": "An die Freude (Beethovens 9:e symfoni)",
+			"text": "Aftonrodnan svalka sprider\nSkymningen sig sänker fin\nOch likt dimridåer sprider\nDoften av det rena vin\n\n||: Låt det hjälpa mig till att segla\nRakt in i rusets röda tröst\nNatten flyr på gryningsvingar\nVärmen flammar i mitt bröst :||\nHEJ!!!",
 			"index": "ε6"
 		},
 		{
@@ -918,8 +918,8 @@
 		{
 			"title": "Djungelpunsch",
 			"author": "",
-			"melody": "Var nöjd med... (Djungelboken)",
-			"text": "Jag gillar alla tiders punsch\nPunsch till frukost, punsch till lunch\nEn punsch till förrätt, varmrätt och dessert\nJag gillar punsch för vet du vad;\nrent kaffe gör ju ingen glad\nSå punsch för fulla muggar vill jag ha!\n\nMed konjak du lockar\nDen bästa Renault\nFörlåt om jag chockar\noch tar punsch ändå\nOch bjuder du på fin likör\nfår du ursäkta om det stör\nJag väljer hellre Grönstedts Blå,\nen Cederlunds eller Flaggpunsch och\nkanske du har ren Platin?\n\nJag gillar punsch\nGer du mig punsch så är jag din\nFör evigt din",
+			"melody": "Var nöjd med.../Djungelboken",
+			"text": "Jag gillar alla tiders punsch\nPunsch till frukost, punsch till lunch\nEn punsch till förrätt, varmrätt och dessert\nJag gillar punsch för vet du vad;\nrent kaffe gör ju ingen glad\nSå punsch för fulla muggar vill jag ha!\n\nMed konjak du lockar\nDen bästa Renault\nFörlåt om jag chockar\noch tar punsch ändå\nOch bjuder du på fin likör\nfår du ursäkta om det stör\nJag väljer hellre Grönstedts Blå,\nen Cederlunds eller Flaggpunsch åh...\nkanske har du ren Platin?\n\nJag gillar punsch,\nså ge mig punsch\noch jag är din,\nför evigt din.",
 			"index": "ζ7"
 		},
 		{
@@ -954,7 +954,7 @@
 			"title": "Visa en torsdagskväll",
 			"author": "",
 			"melody": "Visa vid midsommartid",
-			"text": "Du häller ur flaskan en gyllene tår\nav punsch ifrån Cederlunds.\nDu lyfter sen bägarn och väl du förstår\natt föra den till din mun.\nIkväll ska du dricka ditt livselixir\noch känna den ljuva punschen\nsom ett vårbjörkeskir.\nI natt ska du bäras av Osquar på bår\noch kallas för fyllefår.",
+			"text": "Du häller ur flaskan en gyllene tår\nav punsch ifrån Cederlunds.\nDu lyfter sen bägarn och väl du förstår\natt föra den till din mun.\nIkväll ska du dricka ditt livselixir\noch känna den ljuva punschen\nsom ett vårbjörkeskir.\nI natt ska du bäras av Osquarulda på bår\noch kallas för fyllefår.",
 			"index": "ζ12"
 		},
 		{
@@ -975,7 +975,7 @@
 			"title": "Sista punschvisan",
 			"author": "",
 			"melody": "Auld lang syne",
-			"text": "När punschen småningom ta't slut\noch vår flaska blivit tom.\nDå vänder vi den upp och ner\ntill dess inget rinner ut.\n\n||: Så slicka vi, så slicka vi,\nbåd' utanpå och i.\nOch finns det ändå något kvar\nfår det va' till sämre dar. :||\n\n\nAndra versen brukar sjungas två gånger på fina sittningar. På mer uppsluppna fester sjunger en andra versen\nsittande\nstående\nmed en fot på stolen\nmed båda fötter på stolen\nmed en fot på bordet\noch till sist under bordet",
+			"text": "När punschen småningom ta't slut\noch vår flaska blivit tom.\nDå vänder vi den upp och ner\ntill dess inget rinner ut.\n\n||: Så slicka vi, så slicka vi,\nbåd' utanpå och i.\nOch finns det ändå något kvar\nfår det va' till sämre dar. :||\n\n\nAndra versen brukar sjungas två gånger på fina sittningar. På mer uppsluppna fester sjungs andra versen\n· sittande\n· stående\n· med en fot på stolen\n· med båda fötter på stolen\n· med en fot på bordet\n· och till sist under bordet",
 			"index": "ζ∞"
 		}
 	]
@@ -1044,7 +1044,7 @@
 			"title": "Häflåten",
 			"author": "",
 			"melody": "Midnatt råder",
-			"text": "Yoghurt, yoghurt,\nfyller oss till brädden,\noss till brädden.\nGurglar härligt samman där med grädden\ndär med grädden.\nGräddfil kräver att vi törstigt häfver\nMjölk! Mjölk! Mjölk!",
+			"text": "Yoghurt, yoghurt,\nfyller oss till brädden,\noss till brädden.\nGurglar härligt samman där med grädden\ndär med grädden.\nGräddfil kräver att vi törstigt häfver:\nMjölk! Mjölk! Mjölk!",
 			"index": "η9"
 		},
 		{
@@ -1106,7 +1106,7 @@
 			"title": "Bär ner mig till sjön",
 			"author": "",
 			"melody": "Bei mir bist du schön",
-			"text": "||: Bär ner mig till sjön\nBär ner mig till sjön\nJag känner att jag måste i! :||\nOch när du badat mig\nSå skall du torka mig.\nOch när du torkat mig\nSå vill jag i igen!\n\n||: Bär upp mig i en tall,\nbär upp mig i en tall,\njag känner att jag måste upp. :||\nOch när jag kommit upp,\nså vill jag ner igen\noch när jag kommit ner,\nså vill jag upp igen.\n\n||: Häll i mig min grogg,\nhäll i mig min grogg\nJag känner att jag tål det väl. :||\nOch när jag fått min grogg,\nså fyll då på igen,\noch när du fyllt mitt glas,\nså häll då i igen.\n\n||: Bär ut mig i snön,\nbär ut mig i snön\nJag känner att jag måste spy :||\nOch när jag kastat upp\nså får du torka opp\noch när du torkat upp\nså kan jag spy igen\n\n||: Var var jag igår\nVar var jag igår\nJag undrar, var var jag igår :||\nMitt huvud känns så tungt,\nJag kan ej andas lugnt.\nHur har jag kommit hem,\nOch vem har stoppat mig i säng?",
+			"text": "||: Bär ner mig till sjön\nBär ner mig till sjön\nJag känner att jag måste i! :||\nOch när du badat mig\nSå skall du torka mig.\nOch när du torkat mig\nSå vill jag i igen!\n\n||: Bär upp mig i en tall,\nbär upp mig i en tall,\njag känner att jag måste upp. :||\nOch när jag kommit upp,\nså vill jag ner igen\noch när jag kommit ner,\nså vill jag upp igen.\n\n||: Häll i mig min grogg,\nhäll i mig min grogg\nJag känner att jag tål det väl. :||\nOch när jag fått min grogg,\nså fyll då på igen,\noch när du fyllt mitt glas,\nså häll då i igen.\n\n||: Bär ut mig i snön,\nbär ut mig i snön\nJag känner att jag måste spy :||\nOch när jag kastat upp\nså får du torka opp\noch när du torkat upp\nså kan jag spy igen\n\n||: Var var jag igår?\nVar var jag igår?\nJag undrar, var var jag igår? :||\nMitt huvud känns så tungt,\nJag kan ej andas lugnt.\nHur har jag kommit hem?\nOch vem har stoppat mig i säng?",
 			"index": "θ3"
 		},
 		{
@@ -1176,7 +1176,7 @@
 			"title": "Selen lever",
 			"author": "",
 			"melody": "He's got the whole world in his hand",
-			"text": "||: Selen lever, i vår hånd :|| x4\n\nVi stikker hakkapikken i den, i vår sel...\n\nMen! Selen lever...\n\nVi river skinnet av den, av vår sel...\n\nMen! Selen lever...\n\nVi river loffene av den, av vår sel...\n\nMen! Selen lever...\n\nVi river tarmene ut av den, av var sel...\n\nMen! Selen lever...\n\nVi stikker øynere ut av den, av vår sel...\n\nMen! Selen lever...\n\nVi kjører speedbåt over den, på vår sel...\n\nMen! Selen lever...\n\nCarl Gustaf gråter, för vår sel...",
+			"text": "||: Selen lever, i vår hånd :|| x4\n\nVi stikker hakkapikken i den, i vår sel...\n\nMen! Selen lever...\n\nVi river skinnet av den, av vår sel...\n\nMen! Selen lever...\n\nVi river loffene av den, av vår sel...\n\nMen! Selen lever...\n\nVi river tarmene ut av den, av vår sel...\n\nMen! Selen lever...\n\nVi stikker øynere ut av den, av vår sel...\n\nMen! Selen lever...\n\nVi kjører speedbåt over den, på vår sel...\n\nMen! Selen lever...\n\nCarl Gustaf gråter, för vår sel...",
 			"index": "θ12"
 		}
 	]
@@ -1196,7 +1196,7 @@
 			"title": "Integralkalkylens fader",
 			"author": "Skriven till integralens 300-årsdag 1975-11-11",
 			"melody": "Sveriges fana\nSF1602 Differential- och integralkalkyl II",
-			"text": "Integralkalkylens fader,\nG W Leibniz hette han.\nHan blev trött på att skriva rader\nAv plustecken efter varann.\n\nSå han tänkte:\n\"Das Wort Summe,\nEs beginnt ja mit ein S\".\nOch han sade,\nOch han gjorde\nIntegrationssymbolen av sitt S.\n\nIntegralkalkylens fader\nFick iden för länge se'n,\nDen elfte uti november\nSextonhudra-sjuttifem.\nSe'n det året,\nSe'n den dagen,\nVi skriver det tecknet så.\nOch vi räknar\nOch kalkylerar,\nIntegralens tecken kan en lita på.\n\nOch idag vi tecknet hylla\nDet löser alla problem.\nDet lyckas vår fritid fylla\nMed dx och med dt:n.\nJa, må det leva,\nJa, må det leva\nI många hundrade år.\nSå att våra barn\nOch våra barnbarn\nIntegralens tecken lära får.",
+			"text": "Integralkalkylens fader,\nG W Leibniz hette han.\nHan blev trött på att skriva rader\nAv plustecken efter varann.\n\nSå han tänkte:\n\"Das Wort Summe,\nEs beginnt ja mit ein S\".\nOch han sade,\nOch han gjorde\nIntegrationssymbolen av sitt S.\n\nIntegralkalkylens fader\nFick idén för länge se'n,\nDen elfte uti november\nSextonhudra-sjuttifem.\nSe'n det året,\nSe'n den dagen,\nVi skriver det tecknet så.\nOch vi räknar\nOch kalkylerar,\nIntegralens tecken kan en lita på.\n\nOch idag vi tecknet hylla\nDet löser alla problem.\nDet lyckas vår fritid fylla\nMed dx och med dt:n.\nJa, må det leva,\nJa, må det leva\nI många hundrade år.\nSå att våra barn\nOch våra barnbarn\nIntegralens tecken lära får.",
 			"index": "ι2"
 		},
 		{
@@ -1238,14 +1238,14 @@
 			"title": "ODE till en husvagn",
 			"author": "Första Fulölfesten, 2000",
 			"melody": "Husvagn\nSG1130 Mekanik, baskurs",
-			"text": "Vi har ägnat våren åt en kurs i mekanik,\nprickar, streck och pilar och en massa dynamik.\nVi har haft svårt att fatta vad en svängning innebär\nmen äntligen har vi förstått vad Newtons lagar lär...\n\nMan ska ha husvagn, som sitter fastspänd i en båt,\nman ska ha husvagn, som sedan sjunker och blir våt,\nman ska ha husvagn, som först är odämpad och fri,\nman ska ha husvagn, nu så fattar vi!\n\nMan tänker sig en vagn med massan m och så en fjäder\nsom står på däcket på en båt som seglar i hårt väder.\nNär båten gungar skapas det en svängningsekvation,\noch vattnet som sen strömmar in ger stark viskös friktion.\n\nMan ska ha husvagn, då kommer man att räkna rätt,\nman ska ha husvagn, för då kan resten inses lätt,\nman ska ha husvagn, det är ett bra svängningssystem,\nman ska ha husvagn i sina problem!\n\nm x prick prick + c x prick + k x är m g\nx prick är A ω-n cos ωn t\nτ är lika med 2 π genom ω-n,\ndär ω-n är roten ur k genom m.\n\nMan ska ha husvagn, det är en bild som är konkret,\nman ska ha husvagn, men för en hög viskositet\nska man ha honung - det ger ett ζ som är högt,\nman ska ha honung - för det är kladdigt, mjukt och sött!",
+			"text": "Vi har ägnat våren åt en kurs i mekanik,\nprickar, streck och pilar och en massa dynamik.\nVi har haft svårt att fatta vad en svängning innebär\nmen äntligen har vi förstått vad Newtons lagar lär...\n\nEn ska ha husvagn, som sitter fastspänd i en båt,\nen ska ha husvagn, som sedan sjunker och blir våt,\nen ska ha husvagn, som först är odämpad och fri,\nen ska ha husvagn, nu så fattar vi!\n\nEn tänker sig en vagn med massan m och så en fjäder\nsom står på däcket på en båt som seglar i hårt väder.\nNär båten gungar skapas det en svängningsekvation,\noch vattnet som sen strömmar in ger stark viskös friktion.\n\nEn ska ha husvagn, då kommer en att räkna rätt,\nen ska ha husvagn, för då kan resten inses lätt,\nen ska ha husvagn, det är ett bra svängningssystem,\nen ska ha husvagn i sina problem!\n\nm ẍ + c ẋ + k x är m g\nẋ är A ωₙ cos ωₙ t\nτ är lika med 2 π genom ωₙ,\ndär ωₙ är roten ur k genom m.\n\nEn ska ha husvagn, det är en bild som är konkret,\nen ska ha husvagn, men för en hög viskositet\nska man ha honung det ger ett ζ som är högt,\nen ska ha honung för det är kladdigt, mjukt och sött!",
 			"index": "ι8"
 		},
 		{
 			"title": "Matlab",
 			"author": "Uppsala teknologers sångbok",
 			"melody": "Husvagn\nDN1240 Numeriska metoder, grundkurs II",
-			"text": "Jag har prövat nästan allt som finns att pröva på:\nKulram, fingrar, räknesticka, tärning eller så.\nJag har kalkylerat på de konstigaste sätt\nmen nu så har jag kommit på hur man ska räkna rätt.\n\nMan ska ha MATLAB - då är kalkylen redan klar.\nMan ska ha MATLAB - det har jag sett att andra har.\nMan ska ha MATLAB - det är min livsfilosofi.\nMan ska ha MATLAB - för då blir en fri.\n\nI många år så var jag inte alls så särskilt lärd.\nJag visste ej vad som vänta' mig i denna stora värld.\nMen sedan jag till NADA kom, och ända sedan dess\nså har jag funnit livets stora lyxdelikatess.\n\nMan ska ha MATLAB - så att man slipper tänka alls.\nMan ska ha MATLAB - ja, då går allting som en vals.\nMan ska ha MATLAB - det bygger på nån slags logik.\nMan ska ha MATLAB - för då blir man rik.\n\n5 minuter mekanik, 5 minuter statfys.\n5 minuter kvantfysik, 5 minuter analys.\n5 minuter fråga propp, 5 minuter kolla opp.\n5 minuter tänka själv och sedan tar det stopp.\n\nMan ska ha MATLAB - och datasalens friska luft.\nMan ska ha MATLAB - det tycker tjejerna är tufft.\nMan ska ha MATLAB - när Ryssen kommer med sitt MIG\nMan ska ha MATLAB - då vinner man i krig",
+			"text": "Jag har prövat nästan allt som finns att pröva på:\nKulram, fingrar, räknesticka, tärning eller så.\nJag har kalkylerat på de konstigaste sätt\nmen nu så har jag kommit på hur en ska räkna rätt.\n\nEn ska ha MATLAB, då är kalkylen redan klar.\nEn ska ha MATLAB, det har jag sett att andra har.\nEn ska ha MATLAB, det är min livsfilosofi.\nEn ska ha MATLAB, för då blir en fri.\n\nI många år så var jag inte alls så särskilt lärd.\nJag visste ej vad som vänta’ mig i denna stora värld.\nMen sedan jag till NADA kom, och ända sedan dess\nså har jag funnit livets stora lyxdelikatess.\n\nEn ska ha MATLAB, så att en slipper tänka alls.\nEn ska ha MATLAB, ja, då går allting som en vals.\nEn ska ha MATLAB, det bygger på nån slags logik.\nEn ska ha MATLAB, för då blir en rik.\n\n5 minuter mekanik, 5 minuter statfys,\n5 minuter kvantfysik, 5 minuter analys,\n5 minuter fråga propp, 5 minuter kolla opp,\n5 minuter tänka själv och sedan tar det stopp.\n\nEn ska ha MATLAB, och datasalens friska luft.\nEn ska ha MATLAB, det tycker studenterna är tufft.\nEn ska ha MATLAB, när Ryssen kommer med sitt MIG.\nEn ska ha MATLAB, då vinner en i krig.",
 			"index": "ι9"
 		},
 		{

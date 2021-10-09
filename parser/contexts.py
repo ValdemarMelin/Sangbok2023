@@ -22,6 +22,7 @@ LW_CTX.add_context_category(
         ms.MacroSpec("mel", "{"),
         ms.MacroSpec("auth", "{"),
         ms.MacroSpec("course", "{"),
+        ms.MacroSpec("instruction", "{"),
         ms.MacroSpec("digitalonly", "{"),
         ms.MacroSpec("physicalonly", "{"),
 
@@ -52,6 +53,6 @@ L2T_CTX.add_context_category(
         l2t.EnvironmentTextSpec("minipage", simplify_repl=r'%(body)s'),
     ],
     specials=[
-        # l2t.SpecialsTextSpec('\n', ""), # Ignore line-breaks? (Doesn't work.)
+        # l2t.SpecialsTextSpec('_2', "₂"), # Fungerar ej.
     ],
 )

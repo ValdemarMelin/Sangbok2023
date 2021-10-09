@@ -27,5 +27,5 @@ jobs:
           name: out.json
           path: parser/out.json
       - name: Compare output to target
-        run: python3 conmpare.py
+        run: python3 compare.py
         working-directory: parser
