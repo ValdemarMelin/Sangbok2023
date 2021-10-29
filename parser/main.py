@@ -102,12 +102,17 @@ def recurse_node(node, chapter, song) -> (Chapter, Song):
 
 L2T = l2t.LatexNodes2Text(L2T_CTX)
 
+def mathChars(s: str) -> str:
+    return s.replace("_2", "₂").replace("^2", "²").replace("^3", "³").replace("^∘","°").replace("_n", "ₙ") # TODO: Do some other way
+
 def parse_singular_macro_node(node: lw.LatexMacroNode) -> str:
-    return L2T.node_to_text(node.nodeargd.argnlist[0]).replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
+    return mathChars(L2T.node_to_text(node.nodeargd.argnlist[0]).replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n"))
 
 def parse_song_lyrics(node: lw.LatexEnvironmentNode) -> str:
-    out = L2T.node_to_text(node).strip().replace(" \n", "\n").replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
-    out = out.replace("_2", "₂").replace("^2", "²").replace("^3", "³").replace("^∘","°").replace("_n", "ₙ") # TODO: Do some other way
+    out = L2T.node_to_text(node).strip()
+    out = re.sub(r" +\n", "\n", out)
+    out = out.replace("\n\n\n","\n\n").replace("\n\n\n","\n\n")
+    out = mathChars(out)
     return out
 
 def parse_chapter_title(node: lw.LatexMacroNode) -> Chapter:

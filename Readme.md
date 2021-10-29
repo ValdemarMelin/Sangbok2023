@@ -22,9 +22,6 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Fler ändringar kommer, och det återstår att testa så att resultatet blir likvärdigt.
 
 ## Ändringar per kapitel
-### Visuellt oförändrade kapitel
-* Kappa
-
 ### Mindre layout-ändringar
 * Alfa - Auld lang syne har försumbart ändrat marginalavstånd
 * Beta - har en radbrytnings-bugg på första sidan, som är fixad på ett rätt fult sätt.
@@ -41,6 +38,7 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
         * "slå oss bi" -> "stå oss bi"
         * "han" -> "hen"
         * Fixad typo i "lättingen"
+    * Gud är ickebinär
 * Beta
     * Härjavisan "då värdig" -> "så tuff" (tre stavelser på två toner är lite so-so...)
 * Delta
@@ -67,13 +65,19 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
     * 3 "fårä" -> "får"
     * 7 "nån förnäm" -> "fin", "det kanske" -> "om det"
 * Eta 1 - Vattenfysikalen Shakespeare var 1990 (enl. deras hemsida).
-* Lambda - 9 skrevs av A. de la Halle, inte Hale
+* Lambda
+    * 4 - "när när" -> "när den"
+    * 9 skrevs av A. de la Halle, inte Hale
+* Kappa
+    * 8 - "azur skiftande" -> "azurskiftande"
+    * 10 - "den" -> "en"
 * My
     * 2 - "Osquristina" -> "Osquarulda" (vet inte vilket som är bättre, men har en känsla av att det sistnämnda är vanligare när den väl sjungs)
-    * 7 - justerade pronomenfel "jag" -> "hen", etc.
+    * 7 - "jag" -> "hen", etc.
 * Ny
     * Hallen luta - "alldles" -> "alld'les"
     * Älska dig själv - "dig" -> "dej" (en måste vara konsekvent)
+    * Lumberjack song - Mounties är nu fetstilt (standardisering)
 * Omikron - "bröder" -> "fränder"
 
 <!--TODO: Find mänska -> männ'ska, etc.-->
@@ -106,11 +110,5 @@ Dvs. skillnader mellan den digitala versionen och den fysiska just nu.
 Dvs. texter där vem som sjunger noterats med bokstäver i den digitala, vilket ändrats till fetstilt.
 * Delta 9d, 11g
 
-### Användbar RegEx
-(För manuell ändring till digital version.)
-* `\\huge\{(\w{0,2}(\$.*?\$)?)\s(.*)\}` => `\chaptertitle{$1}{$3}` - kapiteltitel
-* * `\\Large\s([\$]\\[a-z]+?[,\d\.]*?\$[a-z]?)\.\s([^\\]*?)\s?\\{2}` => `\songtitle{$1}{$2}` vanliga låttitlar
-* `\\Large\s([\$]\\[a-z]+?[,\d\.]*?\$[a-z]?)\.\s([^\\]*).*` => `\songtitle{$1}{$2}` - vanliga låttitlar (utan nyrad på slutet)
-* `\\Large\s[\$]\\[\w\/]+?\\[a-z]+?\$\.` - numrerade med specialsymboler
-* `\\Large\so\d+?[a-z]?\. ` - omikron
-* `\\begin\{flushright\}\n?\s{0,8}\\textit\{(.*)\}\n?\\end\{flushright\}` => `\auth{$1}` - upphovsperson
+## Oklarheter:
+* Theta-6 Dom som är nyktra har en oklar radbrytning mitt i harmynta.

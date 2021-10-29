@@ -28,6 +28,9 @@ LW_CTX.add_context_category(
 
         ms.MacroSpec("nysida", r"{{"),
         ms.MacroSpec("sidindex", r"{{"),
+
+        ms.MacroSpec("forsangare", r"{"),
+        ms.MacroSpec("alla", r"{"),
     ],
     environments=[
         ms.EnvironmentSpec("lyrics", ""),
@@ -46,6 +49,8 @@ L2T_CTX.add_context_category(
         l2t.MacroTextSpec("newline", simplify_repl='\n'),
         l2t.MacroTextSpec("newpage", simplify_repl='\n'),
         l2t.MacroTextSpec("includegraphics", simplify_repl=''),
+        l2t.MacroTextSpec("forsangare", simplify_repl=r'F: %(1)s'),
+        l2t.MacroTextSpec("alla", simplify_repl=r'A: %(1)s'),
         # l2t.MacroTextSpec("textbf", simplify_repl=r'<b>%(1)s</b>'), # Disabled in testing
         # l2t.MacroTextSpec("textit", simplify_repl=r'<i>%(1)s</i>'),
     ],
