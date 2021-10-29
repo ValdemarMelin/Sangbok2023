@@ -24,7 +24,6 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 ## Ändringar per kapitel
 ### Visuellt oförändrade kapitel
 * Kappa
-* Omikron
 
 ### Mindre layout-ändringar
 * Alfa - Auld lang syne har försumbart ändrat marginalavstånd
@@ -55,11 +54,13 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
     * Livet är härligt har fått melodin ändrad till "Polyushko-polye" från "Röda kavalleriet".
     * Vodka, vodka - "Från våran stat" -> "vill jag dricka" (mer grammatiskt korrekt), "kamrat" -> "männ'ska" (kamrat är betonat på fel stavelse)
     * 11d - "längst" -> "längs", "ju bättre" -> "blir bättre"
+    * 11f - jätte plask -> jätteplask
     * 13a - "ock" -> "och"
     * 13c - "bröder" -> "vänner", "näsan är röder" -> "näsan den ränner"
-    * 15a - nu "könsneutral" (fårn den digitala versionen).
+    * 15a - delvis könsneutraliserad. Bör ev. neutraliseras ytterligare.
 * Gamma
     * 5 - "Gudagott är ölen på fat." -> "Öl är gudagott att dricka." (Passar bättre med betoningarna)
+    * 7 - nertill -> ner till
 * Epsilon - 9 "enn" -> "en"
 * Theta - 11b har nu kursiv källreferens.
 * Zeta
@@ -73,6 +74,7 @@ För att underlätta parsing, är det bra om saker är standardiserade. Denna br
 * Ny
     * Hallen luta - "alldles" -> "alld'les"
     * Älska dig själv - "dig" -> "dej" (en måste vara konsekvent)
+* Omikron - "bröder" -> "fränder"
 
 <!--TODO: Find mänska -> männ'ska, etc.-->
 

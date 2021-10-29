@@ -35,6 +35,9 @@ class Song:
             "text": self.text,
             "index": self.prefix
         }
+    
+    def toCSVRow(self):
+        return '"{}", "{}", "{}", "{}"'.format(self.prefix,self.title, self.author, self.melody)
 
     # TODO: The below functions are VERY redundant.
     def setLyrics(self, text) -> bool:

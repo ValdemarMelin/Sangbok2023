@@ -31,7 +31,7 @@ LW_CTX.add_context_category(
     ],
     environments=[
         ms.EnvironmentSpec("lyrics", ""),
-        ms.EnvironmentSpec("minipage", "{")
+        ms.EnvironmentSpec("minipage", "[{")
     ]
 )
 

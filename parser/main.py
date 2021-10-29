@@ -24,6 +24,7 @@ def parse(path: str) -> Chapter:
         raw = re.sub(r"\\vspace{\dpt}", r"\n", raw)
         raw = re.sub(r"\\vspace{\d\dpt}", r"\n\n", raw)
         raw = raw.replace('\|', "||")
+        raw = raw.replace('\\\\ \n', '\n')
 
         w = lw.LatexWalker(raw, latex_context=LW_CTX)
         (nodelist, pos, len_) = w.get_latex_nodes(pos=0)
@@ -140,4 +141,7 @@ if __name__ == "__main__":
     with open("out.json", "w") as f:
         info("Exporting to out.json (overwrite mode).")
         f.write("[\n" + ",".join([c.toJSON() for c in chapters if c is not None]) + "\n]")
+    with open("out.csv", "w") as f:
+        info("Exporting to out.csv (overwrite mode).")
+        f.write("\n".join(["\n".join([s.toCSVRow() for s in c.songs]) for c in chapters if c is not None]))
     
