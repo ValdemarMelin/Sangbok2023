@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export TEXINPUTS=::$(pwd)
+export TEXINPUTS=::$(pwd)/../..
 
 # We remove aux files to get a clean compilation.
 rm **/*.aux
