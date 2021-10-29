@@ -19,7 +19,7 @@ jobs:
       - name: Install texlive
         run: sudo apt-get update && sudo apt-get install -y texlive texlive-binaries texlive-fonts-recommended texlive-lang-european texlive-latex-base texlive-latex-extra
       - name: Compile LaTeX
-        run: ./.github/scripts/compile.sh
+        run: .github/scripts/compile.sh
       - name: Archive pdf:s
         uses: actions/upload-artifact@v2
         with:
