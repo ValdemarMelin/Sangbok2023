@@ -31,7 +31,7 @@ class Song:
         return {
             "title": self.title,
             "author": self.author,
-            "melody": "\n".join(filter(lambda x: len(x) > 0, [self.subtitle, self.melody, self.course, self.sheetmusicnotice, self.instruction])),
+            "melody": "\n".join(filter(lambda x: len(x) > 0, ["("+self.subtitle+")" if len(self.subtitle) > 0 else "", self.melody, self.course, self.sheetmusicnotice, self.instruction])),
             "text": self.text,
             "index": self.prefix
         }

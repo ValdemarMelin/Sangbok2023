@@ -69,7 +69,7 @@
 			"title": "Kalmarevisan",
 			"author": "",
 			"melody": "F: Försångare\nA: Alla\nSjungs lämpligen på småländska.",
-			"text": "F: Uti Kalmare stad\nja där finns det ingen kvast\nA: förrän lördagen!\n\nF: Hej dick...\nA: ...hej dack!\nF: Jag slog i...\nA: ...och vi drack!\nF: Hej dickom dickom dack!\nA: Hej dickom dickom dack!\nFör uti Kalmare stad, ja där finns det ingen kvast förrän lördagen!\n\n||: F: När som bonden kommer hem\nA: kommer bondekvinnan ut :|| och är så stor i sin trut.\n\nF: Hej dick...\n\n||: F: Var är pengarna du fått?\nA: Jo, dem har jag supit opp :|| uppå Kalmare slott\n\nF: Hej dick...\n\n||: F: Jag skall mäla dig an\nA: för vår kronbefallningsman :||  och du skall få skam.\n\nF: Hej dick...\n\n||: F: Kronbefallningsmannen vår\nA: satt på krogen i går :|| och var full som ett får.\n\nF: Hej dick...",
+			"text": "F: Uti Kalmare stad\nja där finns det ingen kvast\nA: förrän lördagen!\n\nF: Hej dick...\nA: ...hej dack!\nF: Jag slog i...\nA: ...och vi drack!\n\nF: Hej dickom dickom dack!\nA: Hej dickom dickom dack!\nFör uti Kalmare stad, ja där finns det ingen kvast förrän lördagen!\n\n||: F: När som bonden kommer hem\nA: kommer bondekvinnan ut :||\noch är så stor i sin trut.\n\nF: Hej dick... (etc.)\n\n||: F: Var är pengarna du fått?\nA: Jo, dem har jag supit opp:||\nuppå Kalmare slott\n\nF: Hej dick... (etc.)\n\n||: F: Jag skall mäla dig an\nA: för vår kronbefallningsman :||\n och du skall få skam.\n\nF: Hej dick... (etc.)\n\n||: F: Kronbefallningsmannen vår\nA: satt på krogen i går:||\n och var full som ett får.\n\nF: Hej dick... (etc.)",
 			"index": "β4"
 		},
 		{
@@ -361,7 +361,7 @@
 			"title": "Finsk snapsvisa",
 			"author": "",
 			"melody": "Bör sjungas efter grundliga förberedelser, angivande av ett flertal tonarter med bibehållen taktkänsla.\nHiss-dur, Vivace molto fortissimo con spirito.",
-			"text": "(17 sekunders tystnad)\n        NU!!!",
+			"text": "(17 sekunders tystnad)\n    NU!!!",
 			"index": "δ6a"
 		},
 		{
@@ -430,7 +430,7 @@
 		{
 			"title": "Livet är härligt",
 			"author": "Chalmersspexet Katarina 1959\nDenna sjunges först på alla Chalmerssittningar",
-			"melody": "Röda kavalleriet\nSjunges först svagt, sedan starkt",
+			"melody": "Polyushko-polye\nSjunges först svagt, sedan starkt",
 			"text": "||: Livet är härligt!\nTavaritj, vårt liv är härligt!\nVi alla våra små bekymmer glömmer\nnär vi har fått en tår på tanden, skål!\nTag dig en vodka!\nTavaritj, en liten vodka!\nGlasen i botten vi tillsammans tömmer!\n\n1: Det kommer mera efter ha-a-and. :||\n\n2: Det kommer mera efter hand!",
 			"index": "δ8a"
 		},
@@ -876,7 +876,7 @@
 		{
 			"title": "Punschen kommer",
 			"author": "",
-			"melody": "Glada änkan\n(Sjungs medan punschen serveras, under det att man gungar vänster-höger, framåt-bakåt och uppåt-nedåt\nDen som fått sin punsch slutar sjunga)",
+			"melody": "Glada änkan\n(Sjungs medan punschen serveras, under det att en gungar vänster-höger, framåt-bakåt och uppåt-nedåt\nDen som fått sin punsch slutar sjunga)",
 			"text": "Punschen kommer, punschen kommer,\nljuv och sval.\nGlasen imma, röster stimma,\ni vår sal.\nSkål för glada minnen,\nskål för varje vår!\nInga sorger finnas mer\nnär punsch vi får.",
 			"index": "ζ1"
 		},
@@ -1549,7 +1549,7 @@
 		},
 		{
 			"title": "Madrigal",
-			"author": "A. de la Hale",
+			"author": "A. de la Halle",
 			"melody": "",
 			"text": "Kom, du ljuva hjärtevän!\nSkall jag vänta länge än?\n||: Längtan mig förbränner,\nHjärtevän! :||\n\nMånens skiva blank och rund\nGlider fram i nattens stund.\n||: Du, du är mitt hjärtas\nEnda tröst. :||\n\nLiksom rosen skär och ren,\nslår du ut i solens sken.\n||: Kom, kom du min ljuva\nHjärtevän! :||",
 			"index": "λ9"

@@ -34,7 +34,8 @@ LW_CTX.add_context_category(
     ],
     environments=[
         ms.EnvironmentSpec("lyrics", ""),
-        ms.EnvironmentSpec("minipage", "[{")
+        ms.EnvironmentSpec("minipage", "[{"),
+        ms.EnvironmentSpec("subfigure", "{"),
     ]
 )
 
@@ -56,6 +57,7 @@ L2T_CTX.add_context_category(
     ],
     environments=[
         l2t.EnvironmentTextSpec("minipage", simplify_repl=r'%(body)s'),
+        l2t.EnvironmentTextSpec("subfigure", simplify_repl=r'%(body)s'),
     ],
     specials=[
         # l2t.SpecialsTextSpec('_2', "₂"), # Fungerar ej.
