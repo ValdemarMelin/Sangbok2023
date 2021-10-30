@@ -1,4 +1,4 @@
-\documentclass[a6paper,10pt]{article}
+\documentclass[a6paper, 10pt, twoside]{article}
 %\usepackage[T1]{fontenc}
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,19 +7,20 @@
 \usepackage{wrapfig}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{sidspaltHack}
-
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
-
+\usepackage{digital}
 
 \setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.47in}
 \setlength{\textwidth}{215pt}
 
 \pagestyle{empty}
 
 
+% TODO: Varför är inte det här i alfa-kapitlet?
+% TODO: Right-side margin error
 \begin{document}
 \nysida{2}{}\noindent
-9. Gyckel bör framföras åtminstone av varje grupp på festen. Exempel på grupper är nämnder, föreningar, festlag, n$\emptyset$llegrupp o.d. \\Ett dåligt gyckel är likväl ett gyckel och förtjänar att representeras som sådant.
+9. Gyckel bör framföras åtminstone av varje grupp på festen. Exempel på grupper är nämnder, fören-\\ingar, festlag, n$\emptyset$llegrupp o.d. \\Ett dåligt gyckel är likväl ett gyckel och förtjänar att representeras som sådant.
 \vspace{5pt} \\
 10. En bör inte lämna bordet innan taffeln bryts, vanligtvis med 'O Gamla Klang' eller 'Sista Punschvisan'. Naturligtvis är kortare uppbrott för besök i baren eller sminkrummet fullt acceptabla.\vspace{5pt}   
 11. Visa uppskattning gentemot festfixarna så att de vill arrangera fler fester. Fjäsk går hem.
@@ -38,15 +39,16 @@
 17. Antalet regler skall vara 17.
 
 \nysida{2}{1}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
-\huge{B$\beta$ Visor till gasque}
+\chaptertitlenobr{B$\beta$}{Visor till gasque}
+\small
 \begin{center}
-\Large $\beta1$. Porthos visa (Athos visa) \\ 
-\mel{You can't get a man with a gun}
-\textit{Noter finns i notkapitlet}
+   \songtitle{$\beta1$}{Porthos visa (Athos visa)}
+   \mel{You can't get a man with a gun}
+   \sheetmusicnoticenormal{Noter finns i notkapitlet}
 \end{center}
-\small Jag vill börja gasqua, var fan är min flaska?\\
+\begin{lyrics}
+Jag vill börja gasqua, var fan är min flaska?\\
 Vem i helvete stal min butelj?\\
 Skall törsten mig tvinga, en TT börja svinga\\
 Nej, för fan bara blunda och svälj\\
@@ -58,9 +60,8 @@ Träffar vi välan på någon pub\\
 Och där skall vi festa, blott dricka av det bästa\\
 Utav Whisky och portvin, jag tänker gå hårt in\\
 För att prova på rubb och stubb
-\begin{flushright}
-   \textit{Bergsspexet 1960}
-\end{flushright}
+\end{lyrics}
+\auth{\digitalonly{Tore Norén\\}Bergsspexet 1960}
 %
 %\begin{figure}[!h]
 %\centering
@@ -68,13 +69,13 @@ För att prova på rubb och stubb
 %\end{figure}
 
 \nysida{2}{2}
-\setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\beta2$. Lyft ditt välförsedda glas \\ 
-\mel{Ding dong, merrily on high} 
-\textit{Noter till blandad kör finns i notkapitlet}
+\songtitle{$\beta2$}{Lyft ditt välförsedda glas}
+   \mel{Ding dong, merrily on high} 
+   \sheetmusicnoticenormal{Noter till blandad kör finns i notkapitlet}
 \end{center}
-\small Lyft ditt välförsedda glas, \\
+\begin{lyrics}
+Lyft ditt välförsedda glas, \\
 det är en ljuvlig börda! \\
 Nu har polarna kalas, \\
 i morgon är det lördag! \\
@@ -88,7 +89,9 @@ Nu har polarna kalas, \\
 hör liemannen flämta! \\
 $\|$: Dingedingedinge dingedingedinge \\
 Dingedingedinge ding dong dong \\
-Begravningsklockor klämta. :$\|$ 
+Begravningsklockor klämta. :$\|$
+\end{lyrics}
+\digitalonly{\auth{Medicinarspexet Göteborg 1970}}
 
 \begin{figure}[!h]
 \hfill
@@ -96,18 +99,18 @@ Begravningsklockor klämta. :$\|$
 \end{figure}
 
 \nysida{2}{3}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\beta3$. Härjavisan \\ 
-\mel{Gärdebylåten}
+   \songtitle{$\beta3$}{Härjavisan}
+   \mel{Gärdebylåten}
 \end{center}
-\small Hurra nu ska en äntligen \\få röra på benen,\\
-hela stammen jublar \\och det spritter i grenen.\\
-Tänk att än en gång få spränga fram \\på Brunte i galopp.
+\begin{lyrics}
+Hurra nu ska en äntligen \physicalonly{\\}få röra på benen,\\
+hela stammen jublar \physicalonly{\\}och det spritter i grenen.\\
+Tänk att än en gång få spränga fram \physicalonly{\\}på Brunte i galopp.
 \vspace{5pt}\\
-Din doft o kära Brunte är \\trots brist i hygienen\\
-för en vild mongol\\ minst lika ljuv som syrenen.\\
-Tänk att på din rygg få rida runt \\i stan och spela topp! 
+Din doft o kära Brunte är \physicalonly{\\}trots brist i hygienen\\
+för en vild mongol \physicalonly{\\}minst lika ljuv som syrenen.\\
+Tänk att på din rygg få rida runt \physicalonly{\\}i stan och spela topp! 
 \vspace{5pt}\\
 \textbf{Ja, nu skall vi ut och härja\\
 supa och slåss och svärja,\\
@@ -118,88 +121,83 @@ nu änteligen lär jag\\
 kunna dra nån riktig nytta \\
 av min Hermodskurs i mord. }
 \vspace{5pt}\\
-Ja, mordbränder är klämmiga, \\ta fram fotogenen\\
+Ja, mordbränder är klämmiga, \physicalonly{\\}ta fram fotogenen\\
 eftersläckningen tillhör just de fenomenen,\\
-inom brandmansyrket \\som jag tycker det är nån nytta med.
+inom brandmansyrket \physicalonly{\\}som jag tycker det är nån nytta med.
 \newpage 
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
-Jag målar för mitt inre upp \\den härliga scenen\\
-blodrött mitt i brandgult, \\ej ens prins Eugen, en\\
-lika mustig vy kan måla, \\ens om han målade med sked.
+Jag målar för mitt inre upp \physicalonly{\\}den härliga scenen\\
+blodrött mitt i brandgult, \physicalonly{\\}ej ens prins Eugen, en\\
+lika mustig vy kan måla, \physicalonly{\\}ens om han målade med sked.
 \vspace{5pt}\\
 \textbf{Ja, nu skall vi ut och härja...} 
 \vspace{5pt}\\
-Liksom våra fäder, \\
-vikingarna i Norden\\
-drar vi riket runt \\och super oss under borden.\\
-Brännvinet har blivit \\ett elixir för kropp såväl som själ.
+Liksom våra fäder, \physicalonly{\\}vikingarna i Norden\\
+drar vi riket runt \physicalonly{\\}och super oss under borden.\\
+Brännvinet har blivit \physicalonly{\\}ett elixir för kropp såväl som själ.
 \vspace{5pt}\\
-Känner du dig liten \\och är ynklig på jorden\\
-växer du med supen \\och blir stor uti orden,\\
-slår dig för ditt stolta bröst \\och blir då värdig från hår till häl. 
+Känner du dig liten \physicalonly{\\}och är ynklig på jorden\\
+växer du med supen \physicalonly{\\}och blir stor uti orden,\\
+slår dig för ditt stolta bröst \physicalonly{\\}och blir så tuff från hår till häl. 
 \vspace{5pt}\\
-\textbf{Ja, nu skall vi ut och härja...} 
-\begin{flushright}
-   \textit{Text: Hans Alfredsson \\Lundaspexet Djingis Khan 1954}
-\end{flushright}
+\textbf{Ja, nu skall vi ut och härja...}
+\end{lyrics}
+\auth{Text: Hans Alfredsson \\Lundaspexet Djingis Khan 1954}
 \vspace{-30pt}
 \begin{figure}[!h]
 \includegraphics[width=0.32\textwidth]{rodstuga.png}
 \end{figure}
 
 \nysida{2}{4}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\beta4$. Kalmarevisan \\ 
-\small \textit{Försångare/\textbf{Alla}\\Sjungs lämpligen på småländska.}
+   \songtitle{$\beta4$}{Kalmarevisan}
+   \small{\instruction{\physicalonly{Försångare/\textbf{Alla}}\digitalonly{F: Försångare\\A: Alla}\\Sjungs lämpligen på småländska.}}% TODO: Digitalize
 \end{center}
+\begin{lyrics}
 \begin{figure}[!h]
 \begin{subfigure}{0.55\textwidth}
-\small Uti Kalmare stad\\
-ja där finns det ingen kvast\\
-\textbf{förrän lördagen!}
+\small \forsangare{Uti Kalmare stad\\
+ja där finns det ingen kvast}\\
+\alla{förrän lördagen!}
 \vspace{5pt}\\
-\textit{Hej dick... \\
-\textbf{...hej dack!}\vspace{5pt} \\
-Jag slog i...\\
-\textbf{...och vi drack!}}
-\end{subfigure}
-\begin{subfigure}{0.41\textwidth}
-\includegraphics[width=0.9\textwidth]{kalmarslott3.png}
-\end{subfigure}
-\end{figure}
-\vspace{-5pt}
-\textit{Hej dickom dickom dack!\\
-\textbf{Hej dickom dickom dack!}}\vspace{5pt} \\
-\textbf{För uti Kalmare stad,\\ ja där finns det ingen kvast\\ förrän lördagen!}
+\textit{\forsangare{Hej dick...} \\
+\alla{...hej dack!}\physicalonly{\vspace{5pt}} \\
+\forsangare{Jag slog i...}\\
+\alla{...och vi drack!}}
+\end{subfigure}\begin{subfigure}{0.41\textwidth}\includegraphics[width=0.9\textwidth]{kalmarslott3.png}\end{subfigure}\end{figure}
+\physicalonly{\vspace{-5pt}}
+\textit{\forsangare{Hej dickom dickom dack!}\\
+\alla{Hej dickom dickom dack!\physicalonly{\vspace{5pt}} \\
+För uti Kalmare stad,\physicalonly{\\} ja där finns det ingen kvast \physicalonly{\\}förrän lördagen!}}
 \vspace{5pt} \\
-$\|$: När som bonden kommer hem \\
-\textbf{kommer bondekvinnan ut :$\|$ \\och är så stor i sin trut.}
+$\|$: \forsangare{När som bonden kommer hem} \\
+\alla{kommer bondekvinnan ut :$\|$ \\och är så stor i sin trut.}
 \vspace{5pt} \\
-\textit{Hej dick...} (etc.) 
+\textit{\forsangare{Hej dick...}} (etc.) 
 \vspace{5pt} \\
-$\|$: Var är pengarna du fått?\\
-\textbf{Jo, dem har jag supit opp:$\|$ \\uppå Kalmare slott}
+$\|$: \forsangare{Var är pengarna du fått?}\\
+\alla{Jo, dem har jag supit opp:$\|$ \\uppå Kalmare slott}
 \vspace{5pt} \\
-\textit{Hej dick...} (etc.)
+\textit{\forsangare{Hej dick...}} (etc.) 
 \vspace{5pt} \\
-$\|$:Jag skall mäla dig an\\
-\textbf{för vår kronbefallningsman :$\|$ \\ och du skall få skam.}
-\nysida{2}{5}
-\setlength{\oddsidemargin}{-0.37in}
-\noindent
+$\|$: \forsangare{Jag skall mäla dig an}\\
+\alla{för vår kronbefallningsman :$\|$ \\ och du skall få skam.}
+\nysida{2}{5}\noindent
+\physicalonly{\vspace{5pt}} \\
+\textit{\forsangare{Hej dick...}} (etc.) 
 \vspace{5pt} \\
-\textit{Hej dick...} (etc.)
+$\|$: \forsangare{Kronbefallningsmannen vår} \\
+\alla{satt på krogen i går:$\|$\\ och var full som ett får.}
 \vspace{5pt} \\
-$\|$: Kronbefallningsmannen vår \\
-\textbf{satt på krogen i går:$\|$\\ och var full som ett får.}
-\vspace{5pt} \\
-\textit{Hej dick...} (etc.)
+\textit{\forsangare{Hej dick...}} (etc.) 
+\end{lyrics}
+
 \begin{center}
-\Large $\beta5$. Jag skall festa \\ 
-\mel{Bamse-låten}
+   \songtitle{$\beta5$}{Jag skall festa}
+   \mel{Bamse-låten}
 \end{center}
+\vspace{-3pt}
+\begin{lyrics}
 Jag skall festa, ta det lugnt med spriten,\\
 ha det roligt utan att va' full.\\
 Inte krypa runt med festeliten,\\
@@ -221,20 +219,21 @@ Spyan rinner ner för ylleslipsen,\\
 raviolin torkar i mitt hår.\\
 Vem har lagt mig här i pissoaren,\\
 vems är gaffeln i mitt högra lår?
+\end{lyrics}
 
 \nysida{2}{6}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\beta6$. Emils spritvisa \\ 
-\mel{Snickerboa}
+   \songtitle{$\beta6$}{Emils spritvisa}
+   \mel{Snickerboa}
 \end{center}
+\begin{lyrics}
 Till spritbutiken ränner jag \\
 och bankar på dess port. \\
 Jag vill ha nå't som bränner bra \\
 och gör mig skitfull fort. \\
 Expediten sa: "Godda', \\
 hur gammal kan min herre va'? \\
-Har du nå't leg, ditt jävla drägg?\\ 
+Har du nå't leg, ditt jävla drägg?\\
 Kom hit igen när du fått skägg!" \\
 \newline
 Men detta var ju inte bra \\
@@ -242,15 +241,16 @@ jag vill bli full i kväll. \\
 Då plötsligt en idé fick jag: \\
 de har ju sprit på Shell! \\
 Många flaskor stod där på rad \\
-så nu kan jag bli skitfull och glad.\\ 
+så nu kan jag bli skitfull och glad.\\
 Den röda vätskan rinner ner... \\
 Nu kan jag inte se nå't mer. 
+\end{lyrics}
 
 \nysida{2}{7}
-\setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\beta7$. Hej på er vänner alla \\ 
+   \songtitle{$\beta7$}{Hej på er vänner alla}
 \end{center}
+\begin{lyrics}
 Hej på er vänner alla, \\
 ja vi ska supa tills dess vi falla, \\
 och brännvinslitern, den är för liten, \\
@@ -267,6 +267,7 @@ med tvenne små enkla rader: \\
 som alltid var så glad och goder.\\ 
 Här vilar det en fylletrogen, \\
 som alltid var så glad och goder." 
+\end{lyrics}
 \vspace{35pt} \\
 \begin{figure}[!h]
 \centering
@@ -274,11 +275,11 @@ som alltid var så glad och goder."
 \end{figure}
 
 \nysida{2}{8}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\beta8$. Lille Olle \\ 
-\mel{Katyuscha}
+   \songtitle{$\beta8$}{Lille Olle}
+   \mel{Katyuscha}
 \end{center}
+\begin{lyrics}
 Lille Olle skulle gå på disco, \\
 men han hade inte någon sprit.\\ 
 Lille Olle skaffa' lite hembränt, \\
@@ -306,8 +307,7 @@ Lille Olles hjärna står i lågor, \\
 lille Olle dog av överdos. \\
 \newline
 La lalla la la la ... 
-\nysida{2}{9}
-\setlength{\oddsidemargin}{-0.37in}
+\newpage
 \noindent
 (Långsamt) \\
 Lille Olle sitter nu i himlen, \\
@@ -317,13 +317,14 @@ Lille Olle skaffade en ölback, \\
 capsar nu med Gud och Sankte Per. \\
 \newline
 La lalla la la la ...
-\begin{flushright}
-\textit{Text: Calle Isaksson, D-LiTH}
-\end{flushright}
+\end{lyrics}
+\auth{Text: Calle Isaksson, D-LiTH}
+\sidindex{2}{9}
 \begin{center}
-\Large $\beta9$. Gasqueljäsen \\ 
-\mel{Marseljäsen/de Lisle}
+   \songtitle{$\beta9$}{Gasqueljäsen}
+   \mel{Marseljäsen/de Lisle}
 \end{center}
+\begin{lyrics}
 Vi dricker öl, vi dricker alkohol,\\
 vi dricker mer än vad vi tål!\\
 Det var kaos och dimmigt i Lützen,\\
@@ -340,16 +341,15 @@ $\|$: Drick ur, drick ur\\
 tills det tar slut\\
 1: Vi dricker med bravur! :$\|$\\
 2: Vi super med kultur!
-\begin{flushright}
-\textit{Fysikalen Kristina 1982}
-\end{flushright}
+\end{lyrics}
+\auth{Fysikalen Kristina 1982}
 
 \nysida{2}{10}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\beta10$. Mattevisan \\ 
-\mel{Jag är en liten undulat}
+   \songtitle{$\beta10$}{Mattevisan}
+   \mel{Jag är en liten undulat}
 \end{center}
+\begin{lyrics}
 Jag är en liten teknolog\\
 som har så helvetes svårt,\\
 med all den matten,\\
@@ -360,29 +360,28 @@ Jag vill ha öl och billigt vin.\\
 Kan kalla mig fyllesvin.\\
 Ja, derivata och integraler\\
 de kan ni glömma!
-\begin{flushright}
-\textit{Text: Jan-Ola Vensson, F}
-\end{flushright}
+\end{lyrics}
+\auth{Text: Jan-Ola Vensson, F}
 \vspace{-10pt}
 \begin{center}
-\Large $\beta11$. 37:an \\ 
-\mel{34:an}
+   \songtitle{$\beta11$}{37:an}
+   \mel{34:an}
 \end{center}
+\begin{lyrics}
 Jag har druckit många punschar,\\
- blandat grogg i alla år\\
+blandat grogg i alla år\\
 svept en herrans massa cognac\\
- och vält 100 000 får - VA?!\\
+och vält 100 000 får - VA?!\\
 Fått betongkeps utav rödvin,\\
- haft likör som måltidsdryck\\
+haft likör som måltidsdryck\\
 sabbat Chivas med en Cola, \\
 halsat folköl med en knyck.
 \vspace{5pt} \\
 Men nu e' det slut på halvmesyrer\\
- nu ska blannevattnet bort,\\
+nu ska blannevattnet bort,\\
 här ska rationaliseras, proceduren göras kort.\\
 Fina spriten flödar bäst i strupen utan fint manér,\\
 så helt utan krusiduller går 37:an i magen ner!
-\begin{flushright}
-\textit{Ur Lunds Fysikteknologers sångbok 1999}
-\end{flushright}
+\end{lyrics}
+\auth{Ur Lunds Fysikteknologers sångbok 1999}
 \end{document}

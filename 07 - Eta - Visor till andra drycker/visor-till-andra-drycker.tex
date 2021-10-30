@@ -1,4 +1,4 @@
-\documentclass[a6paper,10pt]{article}
+\documentclass[a6paper, 10pt, twoside]{article}
 %\usepackage[T1]{fontenc}
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,10 +7,10 @@
 \usepackage{wrapfig}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{sidspaltHack}
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
-\newcommand{\notis}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+\usepackage{digital}
 
 \setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.47in}
 \setlength{\textwidth}{215pt}
 
 \pagestyle{empty}
@@ -18,12 +18,14 @@
 \begin{document}
 \nysida{7}{1}
 \noindent
-\huge{H$\eta$ Visor till andra drycker}
+\chaptertitlenobr{H$\eta$}{Visor till andra drycker}
+\small
 \begin{center}
-\Large $\eta1$. Skål för vattnet \\ 
+\songtitle{$\eta1$}{Skål för vattnet} 
 \mel{Rule Britannia}
 \end{center}
-\small I Spanien hör det till god ton och etikett\\
+\begin{lyrics}
+I Spanien hör det till god ton och etikett\\
 att gå omkring och skryta vitt och brett.\\
 De trodde att de skulle slå oss lätt!
 \vspace{5pt}\\
@@ -34,18 +36,17 @@ men vi är de som väger tyngst på havets våg!
 Skål för vattnet, tjoho för H$_2$O!\\
 Skål för ön där bara blyga britter bo!\\
 Skål för vattnet som gör vår flotta stark,\\
-hell allt vatten som ger flyt åt vår monark! 
-\begin{flushright}
-\textit{Vattenfysikalen Shakespeare 1992}
-\end{flushright}
+hell allt vatten som ger flyt åt vår monark!
+\end{lyrics}
+\auth{Vattenfysikalen Shakespeare 1990}
 
 \nysida{7}{2}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\eta2$.  En kan dricka vatten \\
+\songtitle{$\eta2$}{En kan dricka vatten}
 \mel{Vi äro musikanter}
 \end{center}
+\begin{lyrics}
 En kan dricka vatten, \\
 mjölk, och gammalt flott.\\
 Men vi dricker hellre\\
@@ -64,17 +65,16 @@ Vi kan häva ost och vardagsrum.
 Och vi kan supa bomfadderalla,\\
 bomfadderalla, skål på Er alla!\\
 Vi kan supa andra hållet, andra hållet med. 
-\begin{flushright}
-\textit{n$\emptyset$llespexet 1995}
-\end{flushright}
+\end{lyrics}
+\auth{n$\emptyset$llespexet 1995}
 
 \nysida{7}{3}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\eta3$. Nu tar vi rom \\
+\songtitle{$\eta3$}{Nu tar vi rom}
 \mel{Deck the hall}
 \end{center}
+\begin{lyrics}
 Här på skeppet rinner rommen,\\
 lalalalala lalalala!\\
 Rom till varje nyankommen,\\
@@ -92,13 +92,13 @@ ROM och RAM och rom och cola,\\
 lalalalax lägger också rom.\\
 "Rom och mjölke" vill vi vråla.\\
 Allalala vägar bär till rom! 
-\begin{flushright}
-\textit{Fysikalen Shakespeare 1990}
-\end{flushright}
+\end{lyrics}
+\auth{Fysikalen Shakespeare 1990}
 \begin{center}
-\Large $\eta4$. Däj-o \\
+\songtitle{$\eta4$}{Däj-o}
 \mel{Banana boat song}
 \end{center}
+\begin{lyrics}
 $\|$: Däj-o, däääj-o\\
 Daylight come, and me wan' go home. :$\|$\\
 Work all night on a drink of rum.\\
@@ -109,14 +109,15 @@ Daylight come, and me wan' go home
 $\|$: Dääj-o, däääj-o\\
 Daylight come, and me wan' go home :$\|$\\
 Däääj-o! 
+\end{lyrics}
 
 \nysida{7}{5}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\eta5$. Mjölk\\
+\songtitle{$\eta5$}{Mjölk}
 \mel{Trink, trink}
 \end{center}
+\begin{lyrics}
 Mjölk, mjölk vi vill ha mjölk,\\
 det är en underbar dryck.\\
 Mjölk, mjölk vi vill ha mjölk,\\
@@ -125,26 +126,29 @@ Hämta din spann, mjölka din get,\\
 ge mig en klunk utav det.\\
 Slut upp i kampen för helnykterhet.\\
 Mjölk är det bästa jag vet!
+\end{lyrics}
 \begin{figure}[!h]
 \hfill
 \includegraphics[width=0.5\textwidth]{goat.png}
 \end{figure}
 \begin{center}
-\Large $\eta6$. Mjölksång\\
+\songtitle{$\eta6$}{Mjölksång}
 \mel{Mors lilla Olle}
 \end{center}
+\begin{lyrics}
 Vad dom kan göra i vårt mejeri!\\
 Mjölk kan dom tillverka med grejer i.\\
 Lättmjölk och folkmjölk och starkmjölk är bra.\\
 Dom ska vi dricka imorgon, hurra!
+\end{lyrics}
 
 \nysida{7}{7}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\eta7$. Hyllningsvisa till absinten\\
+\songtitle{$\eta7$}{Hyllningsvisa till absinten}
 \mel{Come All Ye Faithful}
 \end{center}
+\begin{lyrics}
 Var är absinten,\\
 illgrön liksom minten,\\
 som skänker galenskap åt var teknolog?
@@ -160,14 +164,15 @@ som ger oss stirrig blick och rufsigt hår,
 dessutom kindfärg liksom August Strindberg.\\
 För att bli kreativa har vi bli'tt addiktiva,\\
 snart blir vi högaktiva; vi tar oss en tår! 
-\notis{Sing-Sing Singers 2000}
+\end{lyrics}
+\auth{Sing-Sing Singers 2000}
 
 \nysida{7}{8}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\eta8$. Schottis på Valhall\\
+\songtitle{$\eta8$}{Schottis på Valhall}
 \end{center}
+\begin{lyrics}
 Opp och hoppa, Tor.\\
 Slå på trumman, bror.\\
 Det är dans här på Valhall i natt.\\
@@ -187,15 +192,16 @@ Vred vart väl Ving-Tor, vakna och vråla.\\
 Brage bråka och Skade hon skrek:
 \vspace{5pt}\\
 Opp och hoppa, Tor... 
-\notis{Ulf Peder Olrog}
+\end{lyrics}
+\auth{Ulf Peder Olrog}
 
 \nysida{7}{9}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\eta9$. Häflåten\\
+\songtitle{$\eta9$}{Häflåten}
 \mel{Midnatt råder}
 \end{center}
+\begin{lyrics}
 Yoghurt, yoghurt,\\
 fyller oss till brädden,\\
 oss till brädden.\\
@@ -203,25 +209,28 @@ Gurglar härligt samman där med grädden,\\
 där med grädden.\\
 Gräddfil kräver att vi törstigt häfver:\\
 Mjölk! Mjölk! Mjölk!
+\end{lyrics}
 \vspace{40pt}
 \begin{center}
-\Large $\eta10$. Kaffe\\
+\songtitle{$\eta10$}{Kaffe}
 \mel{Du ska få min gamla cykel när jag dör}
 \end{center}
+\begin{lyrics}
 Kaffe, kaffe, kaffe,\\
 konjak och likör,\\
 ger åt alla här ett mycket gott humör.\\
 På det ska ni ge er katten,\\
 vi skall sitta hela natten,\\
 dricka kaffe, kaffe, konjak och likör.
+\end{lyrics}
 
 \nysida{7}{11}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\eta11$. Whiskyn\\
+\songtitle{$\eta11$}{Whiskyn}
 \mel{Längtan till landet}
-\end{center} 
+\end{center}
+\begin{lyrics} 
 Whiskyn är förädling utav ölet,\\
 destilleras, lagras flera år.\\
 En mästardryck, full av gamla anor\\
@@ -231,11 +240,13 @@ Drycken njutas bäst uti kristallglas\\
 aldrig mer än fyror på en gång.\\
 En kultiverad dryck som saknar like.\\
 Vi hyllar alla whiskys med en sång.
-\notis{Jan Engshagen, 2011}
+\end{lyrics}
+\auth{Jan Engshagen, 2011}
 \begin{center}
-\Large $\eta12$. 1, 2, 3, Whisky!\\
+\songtitle{$\eta12$}{1, 2, 3, Whisky!}
 \mel{Siffersången (Fem myror)}
-\end{center} 
+\end{center}
+\begin{lyrics} 
 Glenlivet,\\
 Highland Park,\\
 Glegoyne,\\
@@ -249,15 +260,16 @@ Macallan,\\
 Knockando,\\
 Glenfarclas,\\
 Clynelish!
-\notis{Didrik Lundberg, 2011}
+\end{lyrics}
+\auth{Didrik Lundberg, 2011}
 
 \nysida{7}{13}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\eta13$. Kahlua\\
+\songtitle{$\eta13$}{Kahlua}
 \mel{Kalinka}
 \end{center}
+\begin{lyrics}
 Vi söker våra rötter,\\
 dricker allt som rött är.\\
 Upphäver sedan glatt vårt röda tjut.
@@ -271,6 +283,7 @@ med vodka och grädde rör med frenesi.\\
 White Russian, White Russian, \\
 White Russian det bli.\\
 Den dryck som har blivit vårt livselixir. :$\|$
-\notis{Fysikalen Anastasia 2004}
+\end{lyrics}
+\auth{Fysikalen Anastasia 2004}
 
 \end{document}

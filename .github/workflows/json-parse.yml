@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Parse into JSON
+
+# Controls when the workflow will run
+on:
+  push:
+    paths:
+      - '**.tex'
+      - '**.py'
+      - '**/json-parse.yml'
+
+jobs:
+  parse-to-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install pylatexenc
+        run: sudo pip3 install pylatexenc
+      - name: Run JSON converter (experimental)
+        run: python3 main.py
+        working-directory: parser
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: out.json
+          path: parser/out.json
+      - name: Compare output to target
+        run: python3 compare.py
+        working-directory: parser

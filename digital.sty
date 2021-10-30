@@ -1,0 +1,37 @@
+% Denna fil innehåller definitioner av kommandon som används för att enklare kunna generera lyrics.json-filen från tex-filerna.
+% Framöver kan den även med fördel användas för att standardisera sångbokens utseende.
+
+\ProvidesPackage{digital}
+
+%\RequirePackage[T1]{fontenc}
+\RequirePackage{comment}
+
+%
+% Allmänt
+%
+\newcommand{\chaptertitle}[2]{\huge{#1 #2}\\}
+\newcommand{\chaptertitlenobr}[2]{\huge{#1 #2}}
+
+%
+% Sånger
+%
+\newcommand{\songtitle}[2]{\Large{#1. #2}\\}
+\newcommand{\songsubtitle}[1]{\large{#1\\}}
+\newcommand{\songsubtitlelarge}[1]{\Large{#1\\}}
+
+% Två storlekar förekommer på notkapitels-notiser...
+\newcommand{\sheetmusicnoticefootnote}[1]{\footnotesize{\textit{#1}}}
+\newcommand{\sheetmusicnotice}[1]{\small{\textit{#1}}}
+\newcommand{\sheetmusicnoticenormal}[1]{\textit{#1}}
+
+\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
+\newcommand{\auth}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+\newcommand{\course}[1]{\footnotesize{#1\\}} % Mostly used by 9 - iota
+\newcommand{\instruction}[1]{\textit{#1}}
+\newenvironment{lyrics}{}{} % Only for parsing.
+
+\newcommand{\digitalonly}[1]{} % Only visible in the digital version.
+\newcommand{\physicalonly}[1]{#1} % Only visible in physical version.
+
+\newcommand{\forsangare}[1]{#1}
+\newcommand{\alla}[1]{\textbf{#1}}

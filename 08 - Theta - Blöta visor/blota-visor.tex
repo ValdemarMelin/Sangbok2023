@@ -1,4 +1,4 @@
-\documentclass[a6paper,10pt]{article}
+\documentclass[a6paper, 10pt, twoside]{article}
 %\usepackage[T1]{fontenc}
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,10 +7,10 @@
 \usepackage{wrapfig}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{sidspaltHack}
-
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
+\usepackage{digital}
 
 \setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.47in}
 \setlength{\textwidth}{215pt}
 
 \pagestyle{empty}
@@ -18,7 +18,7 @@
 \begin{document}
 \nysida{8}{}
 \noindent
-\huge{$\Theta\theta$ Blöta visor}\\
+\chaptertitle{$\Theta\theta$}{Blöta visor}
 \newline
 \large\textit{\indent Vem jämrar och stönar? Vem grälar och bråkar? Vem skaffar sig onödiga sår och får simmiga ögon? \\
 \indent Den som blir sittande vid glaset, den som kommer för att smaka det kryddade vinet. \\
@@ -32,17 +32,17 @@ hugger som en giftorm. \\
 jag fick stryk men märkte det inte.
 När skall jag vakna?
 Jag vill ha mer!"}
-\begin{flushright}
-\textit{Ordspråksboken 23:29-35}
-\end{flushright}
+\auth{Ordspråksboken 23:29-35}
 
+
+\small % TODO: Scope the above \large tags, so that we don't need renewal of \small here.
 \nysida{8}{1}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\theta1$. Störthärligt full \\ 
+\songtitle{$\theta1$}{Störthärligt full} 
 \mel{Fat mamie Brown}
 \end{center}
-\small Nu har alla lämnat festen och jag \\
+\begin{lyrics}
+Nu har alla lämnat festen och jag \\
 sitter ensam kvar,\\
 ibland groggar, pilsnerflaskor\\
 i en sönderslagen bar.\\
@@ -70,8 +70,7 @@ eller också när jag stod i moraklockan\\
 och var sjuk.
 \vspace{5pt}\\
 \textbf{För jag är störthärligt full...}
-\nysida{8}{2}
-\setlength{\oddsidemargin}{-0.37in}
+\newpage
 \noindent
 Och i morgon när jag vaknar -\\
 med en bergsborr i min kropp,\\
@@ -83,13 +82,14 @@ så jag raglar ut till köket\\
 för en återställare!
 \vspace{5pt}\\
 \textbf{För jag är störthärligt full...}
-\begin{flushright}
-\textit{Hittad på Handels 1981}
-\end{flushright}
+\end{lyrics}
+\auth{Hittad på Handels 1981}
+\sidindex{8}{2}
 \begin{center}
-\Large $\theta2$. Jag var full en gång \\ 
+\songtitle{$\theta2$}{Jag var full en gång} 
 \mel{Flottarkärlek}
 \end{center}
+\begin{lyrics}
 Jag var full en gång för länge se'n. \\
 På knäna kröp jag hem, \\
 varje dike var för mig ett vilohem. \\
@@ -102,16 +102,18 @@ På knäna kröp jag hem \\
 och i sällskap hade jag en elefant. \\
 Elefanten spruta' vatten \\
 och jag trodde det var öl. \\
-Sedan dess har alla kallat mig för knöl -- fylleknöl! 
-\vspace{5pt}\\
+Sedan dess har alla kallat mig för knöl -- fylleknöl!
+\digitalonly{\newline\newline\newline Andra versen kan upprepas med "öl-fylleknöl" utbytt mot "vin-fyllesvin", och sedan "sprit-fylleskit"}
+\end{lyrics}
+\vspace{5pt}\\ % TODO: Digitalize
 \textit{Andra versen kan upprepas med "öl-fylleknöl" utbytt mot \textbf{vin-fyllesvin}, \textbf{sprit-fylleskit} och\\ \textbf{pisang-fylleslang}}
 
 \nysida{8}{3}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\theta3$. Bär ner mig till sjön \\ 
+\songtitle{$\theta3$}{Bär ner mig till sjön} 
 \mel{Bei mir bist du schön}
 \end{center}
+\begin{lyrics}
 $\|$: Bär ner mig till sjön, \\
 bär ner mig till sjön, \\
 jag känner att jag måste i! :$\|$ \\
@@ -144,8 +146,7 @@ så får du torka opp. \\
 Och när du torkat upp, \\
 så kan jag spy igen.!
 
-\nysida{8}{4}
-\setlength{\oddsidemargin}{-0.37in}
+\newpage
 \noindent
 $\|$: Var var jag igår? \\
 Var var jag igår? \\
@@ -154,11 +155,14 @@ Mitt huvud känns så tungt, \\
 jag kan ej andas lugnt. \\
 Hur har jag kommit hem? \\
 Och vem har stoppat mig i säng? 
+\end{lyrics}
 \vspace{10pt}
+\sidindex{8}{4}
 \begin{center}
-\Large $\theta4$. Minne \\ 
+\songtitle{$\theta4$}{Minne} 
 \mel{Memories (Cats)}
 \end{center}
+\begin{lyrics}
 Minne, jag har tappat mitt minne! \\
 Är jag svensk eller finne?\\
 Kommer inte ihåg...
@@ -169,11 +173,13 @@ sådär små alko-hål.\\
 Men besinn' er,\\
 en tätar med det brännvin en får\\
 fastän minnet och helan går. 
+\end{lyrics}
 \vspace{10pt}
 \begin{center}
-\Large $\theta5$. Antisnapsvisa \\ 
+\songtitle{$\theta5$}{Antisnapsvisa} 
 \mel{Sjösala vals}
 \end{center}
+\begin{lyrics}
 Huvudet vi lyfter med ett stön ur vår säng.\\
 Diskmaskin i buken, kanoner i huvudet.\\
 Tungan som en plyschsoffa och yrseln i sväng.\\
@@ -183,13 +189,14 @@ Varför finns det aldrig någon nykter QuArneVal?\\
 O, låt oss somna om så vi slipper våra kval.\\
 Men se, så många supar vi redan kastat upp i sängen:\\
 Renat och Skåne, Svartvinbär och fager Bäsk! 
+\end{lyrics}
 
 \nysida{8}{6}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\theta6$. Dom som är nyktra \\ 
+\songtitle{$\theta6$}{Dom som är nyktra} 
 \mel{Du är den ende}
 \end{center}
+\begin{lyrics}
 Dom som är nyktra,\\
 de har inge' roligt.\\
 Dom har bara ansvar\\
@@ -215,20 +222,19 @@ a brännvinet läcker.\\
 När de tar en hela\\
 ses gommen sig dela.\\
 Så därför är jag hellre rik än harmynt! 
-\begin{center}
-\textit{Vers att sjunga i dur}
-\end{center}
-Det gör det samma var vi må va' gäster.\\
+\begin{center}\textit{Vers att sjunga i dur\digitalonly{:}}\end{center}\physicalonly{
+}Det gör det samma var vi må va' gäster.\\
 Ja, till och med lanthushållningssällskapsfester\\
 kan uthärdas med eau-de-vie\\
 som får månda'n att bli blott en vag utopi.
+\end{lyrics}
 
 \nysida{8}{7}
-\setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\theta7$. Treo-comp\\ 
+\songtitle{$\theta7$}{Treo-comp} 
 \mel{Längtan till landet}
 \end{center}
+\begin{lyrics}
 Morgonstund med smak av döda bävrar\\
 frukostmorgonen är över oss.\\
 Hur vi alla stretar, hur vi vägrar\\
@@ -238,11 +244,13 @@ Snart är dagen här med hemska plågor\\
 huvudvärk, yrsel, elände men,\\
 det finns faktiskt ett glas som dej kan rädda.\\
 Treo-comp vår frälsare och vän. 
+\end{lyrics}
 \vspace{40pt}
 \begin{center}
-\Large $\theta8$. Vit vecka\\ 
+\songtitle{$\theta8$}{Vit vecka} 
 \mel{White christmas}
 \end{center}
+\begin{lyrics}
 Jag drömmer om en vit vecka.\\
 Sju dagar utan alkohol.\\
 Tänk att bara skåla\\
@@ -253,16 +261,15 @@ Jag drömmer om en vit vecka.\\
 Det finns en gräns för vad jag tål.\\
 Jag vill inte ha mera sprit,\\
 så låt nästa vecka vara vit.
-\begin{flushright}
-\textit{Sångarstriden 1992}
-\end{flushright} 
+\end{lyrics}
+\auth{Sångarstriden 1992} 
 
 \nysida{8}{9}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\theta9$. Vi dricka, vi dricka\\ 
+\songtitle{$\theta9$}{Vi dricka, vi dricka} 
 \mel{Tre Pepparkaksgubbar}
 \end{center}
+\begin{lyrics}
 Vi dricka, vi dricka\\
 upp allt som dukas fram.\\
 Först ölen och vinet\\
@@ -271,14 +278,14 @@ Väl runda och goda\\
 vi lämnar vår salong.\\
 Men ramlar ner och somnar sött\\
 i rännstenens schäslong.
-\begin{flushright}
-\textit{David Danowsky (F)}
-\end{flushright}
+\end{lyrics}
+\auth{David Danowsky (F)}
 \vspace{40pt}
 \begin{center}
-\Large $\theta10$. When I get drunker\\
+\songtitle{$\theta10$}{When I get drunker}
 \mel{When I'm 64} 
 \end{center}
+\begin{lyrics}
 When I get drunker, loosing my mind\\
 many beers from now.\\
 Will I still be having me a jolly good time,\\
@@ -288,13 +295,14 @@ don't say you want no more,\\
 'cause we are the singers\\
 and we are the swingers,\\
 join us and you won't get bored.
+\end{lyrics}
 
 \nysida{8}{11}
-\setlength{\oddsidemargin}{-0.37in}
 \begin{center}
-\Large $\theta11a$. Vi ska supa \\
+\songtitle{$\theta11$a}{Vi ska supa}
 \mel{Askungen}
 \end{center}
+\begin{lyrics}
 Vi ska supa, vi ska festa,\\
 vi ska göra vårat bästa,\\
 vi ska låta marken gunga,\\
@@ -304,11 +312,13 @@ vi festar in Norden\\
 och vi ska bara supa, sjunga, \\
 spexa, älska, vara unga.\\
 Imorgon äro alla huven tunga.
+\end{lyrics}
 \begin{center}
 \vspace{20pt}
-\Large $\theta11b$. Härjarens bordsvisa \\
+\songtitle{$\theta11$b}{Härjarens bordsvisa}
 \mel{Askungen}
 \end{center}
+\begin{lyrics}
 Vi ska röja, vi ska härja\\
 vi ska supa, slåss och svärja.\\
 Oss förnöja sisådärja\\
@@ -317,20 +327,19 @@ kan från ett "Bloody-Mary"-a.\\
 Nu änteligen lär ja'\\
 dra någon riktig nytta av\\
 min gamla brännvinsautoklav\\
-och om deet så ska bli min grav\\
+och om det så ska bli min grav\\
 min sprit förtär ja'.
 \vspace{5pt}
 La la la...
-\begin{flushright}
-Bordsvisa Sångarstriden 1985, Lund
-\end{flushright}
+\end{lyrics}
+\auth{Bordsvisa Sångarstriden 1985, Lund}
 
 \nysida{8}{12}
-\setlength{\oddsidemargin}{-0.47in}
 \begin{center}
-\Large $\theta12$. Selen lever \\
+\songtitle{$\theta12$}{Selen lever}
 \mel{He's got the whole world in his hand}
 \end{center}
+\begin{lyrics}
 \textbf{$\|$: Selen lever, i vår hånd :$\|$ x4}
 \vspace{5pt}\\
 Vi stikker hakkapikken i den, i vår sel...
@@ -358,6 +367,7 @@ Vi kjører speedbåt over den, på vår sel...
 \textbf{Men! Selen lever...}
 \vspace{5pt}\\
 Carl Gustaf gråter, för vår sel... 
+\end{lyrics}
 \begin{figure}[!h]
 \hfill 
 \includegraphics[width=0.5\textwidth]{seal.png}
