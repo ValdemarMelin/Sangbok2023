@@ -139,13 +139,14 @@ if __name__ == "__main__":
     chapters: [Chapter] = []
     for d in sorted(os.listdir("..")):
         if d[0:2].isdigit() and 0 < int(d[0:2]) < 16 and os.path.isdir("../"+d):
-            info("Reading chapter {}.".format(int(d[0:2])))
+            info("Parsing chapter {}.".format(d))
             for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
                     chapters.append(parse("../" + d + "/" + f))
-                    if 'minns' in f:
-                        for i in sorted(os.listdir("sigma_inject"), reverse = True):
-                            with open("sigma_inject/"+i, "r") as file:
+                    if os.path.isdir("inject/"+d[0:2]):
+                        for i in sorted(os.listdir("inject/"+d[0:2]), reverse = True):
+                            with open("inject/"+d[0:2]+"/"+i, "r") as file:
+                                info("Injecting: "+i)
                                 chapters[len(chapters)-1].inject(json.load(file))
                         
     with open("out.json", "w") as f:
