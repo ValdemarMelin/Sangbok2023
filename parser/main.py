@@ -147,7 +147,7 @@ if __name__ == "__main__":
                         for i in sorted(os.listdir("inject/"+d[0:2]), reverse = True):
                             with open("inject/"+d[0:2]+"/"+i, "r") as file:
                                 info("Injecting: "+i)
-                                chapters[len(chapters)-1].inject(json.load(file))
+                                chapters[len(chapters)-1].inject(json.load(file), first = i.lower().endswith(".first.json"))
                         
     with open("out.json", "w") as f:
         info("Exporting to out.json (overwrite mode).")

@@ -96,17 +96,20 @@ class Chapter():
         self.prefix = prefix
         self.songs = []
     
-    def __str__(self) -> str: 
+    def __str__(self) -> str:
         return "Chapter: " + self.prefix + " " + self.name + " with " + str(len(self.songs)) + " songs."
 
-    def inject(self, json):
+    def inject(self, json, first = False):
         for jsong in json:
             # TODO: Add more checks
             song = Song(jsong["index"], jsong["title"])
             song.setAuthor(jsong["author"])
             song.setMelody(jsong["melody"])
             song.setLyrics(jsong["text"])
-            self.songs.append(song)
+            if first:
+                self.songs.insert(0, song)
+            else:
+                self.songs.append(song)
     
     def toJSON(self) -> str:
         return json.dumps(self.toDict(), ensure_ascii = False, indent = "\t")
