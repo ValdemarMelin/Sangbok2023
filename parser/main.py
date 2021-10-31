@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, re
+import os, re, json
 from typing import Union
 from utils import warning, info, err
 
@@ -143,6 +143,11 @@ if __name__ == "__main__":
             for f in os.listdir("../"+d):
                 if f.lower().endswith(".tex"):
                     chapters.append(parse("../" + d + "/" + f))
+                    if 'minns' in f:
+                        for i in sorted(os.listdir("sigma_inject"), reverse = True):
+                            with open("sigma_inject/"+i, "r") as file:
+                                chapters[len(chapters)-1].inject(json.load(file))
+                        
     with open("out.json", "w") as f:
         info("Exporting to out.json (overwrite mode).")
         f.write("[\n" + ",".join([c.toJSON() for c in chapters if c is not None]) + "\n]")
