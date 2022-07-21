@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Needs: compare (imagemagick), pdftoppm (poppler-tools), pdflatex (texlive-latex-recommended & texlive-latex-extra)
 
 export TEXINPUTS=::$(pwd)/..
 

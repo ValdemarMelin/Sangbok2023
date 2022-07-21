@@ -56,44 +56,44 @@ jobs:
           path: |
             **/*.pdf-*.png
 
-  compare-pngs-tex:
-    runs-on: ubuntu-latest
-    needs: generate-pngs 
-    name: Compare PNGs to PNGs from original TeX-files
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Fetch generated png:s
-        uses: actions/download-artifact@v2
-        with:
-          name: pngs
-      - name: Compare png:s to original png:s
-        run: ./.github/scripts/img_cmp_tex.sh
-      - name: Archive diff png:s
-        uses: actions/upload-artifact@v2
-        with:
-          name: diff-pngs-tex
-          path: |
-            **/*.diff.png
+  # compare-pngs-tex:
+  #   runs-on: ubuntu-latest
+  #   needs: generate-pngs 
+  #   name: Compare PNGs to PNGs from original TeX-files
+  #   steps:
+  #     - name: Set up Git repository
+  #       uses: actions/checkout@v2
+  #     - name: Fetch generated png:s
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: pngs
+  #     - name: Compare png:s to original png:s
+  #       run: ./.github/scripts/img_cmp_tex.sh
+  #     - name: Archive diff png:s
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: diff-pngs-tex
+  #         path: |
+  #           **/*.diff.png
 
-  compare-pngs-pdf:
-    runs-on: ubuntu-latest
-    needs: generate-pngs
-    name: Compare PNGs to PNGs from original PDF-files
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Fetch generated png:s
-        uses: actions/download-artifact@v2
-        with:
-          name: pngs
-      - name: Compare png:s to original png:s
-        run: ./.github/scripts/img_cmp_pdf.sh
-        env:
-          USE_ORIGINAL_PDFS: true
-      - name: Archive diff png:s
-        uses: actions/upload-artifact@v2
-        with:
-          name: diff-pngs-pdf
-          path: |
-            **/*.diff.png
+  # compare-pngs-pdf:
+  #   runs-on: ubuntu-latest
+  #   needs: generate-pngs
+  #   name: Compare PNGs to PNGs from original PDF-files
+  #   steps:
+  #     - name: Set up Git repository
+  #       uses: actions/checkout@v2
+  #     - name: Fetch generated png:s
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: pngs
+  #     - name: Compare png:s to original png:s
+  #       run: ./.github/scripts/img_cmp_pdf.sh
+  #       env:
+  #         USE_ORIGINAL_PDFS: true
+  #     - name: Archive diff png:s
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: diff-pngs-pdf
+  #         path: |
+  #           **/*.diff.png

@@ -35,11 +35,11 @@
 }
 
 \newcommand\otherchapter[1][gray]{%
-\chaptertext[#1]{\greek{ct}}{\greekspelled{ct}}%
+\chaptertext[#1]{\small{\greek{ct}}}{\small{\greekspelled{ct}}}%
 }
 \newcommand\thischapter{%
 \fill[gray] (-\dx-.5*\w,\y+.4*\ystep) -- (.5*\w,\y+.4*\ystep) -- (.5*\w,\y-.6*\ystep) -- (-\dx-.5*\w,\y-.6*\ystep);
-\chaptertext[white]{\greek{ct}\@song}{\greekspelled{ct}}
+\chaptertext[white]{\small{\greek{ct}\@song}}{\small{\greekspelled{ct}}}
 }
 
 \newcommand\allchapters{%
