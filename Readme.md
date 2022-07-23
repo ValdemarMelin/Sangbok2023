@@ -1,6 +1,23 @@
 # Fysiksektionens sångbok
 
 ## Loggbok
+### Uppdateringar 2022:
+
+Vanliga årliga uppdateringar samt:'
+- Sigma (Visor vi minns)
+  - Albarevisan
+  - En fredagspubrunda
+  - Vi är Fnatt
+  - Bortom Kons förgätmigej
+  - Öppna PyCharm
+- Andra kapitel
+  - Heltal rho (delta 1g)
+  - Systéme Bolaget (iota 25)
+  - Flaggpunschens visa (zeta 11)
+
+Borttagna låtar:
+- FESTU:s Punschvisa (ersatt av Flaggpunschens visa)
+- Självmördarvisan
 
 ### Uppdateringar 2021:
 Förutom de vanliga årliga uppdateringarna har "Matematikhatarvisan" ($$\mu\pi$$) och "Jesus lever" ($$\nu 18$$) införts i sångboken. Kapitlet sigma finns liksom senaste två åren med i sångboken, men saknar detta år innehåll. Tanken är att en ska kunna köpa till detta kapitel åren som kommer och själv sätta in.
@@ -14,8 +31,8 @@ När en ny sångbok skall göras, kopiera hela mappen från föregående år och
 
 #### Ändringar som behöver göras för varje år:
  - Sångbokens årtal på första sidan
- - Ny föhsarlogga 
- - Ändra i Överföhssången utefter kön på Överföhs 
+ - Ny föhsarlogga
+ - Ändra i Överföhssången utefter kön på Överföhs
  - Skriv till senaste årskurs i Årskursernas hederssång
  - (Uppdatera introduktionen)
 
@@ -23,7 +40,7 @@ Kapitlen är fördelade i mappar. I varje mapp finns en .tex-fil tillsammans med
 
 I kapitlet intro-innehåll är innehållsbiten pga bekvämlighet delat i två filer; innehåll och innehåll2. Om något i innehållsförteckningen ska ändras så ändra i dessa filer. Dessa är inkluderade i intro-innehåll.tex.
 
-Mappen med kapitlet noter innehåller alla noter som .pdf och .sib. .sib-filerna är filer för notredigering och kräver ett speciellt program, Sibelius. 
+Mappen med kapitlet noter innehåller alla noter som .pdf och .sib. .sib-filerna är filer för notredigering och kräver ett speciellt program, Sibelius.
 
 När en .pdf-fil för varje kapitel har skapats, lägg alla pdf-filer samlade i en mapp. Totalt ska det vara 18 filer (19 med sigma), om inga kapitel har lags till eller tagits bort. Dessa filer skickas sedan via mail till tryckeriet (US-AB med mailadress <tryck@us-ab.com>). Filerna bör med fördel vara döpta efter vilken ordning de ska komma i och vilken färg de ska ha.
 
