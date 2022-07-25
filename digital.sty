@@ -3,35 +3,47 @@
 
 \ProvidesPackage{digital}
 
-%\RequirePackage[T1]{fontenc}
+%
+% Importera andra paket
+%
 \RequirePackage{comment}
+%\RequirePackage[T1]{fontenc}
 
 %
-% Allmänt
+% Kapitel
 %
-\newcommand{\chaptertitle}[2]{\huge{#1 #2}\\}
-\newcommand{\chaptertitlenobr}[2]{\huge{#1 #2}}
+
+\newcommand{\chaptertitle}[2]{\huge{#1 #2}\\} % Standardformat på kapiteltitel
+\newcommand{\chaptertitlenobr}[2]{\huge{#1 #2}} % Om du verkligen inte kan ha en ny rad på slutet
 
 %
 % Sånger
 %
-\newcommand{\songtitle}[2]{\Large{#1. #2}\\}
-\newcommand{\songsubtitle}[1]{\large{#1\\}}
-\newcommand{\songsubtitlelarge}[1]{\Large{#1\\}}
 
-% Två storlekar förekommer på notkapitels-notiser...
-\newcommand{\sheetmusicnoticefootnote}[1]{\footnotesize{\textit{#1}}}
-\newcommand{\sheetmusicnotice}[1]{\small{\textit{#1}}}
-\newcommand{\sheetmusicnoticenormal}[1]{\textit{#1}}
+% Titlar
+\newcommand{\songtitle}[2]{\Large{#1. #2}\\} % Standardformat på sångtitel
+\newcommand{\songsubtitle}[1]{\large{#1\\}} % Standardformat på undetitel
+\newcommand{\songsubtitlelarge}[1]{\Large{#1\\}} % Om du verkligen behöver ha en stor undertitel
 
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
-\newcommand{\auth}[1]{\begin{flushright}\textit{#1}\end{flushright}}
-\newcommand{\course}[1]{\footnotesize{#1\\}} % Mostly used by 9 - iota
-\newcommand{\instruction}[1]{\textit{#1}}
-\newenvironment{lyrics}{}{} % Only for parsing.
+% Ytterligare instruktioner
+\newcommand{\sheetmusicnotice}[1]{\small{\textit{#1}}} % Notkapitels-notis, standardstorlek
+\newcommand{\sheetmusicnoticefootnote}[1]{\footnotesize{\textit{#1}}} % Liten
+\newcommand{\sheetmusicnoticenormal}[1]{\textit{#1}} % Lite större
 
-\newcommand{\digitalonly}[1]{} % Only visible in the digital version.
-\newcommand{\physicalonly}[1]{#1} % Only visible in physical version.
+\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}} % Definiera melodi
+\newcommand{\course}[1]{\footnotesize{#1\\}} % Vissa låtar (ffa. kapitel 9 - iota) har kurser associerade till dem.
+\newcommand{\instruction}[1]{\textit{#1}} % Instruktion, t.ex. hur den ska framföras, eller vem som sjunger vad.
 
+% Övrigt
+\newcommand{\auth}[1]{\begin{flushright}\textit{#1}\end{flushright}} % Definiera uppovsperson, första framförande, etc.
+\newenvironment{lyrics}{}{} % Tolkas som sångtext av maskininläsaren.
+
+%
+% Differentieringshjälpmedel (tolkas olika av digitala och fysiska versionerna).
+%
+\newcommand{\digitalonly}[1]{} % Innehåll som bara syns i den digitala versionen.
+\newcommand{\physicalonly}[1]{#1} % Innehåll som bara syns i den fysiska versionen.
+
+% Används för att få maskininläsaren att skilja på försångare och resten.
 \newcommand{\forsangare}[1]{#1}
 \newcommand{\alla}[1]{\textbf{#1}}

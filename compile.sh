@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Needs pdflatex
-# Tested on Debian 11 WSL with texlive-base, texlive-latex-extra, texlive-lang-european, texlive-latex-recommended
+# Tested on Debian 11 WSL with pdflatex through: apt install texlive-latex-extra texlive-lang-european
 
 if [[ $*\  != *--logs\ * ]]; then
     echo -e "\e[34mINFO:\e[0m Loggfiler rensas som standard om inte pdfLaTeX stöter på olösliga problem. Använd flaggan --logs för att spara dem."
