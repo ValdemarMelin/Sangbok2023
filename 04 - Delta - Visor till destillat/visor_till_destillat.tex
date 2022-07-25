@@ -1,4 +1,4 @@
-\documentclass[a6paper,10pt]{article}
+\documentclass[a6paper, 10pt, twoside]{article}
 %\usepackage[T1]{fontenc}
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,12 +7,13 @@
 \usepackage{wrapfig}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{sidspaltHack}
+\usepackage{digital}
+
 %\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
 \newcommand{\notis}[1]{\begin{flushright}\textit{#1}\end{flushright}}
 
-
 \setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.47in}
 \setlength{\textwidth}{215pt}
 
 \pagestyle{empty}
@@ -20,9 +21,9 @@
 \begin{document}
 \nysida{4}{}
 \noindent
-\huge{$\Delta\delta$ Visor till destillat}
+\chaptertitlenobr{$\Delta\delta$}{Visor till destillat}
 \vspace{10pt} \\
-\Large Supregler\\
+\Large Supregler\\ % Om du ändrar i denna text, ändra även motsvarande i /parser/inject/04/
 \small 
 Varje människa som vill föra en regelmässig diet i mat och dryck tager sig följande styrketårar.
 
@@ -33,13 +34,12 @@ Nu inträder arbetstiden varunder blott fyllehundar supa. När middagen är serv
 Nu ha vi tedags, men en sann patriot dricker inte denna dryck, som gör magen kvalmig, utan då en sätter sig till spelbordet, tar en sig istället en spelsup, därefter drickes toddy och mellan varje sådan är en berättigad till mellanbindare och äro glasen ej allt för stora drickes tre toddar och följdaktligen tages också två mellanbindare. Vid kvällsmåltiden de tre ordinarie måltidssuparna och då en stiger i sängen bör en ej glömma loppsupen och härmed är dagen till ända. 
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 Dessa 21 supar och 3 toddar äro en måttlig kropps dagliga diet. Likväl kan den vid träget och tröttande arbete förstärkas. En uppfriskar sig då med styrkesupen. Vad därutöver är kan möjligen urarta till rummel och bör därför undvikas. I ovanstående äro emellertid ej inberäknade kyrksupen, tankeställaren, handelssupen och släpsupen.
 \vspace{-5pt}
 \notis{Utdrag ur en pastors anteckningar, 1809.}
 \vspace{-15pt}
 \begin{center}
-\Large De sjutton suparnas intagande
+\Large{De sjutton suparnas intagande}
 \end{center}
 \vspace{-15pt}
 \begin{table}[!h]
@@ -69,16 +69,19 @@ Dessa 21 supar och 3 toddar äro en måttlig kropps dagliga diet. Likväl kan de
 \hline
 \textit{"It's good for two things: degreasing}\\ \textit{engines and killing brain cells."}\\\textit{- Cypher, "The Matrix" (1999)} \\
 \hline
-  \end{tabular}
+  \end{tabular}\
 \end{table}
 
+% TODO: Move to below chapter title
+\small
+
 \nysida{4}{1}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta1$a. Helan går \\ 
+    \songtitle{$\delta1$a}{Helan går}
 \end{center}
-\small Helan går, \\
+\begin{lyrics}
+Helan går, \\
 sjung hopp faderallan lallan lej! \\
 Helan går, \\
 sjung hopp faderallan lej! 
@@ -87,10 +90,12 @@ Och den som inte helan tar, \\
 hen heller inte halvan får. \\
 Helan går (\textit{supen intages})\\
 Sjung hopp faderallan lej! 
+\end{lyrics}
 \begin{center}
-\Large $\delta1$b. Hell and gore \\ 
-\mel{Helan går}
+    \songtitle{$\delta1$b}{Hell and gore} 
+    \mel{Helan går}
 \end{center}
+\begin{lyrics}
 Hell and Gore, \\
 Chung Hop father Allan, Allan ley! \\
 Hell and Gore, \\
@@ -100,24 +105,27 @@ On handsome in the hell and tar \\
 Hell are in the half and four \\
 Hell and Gore! \\
 Chung Hop father Allan ley! 
+\end{lyrics}
 \begin{center}
-\Large $\delta1$c. Et langue d'or\\ 
-\mel{Helan går}
+    \songtitle{$\delta1$c}{Et langue d'or} 
+    \mel{Helan går}
 \end{center}
+\begin{lyrics}
 Et langue d'or, joue haute fadeur a l'an la langue laide! \\
 Et langue d'or, joue haute fadeur a l'an laide! \\
 Octane somme mine te et loitain, \\
 A ni te et leur halle vend fort. \\
 Et langue d'or! \\
 Joue haute fadeur a l'an laide! 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta1$d. Imbelupet \\ 
-\mel{Kors på Idas grav}
+    \songtitle{$\delta1$d}{Imbelupet} 
+    \mel{Kors på Idas grav}
 \end{center}
+\begin{lyrics}
 \small Imbelupet glaset står på bräcklig fot. \\
 Svala pilsnerpavor luta sig därmot. \\
 Men därnere, miserere... 
@@ -145,14 +153,15 @@ sitter djävulen och vrålar på en sept.
 \vspace{5pt} \\
 ...uti magen varm och kvav \\
 sitter djävulen och väser på oktav. 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta1$e. Vem sade ordet "skål"? \\ 
-\mel{Vårvindar friska}
+    \songtitle{$\delta1$e}{Vem sade ordet "skål"?} 
+    \mel{Vårvindar friska}
 \end{center}
+\begin{lyrics}
 Vem sade ordet "skål" här vid bordet,\\
 viskande for det sällskapet kring.\\
 Fattom kristallen, nubben är kall den,\\
@@ -161,26 +170,29 @@ Käraste vänner välkomna hit\\
 känn hur det bränner god akvavit.\\
 Nu lilla hutten går i kaputten\\
 skål lilla tutten, pling, plang, pling.
+\end{lyrics}
 \vspace{60pt}
 \begin{center}
-\Large $\delta1$f. Ubåten \\ 
-\mel{Jazzgossen}
+    \songtitle{$\delta1$f}{Ubåten} 
+    \mel{Jazzgossen}
 \end{center}
+\begin{lyrics}
 Å så kommer det en ångbåt, \\
 och den säger: "Tut-tut-tut!" \\
 Å så kommer det en ubåt, \\
 och den säger: \\
 \textit{(Gurgla nubben) }
+\end{lyrics}
 
 \nysida{4}{2}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta2$a. När helan en tagit \\ 
-\mel{Skånska slott och härresäten}
+    \songtitle{$\delta2$a}{När helan en tagit} 
+    \mel{Skånska slott och härresäten}
 \end{center}
+\begin{lyrics}
 När helan en tagit \\
-och halvan ska förtära, \\
+och halvan ska dricka, \\
 Det är som att kyssa \\
 en nymornad kära. 
 \vspace{5pt} \\
@@ -188,12 +200,14 @@ Ju mera en får, \\
 desto mer vill en ha, \\
 En ensammer jävel \\
 gör alls ingen gla'. 
+\end{lyrics}
 \vspace{60pt}
 \begin{center}
-\Large $\delta2$b. Halvan \\ 
-\mel{Pojkarne}
-\textit{Noter finns i notkapitlet}
+    \songtitle{$\delta2$b}{Halvan} 
+    \mel{Pojkarne}
+    \sheetmusicnoticenormal{Noter finns i notkapitlet}
 \end{center}
+\begin{lyrics}
 Hur länge skall på borden\\ 
 den lilla halvan stå? \\
 Skall snart ej höras orden: \\
@@ -203,23 +217,26 @@ Det ärvda vikingsinne \\
 till supen trår igen, \\
 och helans trogna minne \\
 i halvan går igen.
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta2$c. Angorakatten \\ 
-\mel{Vi går över daggstänkta berg}
+    \songtitle{$\delta2$c}{Angorakatten} 
+    \mel{Vi går över daggstänkta berg}
 \end{center}
+\begin{lyrics}
 Det var en gång en vanlig bonnakatt, fallera, \\
 som älskade en hel-angorakatt, fallera! \\
 Och följden blev en jamare, \\
 men den blev mycket tamare, \\
 för den var blott en halv-an-gor-akatt, fallera. 
+\end{lyrics}
 \begin{center}
-\Large $\delta2$d. Helan gick \\ 
-\mel{Amanda Lundbom}
+    \songtitle{$\delta2$d}{Helan gick} 
+    \mel{Amanda Lundbom}
 \end{center}
+\begin{lyrics}
 Helan gick i vänstra foten, \\
 bom-faderia, faderareralla. \\
 Gudskelov, så vet jag boten, \\
@@ -229,10 +246,12 @@ bom-faderi, faderallanlej \\
 Hugg i! \\
 På nubbar blir en aldrig mätt, \\
 bom-faderi, faderallanlej! 
+\end{lyrics}
 \begin{center}
-\Large $\delta2$e. Helan rasat \\ 
-\mel{Längtan till landet}
+    \songtitle{$\delta2$e}{Helan rasat} 
+    \mel{Längtan till landet}
 \end{center}
+\begin{lyrics}
 Helan rasat ned i våra magar, \\
 sQuvValpar nu på botten mol allen. \\
 I sin ensamhet den bittert klaga: \\
@@ -241,18 +260,19 @@ Snart är halvan här, den härliga supen, \\
 alkoholiskt ren och silverklar, \\
 Dansar som en vårbäck ned genom strupen \\
 Hamnar --- plask! --- i helans budoir. 
+\end{lyrics}
 
 \nysida{4}{3}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta3$a. Nubbekantat \\ 
-\mel{Smedsvisa}
+    \songtitle{$\delta3$a}{Nubbekantat} 
+    \mel{Smedsvisa}
 \end{center}
+\begin{lyrics}
 Att höja en skål kan nog vara rätt \\
 men måttfullhet krävs för att ej halka snett. \\
 Av drycker är tersen särklassigt bäst \\
-som tömmes av vänner på fest. \\
+som tömmes av vänner på fest. \\\digitalonly{\\}
 Så, blott några koppar är allt vi vill ha \\
 och bäska droppar måste det va'. \\
 Men vägen till tersen är ganska lång \\
@@ -260,8 +280,8 @@ så helan vi tar med en gång.
 \vspace{5pt} \\
 Nu har vi väl sagt varandra gutår, \\
 lagt bort våra titlar så gott som det går, \\
-inlett med vår bordspartner konversation, \\
-då strupen vill ha solution. \\
+inlett med vår bordsvän konversation, \\
+då strupen vill ha solution. \\\digitalonly{\\}
 Så, blott några koppar är allt vi vill ha \\
 och bäska droppar måste det va'. \\
 Ty talet gör halsen otroligt torr \\
@@ -270,34 +290,35 @@ så halvan vi tar med en knorr.
 Om vi mot förmodan äter nån mat \\
 så bytes vårt lammkött mot pizza på fat. \\
 Den vådliga rätten får nog stå kvar \\
-istället vi tar oss en klar. \\
+istället vi tar oss en klar. \\\digitalonly{\\}
 Så, blott några koppar är allt vi vill ha \\
 och bäska droppar måste det va'. \\
 Av maten så blir en tjocker och fet \\
 så tersen får bli vår diet. 
-\begin{flushright}
-\textit{Ur det 46:e Bergsspexet KrigEtt}
-\end{flushright}
+\end{lyrics}
+\auth{Ur det 46:e Bergsspexet KrigEtt}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta3$b. Var Osquristina \\ 
-\mel{Te deum (Eurovision-signaturen)}
+    \songtitle{$\delta3$b}{Var Osquristina} 
+    \mel{Te deum (Eurovision-signaturen)}
 \end{center}
+\begin{lyrics}
 Var Osquristina som går på vår sektion \\
 av äldre kollegor lärt en tradition, \\
 att noga se om sin kondition, \\
 Och högra armen ge motion. 
+\end{lyrics}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{nubbe.png}
 \end{figure}
 \begin{center}
-\Large $\delta3$c. Små nubbarna \\ 
-\mel{Små grodorna}
+    \songtitle{$\delta3$c}{Små nubbarna} 
+    \mel{Små grodorna}
 \end{center}
+\begin{lyrics}
 Små nubbarna, små nubbarna \\
 är äckliga att se, \\
 små nubbarna, små nubbarna \\
@@ -307,14 +328,16 @@ Nu tar vi dom, nu tar vi dom, \\
 så slipper vi dom se, \\
 nu tar vi dom, nu tar vi dom, \\
 så slipper vi dom se.
+\end{lyrics}
 
 \nysida{4}{4}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta4$a. Planksaft \\(Längtan till baren) \\ 
-\mel{Längtan till landet}
+    \songtitle{$\delta4$a}{Planksaft}
+    \songsubtitlelarge{(Längtan till baren)}
+    \mel{Längtan till landet}
 \end{center}
+\begin{lyrics}
 Törsten rasar uti våra strupar, \\
 tungan hänger torr och styv och stel. \\
 Men snart vankas stora långa supar, \\
@@ -341,25 +364,28 @@ Låt oss skåla med varandra go' vänner \\
 skål för vår levnads glada hopp. \\
 Törstens eld på nytt i strupen bränner. \\
 Leve livet skål och botten opp! 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta4$b. Brännvin hit\\ 
-\mel{Skära havre}
+    \songtitle{$\delta4$b}{Brännvin hit} 
+    \mel{Skära havre}
 \end{center}
+\begin{lyrics}
 Brännvin hit \\
 och brännvin dit \\
 och brännvin är det bästa. \\
 Och fan den \\
 som brännvin har \\
 och inte bju'r sin nästa. 
+\end{lyrics}
 \vspace{10pt}
 \begin{center}
-\Large $\delta4$c. Gums visa\\ 
-\mel{Skära havre}
+    \songtitle{$\delta4$c}{Gums visa} 
+    \mel{Skära havre}
 \end{center}
+\begin{lyrics}
 \vspace{-5pt}
 Skål, kamrater, \\
 livet är glatt, \\
@@ -367,14 +393,15 @@ och snart förgäta vi sorgen, \\
 Vi söpo igår, \\
 vi supa idag \\
 och tar en sjujäkel i morgon!
+\end{lyrics}
 
 \nysida{4}{5}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta5$a. Fkåne faft\\ 
-\mel{Helan går}
+    \songtitle{$\delta5$a}{Fkåne faft} 
+    \mel{Helan går}
 \end{center}
+\begin{lyrics}
 Fkåne faft, \\
 En fydfvenfk faft med fällfam kraft. \\
 Fkåne faft, \\
@@ -384,17 +411,19 @@ Enf livfluft löfef, fläppef loff, \\
 När fådan faft ferveraf off, \\
 Fmakenf faft \\
 Till landf, till luftf, till havf. 
+\end{lyrics}
 \begin{center}
-\Large $\delta5$b. Mera Skåne\\ 
-\mel{Internationalen}
+    \songtitle{$\delta5$b}{Mera Skåne} 
+    \mel{Internationalen}
 \end{center}
+\begin{lyrics}
 Nu är det dags att taga supen; \\
 den stärker varje svag fysik. \\
 Den rinner ner igenom strupen, \\
 river gott som en tolvtumsspik. 
 \vspace{5pt}\\
 Den är vårt hopp mot gula faran, \\
-vår tröst vid varje beklagd sorg. \\
+vår tröst vid varje bleklagd sorg. \\
 Den stärker oss mot mask i magen, \\
 starkare än Svea borg! 
 \vspace{5pt}\\
@@ -406,15 +435,16 @@ Mera jordar kring månen, \\
 flera månar kring Mars! \\
 Mera marscher till Skåne! \\
 Mer Skåne gubevars, bevars, bevars! 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta5$c. En cyklar för lite\\ 
-\mel{Väda vadmal}
+    \songtitle{$\delta5$c}{En cyklar för lite} 
+    \mel{Väda vadmal}
 \end{center}
 \vspace{-5pt}
+\begin{lyrics}
 En cyklar för lite'. \\
 En röker för mycke' \\
 \textbf{och en är fasen så liberal  \\
@@ -436,15 +466,15 @@ en röker för mycke' \\
 Njut var gudagåva! \\
 Tids nog får en sova.\\
 Ja, det vill jag lova! 
-\begin{flushright}
-\textit{Povel Ramel, 1964}
-\end{flushright}
+\end{lyrics}
+\auth{Povel Ramel, 1964}
 \vspace{-10pt}
 \begin{center}
-\Large $\delta5$d. För att människan\\ 
-\mel{Bä, bä, vita lamm}
+    \songtitle{$\delta5$d}{För att människan} 
+    \mel{Bä, bä, vita lamm}
 \end{center}
 \vspace{-5pt}
+\begin{lyrics}
 För att människan \\
 skall trivas på vår jord \\
 bör hen ständigt ha \\
@@ -454,21 +484,24 @@ en stor, stor sup åt far, \\
 en liten snaps åt mor, \\
 och två små droppar \\
 åt lille, lille bror. 
+\end{lyrics}
 
 \nysida{4}{6}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta6$a. Finsk snapsvisa\\ 
-\textit{\small Bör sjungas efter grundliga förberedelser, angivande av ett flertal tonarter med bibehållen taktkänsla.\\ Hiss-dur, Vivace molto fortissimo con spirito.\\
-(17 sekunders tystnad)}\\
-\Large \textbf{NU!!!}
+\songtitle{$\delta6$a}{Finsk snapsvisa} 
+\instruction{\small Bör sjungas efter grundliga förberedelser, angivande av ett flertal tonarter med bibehållen taktkänsla.\\ Hiss-dur, Vivace molto fortissimo con spirito.\\}
+\begin{lyrics}
+    \textit{\small(17 sekunders tystnad)}\\
+    \Large \textbf{NU!!!}
+\end{lyrics}
 \end{center}
 \begin{center}
-\Large $\delta6$b. Finsk brännvinsvisa\\ 
-\mel{Ratataa ur Povel Ramels film "Ratataa"}
-\textit{\small (bör sjungas med finlänsk brytning. \\ På "Ratataa" drar en i tofsen i mössan.)}
+    \songtitle{$\delta6$b}{Finsk brännvinsvisa} 
+    \mel{Ratataa ur Povel Ramels film "Ratataa"}
+    \instruction{\small (bör sjungas med finlänsk brytning. \physicalonly{\\}På "Ratataa" drar en i tofsen i mössan.)}
 \end{center}
+\begin{lyrics}
 Att dricka brännvin är en sed \\
 som ingen oss har lärt. \\
 Från början vi ej kunde \\
@@ -483,21 +516,24 @@ Ratatataa, med mycket brännvin i. \\
 Ratatataa, ratatataa! \\
 Dricka brännvin gillar jag, \\
 för jag blir så full och glad! 
+\end{lyrics}
 \begin{center}
-\Large $\delta6$c. Sädesfälten\\ 
-\mel{Barndomshemmet}
+    \songtitle{$\delta6$c}{Sädesfälten} 
+    \mel{Barndomshemmet}
 \end{center}
+\begin{lyrics}
 När som sädesfälten böja sig för vinden, \\
 står en jäkel där och böjer dom tillbaks! 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta6$d. Räven\\ 
+    \songtitle{$\delta6$d}{Räven} 
 \end{center}
 \vspace{-15pt}
 \begin{figure}[!h]
+\begin{lyrics}
 \begin{minipage}{0.65\linewidth}
 \small Jag fångade en räv idag, \\
 men räven slank ur näven, \\
@@ -519,13 +555,15 @@ var katten har jag lagt den?
 \begin{minipage}{0.3\linewidth}
 \includegraphics[width=\textwidth]{fox.png}
 \end{minipage}
+\end{lyrics}
 \end{figure}
 \vspace{-15pt}
 \begin{center}
-\Large $\delta6$e. Supen\\ 
-\mel{Räven}
+    \songtitle{$\delta6$e}{Supen} 
+    \mel{Räven}
 \end{center}
 \vspace{-10pt}
+\begin{lyrics}
 Jag fångade en sup idag \\
 men supen slank ur näven, \\
 men lika gla' för det är ja' \\
@@ -544,14 +582,15 @@ Jag fångade en biff idag \\
 men den var seg som kola \\
 och lika seg som den är ja'. \\
 Det är så kul att skåla! 
+\end{lyrics}
 
 \nysida{4}{7}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta7$a. Nu ska vi klämma septen\\ 
-\mel{Nu ska vi skörda linet}
+    \songtitle{$\delta7$a}{Nu ska vi klämma septen} 
+    \mel{Nu ska vi skörda linet}
 \end{center}
+\begin{lyrics}
 Nu skall vi klämma septen gutår, \\
 sjunga en trudelutt om det går. \\
 Tjosan Muhammed, nu är det vår, \\
@@ -560,21 +599,25 @@ julafton är en fredag.
 Klunk-klunk-klunk, klunk-klunk-klunk, \\
 blanda och ge, blanda och ge, \\
 abra kadabra klunk, \\
-julafton är en fredag. \\
+julafton är en fredag. \\\digitalonly{\\}
 \textit{(om och om igen, fortare och fortare)}
+\end{lyrics}
 \begin{center}
-\Large $\delta7$b.Full och galen\\ 
-\mel{Kors på Idas grav (Imbelupet)}
+    \songtitle{$\delta7$b}{Full och galen} 
+    \mel{Kors på Idas grav (Imbelupet)}
 \end{center}
+\begin{lyrics}
 Full och galen med moralen minimal, \\
 ljuder nu signalen till vår bacchanal. \\
 Sensmoralen i lokalen \\
 är att tömma sin pokal \\
 så skandalen i finalen blir total.
+\end{lyrics}
 \begin{center}
-\Large $\delta7$c. Toj hemtegubbar\\ 
-\mel{Hej tomtegubbar}
+    \songtitle{$\delta7$c}{Toj hemtegubbar} 
+    \mel{Hej tomtegubbar}
 \end{center}
+\begin{lyrics}
 $\|$: Toj hemtegubbar gla i slåsen \\
 och låt oss vastiga lura! :$\|$
 \vspace{5pt} \\
@@ -582,21 +625,22 @@ En liten tid vi heva lär \\
 Med möcken hyda och svär bestor, \\
 Toj hemtegubbar gla i slåsen \\
 och låt oss vastiga lura.
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta7$d. Full är bäst\\ 
-\mel{Vi gå över daggstänkta berg}
+    \songtitle{$\delta7$d}{Full är bäst} 
+    \mel{Vi gå över daggstänkta berg}
 \end{center}
+\begin{lyrics}
 Vi som oss för att glupa satt \\
 supa glatt, \\
 ity den som försmår sin första tår \\
 törsta får. \\
 Av längtan vi tryckas, av trängtan att lyckas, \\
-vi nu med bravur häller ur,
-\\eller hur? 
+vi nu med bravur häller ur, \\
+eller hur? 
 \vspace{5pt} \\
 Vi ger tätt som titt strupen sitt, \\
 supen stritt \\
@@ -605,10 +649,12 @@ varm en tår. \\
 Er öven i seder, och söven sen ned er\\ 
 på denna protestbullerfest, \\
 full är bäst! 
+\end{lyrics}
 \begin{center}
-\Large $\delta7$e. Morsgrisar små\\ 
-\mel{Morsgrisar är vi allihopa}
+    \songtitle{$\delta7$e}{Morsgrisar små} 
+    \mel{Morsgrisar är vi allihopa}
 \end{center}
+\begin{lyrics}
 Morsgrisar små ska inte supa \\
 för de stupa allihopa. \\
 Men vi vill ha brännvin fyllt med skupa \\
@@ -618,15 +664,16 @@ Nu med, \textit{(supen tas) }\\
 och nu med. \textit{(tupen sas) }\\
 Nu med, \textit{(schupen tasch) }\\
 och nu med. \textit{(schnaps) }
+\end{lyrics}
 
 \nysida{4}{8}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta8$a. Livet är härligt\\ 
-\mel{Röda kavalleriet}
-\textit{Sjunges först svagt, sedan starkt}
+    \songtitle{$\delta8$a}{Livet är härligt} 
+    \mel{Polyushko-polye}
+    \instruction{Sjunges först svagt, sedan starkt}
 \end{center}
+\begin{lyrics}
 $\|$: Livet är härligt!\\
 Tavaritj, vårt liv är härligt!\\
 Vi alla våra små bekymmer glömmer\\
@@ -638,16 +685,16 @@ Glasen i botten vi tillsammans tömmer!
 1: Det kommer mera efter ha-a-and. :$\|$
 \vspace{5pt}\\
 2: Det kommer mera efter hand! 
-\begin{flushright}
-\textit{Chalmersspexet Katarina 1959\\Denna sjunges först på alla Chalmerssittningar}
-\end{flushright}
+\end{lyrics}
+\auth{Chalmersspexet Katarina 1959\\Denna sjunges först på alla Chalmerssittningar}
 \begin{center}
-\Large $\delta8$b. Vodka, vodka\\ 
-\mel{Stenka Razin}
+    \songtitle{$\delta8$b}{Vodka, vodka} 
+    \mel{Stenka Razin}
 \end{center}
-Vodka, vodka från våran stat, \\
+\begin{lyrics}
+Vodka, vodka vill jag dricka, \\
 jag vill äta kaviar, \\
-$\|$: jag vill älska russkij kamrat, \\
+$\|$: jag vill älska russkij männ'ska, \\
 jag vill spy i samovar :$\|$
 \vspace{5pt}\\
 Vita möss som gå i taket, \\
@@ -657,12 +704,19 @@ ta en sup och allt går väl :$\|$
 \vspace{5pt}\\
 Uppå väggen går en gädda, \\
 med långa ludna, svarta ben, \\
-$\|$:men ni skall inte var rädda, \\
+$\|$: men ni skall inte var rädda, \\
 ta en sup och allt går väl :$\|$
+\digitalonly{
+\\\\\\(Varianter på första versen)
+Falu brännvin - falukorv - falu människa - Faluån
+Whisky - baked beans - Yankee människa - på mina jeans
+En kan också permutera "äta", "älska" och "spy i"
+}
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
+% TODO: Digitalize
 \textit{Varianter på första versen:}
 \vspace{5pt}\\
 Falu brännvin - falukorv - falu - Faluån
@@ -672,18 +726,21 @@ Whisky - baked beans - Yankee - på mina jeans
 En kan också permutera "äta", "älska" och "spy i".
 \vspace{10pt}
 \begin{center}
-\Large $\delta8$c. Så hastigt\\ 
-\mel{Flickan går i ringen}
+    \songtitle{$\delta8$c}{Så hastigt} 
+    \mel{Flickan går i ringen}
 \end{center}
+\begin{lyrics}
 Så hastigt den lilla nubben i strupen försvann, \\
 Så hastigt den lilla nubben i strupen försvann. \\
 Håhå jaja, kommer rafflan idag, \\
 Håhå jaja, kommer rafflan idag? 
+\end{lyrics}
 \vspace{10pt}
 \begin{center}
-\Large $\delta8$d. Gräv ur tundran\\ 
-\mel{Katyuscha}
+    \songtitle{$\delta8$d}{Gräv ur tundran} 
+    \mel{Katyuscha}
 \end{center}
+\begin{lyrics}
 Gräv ur tundran två dussin potäter \\
 låt dem jäsa uti fjorton dar. \\
 $\|$: Modersmjölken för ryssar och sovjeter, \\
@@ -694,20 +751,19 @@ tappa upp på immiga små glas. \\
 Höj sen glasen för fosterlandets välgång, \\
 sjung "Nastrovie" med en mäktig bas. \\
 Höj sen glasen för fosterlandets välgång, \\
-sjung "Nastrovie"... \textit{(supen intages) \\}
+sjung "Nastrovie"... \textit{(supen intages)} \\
 låt glasen gå i kras! 
-\begin{flushright}
-\textit{Ekonomspexet Lenin 1989}
-\end{flushright}
+\end{lyrics}
+\auth{Ekonomspexet Lenin 1989}
 
 \nysida{4}{9}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta9$a. Hyllning till OP Andersson\\ 
-\mel{Lilie Marlene (Gul lyser solen)}
-\textit{(Inte "Vi äro musikanter")}
+    \songtitle{$\delta9$a}{Hyllning till OP Andersson} 
+    \mel{Lilie Marlene (Gul lyser solen)}
+    \instruction{(Inte "Vi äro musikanter")}
 \end{center}
+\begin{lyrics}
 Vi kan dricka Sädes \\
 och vi kan dricka Kron. \\
 Men allra mest vi glädes, \\
@@ -717,11 +773,13 @@ När den gått ned uti vår strup, \\
 så ropas det på nästa sup: \\
 ur svenska hjärtans djup, \\
 ur svenska hjärtans djup. 
+\end{lyrics}
 \vspace{30pt}
 \begin{center}
-\Large $\delta9$b. Tänk om jag hade lilla nubben...\\ 
-\mel{Hej tomtegubbar}
+    \songtitle{$\delta9$b}{Tänk om jag hade lilla nubben...} 
+    \mel{Hej tomtegubbar}
 \end{center}
+\begin{lyrics}
 $\|$: Tänk om jag hade lilla nubben \\
 uppå ett snöre i halsen! :$\|$
 \vspace{5pt}\\
@@ -729,45 +787,47 @@ Och kunde dra den upp och ner \\
 så att den smaka' som många fler! \\
 Tänk om jag hade lilla nubben \\
 uppå ett snöre i halsen 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta9$c. Krök armen\\ 
-\mel{Väva vadmal}
+    \songtitle{$\delta9$c}{Krök armen} 
+    \mel{Väva vadmal}
 \end{center}
+\begin{lyrics}
 Krök armen i vinken, \\
 här vankas det finkel. \\
 Och vanka finkel \\
 och finka vankel \\
 och kröka armen i finkel. \\
 Här vankas det vinkel. 
+\end{lyrics}
 \begin{center}
-\vspace{40pt}
-\Large $\delta9$d. Inre dialog\\ 
-\mel{An der schönen blauen Donau}
-\textit{Försångare / \textbf{Alla}}
+    \vspace{40pt}
+    \songtitle{$\delta9$d}{Inre dialog} 
+    \mel{An der schönen blauen Donau}
+    \instruction{\physicalonly{Försångare/\textbf{Alla}}\digitalonly{F: Försångare\\A: Alla}}
 \end{center}
-Jag vill inte ha - \textbf{en nubbe till!}\\
-Jag mår inte bra - \textbf{en nubbe till!}\\
-Om ni ger mig mer - \textbf{en nubbe till!}\\
-ser jag er som fler - \textbf{en nubbe till!}\\
+\begin{lyrics}
+\forsangare{Jag vill inte ha} - \alla{en nubbe till!}\\
+\forsangare{Jag mår inte bra} - \alla{en nubbe till!}\\
+\forsangare{Om ni ger mig mer} - \alla{en nubbe till!}\\
+\forsangare{ser jag er som fler} - \alla{en nubbe till!}\\
 \vspace{5pt}
-Min mage är sjuk - \textbf{en nubbe till!}\\
-Min hjärna är mjuk - \textbf{en nubbe till!}\\
-\textbf{Jag kan inte tänka så bra,\\
+\forsangare{Min mage är sjuk} - \alla{en nubbe till!}\\
+\forsangare{Min hjärna är mjuk} - \alla{en nubbe till!}\\
+\forsangare{Jag kan inte tänka så bra,\\
 så jag får väl nubben ta - hurra!}\\
-\begin{flushright}
-\textit{Mikael Segersten (E)}
-\end{flushright}
+\end{lyrics}
+\auth{Mikael Segersten (E\digitalonly{-76})}
 
 \nysida{4}{10}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta10$a. Månvisa\\ 
+    \songtitle{$\delta10$a}{Månvisa} 
 \end{center}
+\begin{lyrics}
 När månen vandrar sin tysta ban \\
 och tittar in genom rutan \\
 Då tänker jag att på ljusa dan \\
@@ -775,11 +835,12 @@ då kan jag klara mig utan. \\
 Ja, jag kan klara mig utan måne, \\
 men utan renat och utan Skåne, \\
 det vete f-n, det vete f-n. 
+\end{lyrics}
 \begin{center}
-
-\Large $\delta10$b. Måsen\\
-\mel{Månvisa} 
+    \songtitle{$\delta10$b}{Måsen}
+    \mel{Månvisa} 
 \end{center}
+\begin{lyrics}
 Det satt en mås på en klyvarbom, \\
 och torr i krävan var kräket. \\
 Och torkan brände i skepparns gom, \\
@@ -788,27 +849,30 @@ när de låg där i bleket. \\
 Och skepparn svarte "Jag vill ha OP \\
 om blott jag får, om blott jag får" 
 \vspace{5pt}\\
-Ny lyfte måsen från klyvarbom \\
+Nu lyfte måsen från klyvarbom \\
 och vinden spelar i tågen \\
 och OP:n svalkade skepparns gom. \\
 Jag önskar blott att jag såg 'en. \\
 Så arm och nykter den arme kraken \\
 hen sätter storsegel den krabaten. \\
 Till sjöss hen far och halvan tar. 
+\end{lyrics}
 
 \begin{center}
-\Large $\delta10$c. Den vingklippta måsen\\ 
+    \songtitle{$\delta10$c}{Den vingklippta måsen} 
 \end{center}
+\begin{lyrics}
 Det satt en mås på en klyvarbom\\
 Jag vill ha OP! 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta10$d. JASen\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$d}{JASen} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 Det flög en JAS över Västerbron \\
 men styrsystemet var trasigt. \\
 Piloten sköt ut sig med kanon \\
@@ -816,14 +880,14 @@ för planet svängde så knasigt. \\
 "Jag vill ju uppåt, jag vill ju mer"\\
 men planet svarte: "Jag vill ju ner"\\
 mot alla hjon på Västerbron. 
-\begin{flushright}
-\textit{Dadderiet 1993}
-\end{flushright}
+\end{lyrics}
+\auth{Dadderiet 1993}
 
 \begin{center}
-\Large $\delta10$e. När nubben blänker\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$e}{När nubben blänker} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 När nubben blänker i immigt glas \\
 som hoppets strålande stjärna, \\
 då är det avsett att det ska tas \\
@@ -831,11 +895,13 @@ förutan fruktan och gärna. \\
 Så klang och klingom, så tar vi supen, \\
 den läskar härligt den torra strupen. \\
 Ja, skål gutår, ja, skål gutår! 
+\end{lyrics}
 
 \begin{center}
-\Large $\delta10$f. Moose:en\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$f}{Moose:en} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 Det satt en älg i en klyvartopp,\\
 förklädd i älgjaktens månad.\\
 Befjädrad var hen från tå till topp,\\
@@ -843,14 +909,15 @@ skepparn blev rätt förvånad.\\
 "Jag är en mås, goa skepparn!", ljög den\\
 förklädda älgen, därefter flög den.\\
 Mjukt föll den sen, på skepparen.
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta10$g. När jag är fuller\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$g}{När jag är fuller} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 När jag är fuller, då är jag glad, \\
 fan vet om jag ej är vacker. \\
 Då går jag runt i vår lilla stad, \\
@@ -882,39 +949,42 @@ och avskyr bråk och kravaller. \\
 Min mage krånglar och är ur lag, \\
 och fan ska veta att jag idag \\
 är bakom galler, är bakom galler. 
-\begin{flushright}
-\textit{Sångartäflan 1942}
-\end{flushright}
+\end{lyrics}
+\auth{Sångartäflan 1942}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta10$h. Mesen\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$h}{Mesen} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 Det satt en mes i en klyvarmast,\\
 där sågs hen ragla och svaja.\\
-För trot att frön var hens enda last,\\
+För trots att frön var hens enda last,\\
 var hen nu full som en kaja.\\
 "Vad har du gjort!" hördes skepparn stöna\\
 och mesen svarte: "Jag rökte fröna!\\
 I egen holk, i egen holk"
+\end{lyrics}
 \begin{center}
-\Large $\delta10$i. Musen\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$i}{Musen} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 Det satt en mus i en hushållsost,\\
 och åt och åt utan måtta.\\
 Tills osten blivit en mushåls-ost,\\
 och hen en klotformad råtta.\\
-”Så bra”, sa musen, ”att va en fettboll,\\
+"Så bra", sa musen, "att va en fettboll,\\
 nu kan jag rulla med hast åt rätt håll:\\
-Ostindien! Ostindien!”
+Ostindien! Ostindien!"
+\end{lyrics}
 \begin{center}
-\Large $\delta10$j. Måsens sista sup\\ 
-\mel{Månvisa}
+    \songtitle{$\delta10$j}{Måsens sista sup} 
+    \mel{Månvisa}
 \end{center}
+\begin{lyrics}
 Den mås som satt på en klyvarbom,\\
 den är nu död och begraven\\
 Och skepparn som drack en flaska rom,\\
@@ -922,111 +992,122 @@ hen har nu drunknat i haven.\\
 Så kan det gå om en fått för mycke'\\
 om en för brännvin har fattat tycke.\\
 Vi som har kvar, vi resten tar.
+\end{lyrics}
 
 \nysida{4}{11}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta11$a. Humlorna\\ 
-\mel{Karl Alfred boy}
+    \songtitle{$\delta11$a}{Humlorna} 
+    \mel{Karl Alfred boy}
 \end{center}
+\begin{lyrics}
 Vi äro små humlor vi, bzzz, bzzz. \\
 Vi äro små humlor vi, bzzz, bzzz. \\
 Vi äro små humlor som tar oss en geting. \\
 Vi äro små humlor vi, bzzz, bzzz. 
+\end{lyrics}
 \begin{center}
-\Large $\delta11$b. Fiskarna\\ 
-\mel{Karl Alfred boy}
+    \songtitle{$\delta11$b}{Fiskarna} 
+    \mel{Karl Alfred boy}
 \end{center}
+\begin{lyrics}
 Vi äro små fiskar vi, blubb, blubb. \\
 Vi äro små fiskar vi, blubb, blubb. \\
 Vi äro små fiskar som tar oss en kallsup. \\
 Vi äro små fiskar vi, blubb blubb. 
+\end{lyrics}
 \begin{center}
-\Large $\delta11$c. Änglarna\\ 
-\mel{Karl Alfred boy}
+    \songtitle{$\delta11$c}{Änglarna} 
+    \mel{Karl Alfred boy}
 \end{center}
+\begin{lyrics}
 Vi äro små änglar vi, flax, flax.\\
 Vi äro små änglar vi, flax, flax.\\
 Vi äro små änglar som tar oss en djävel.\\
 Vi äro små änglar vi, flax, flax.
+\end{lyrics}
 \begin{center}
-\Large $\delta11$d. Brännvin är jävligt gott\\
-\mel{Karl Alfred boy}
+    \songtitle{$\delta11$d}{Brännvin är jävligt gott}
+    \mel{Karl Alfred boy}
 \end{center}
+\begin{lyrics}
 Ja, brännvin är jävligt gott. \textit{(bank, bank)}\\
-Ju bättre ju mer en fått. \textit{(bank, bank)}\\
-Det rinner längst halsen, en tappar balansen. \\
+Blir bättre ju mer en fått. \textit{(bank, bank)}\\
+Det rinner längs halsen, en tappar balansen. \\
 Ja, brännvin är jävligt gott! \textit{(bank, bank)}
-
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 Ja, brännvin är jävligt gott. \textit{(bank, bank)}\\
-Ju bättre ju mer en fått. \textit{(bank, bank)}\\
+Blir bättre ju mer en fått. \textit{(bank, bank)}\\
 Men går en i golvet, så där framåt tolv-ett. \\
 Så slår en sig jävligt hårt! \textit{(bank, bank)}
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\delta11$e. En liten fyllhund\\
-\mel{Mors lilla Olle}
+    \songtitle{$\delta11$e}{En liten fyllhund}
+    \mel{Mors lilla Olle}
 \end{center}
+\begin{lyrics}
 En liten fyllhund på krogen satt. \\
 Rosor på kinden - men blicken var matt. \\
 Läpparna små liksom näsan var blå. \\
 Bara jag kunde så skulle jag gå. 
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\delta11$f. Getingen\\
-\mel{Jazzgossen}
+    \songtitle{$\delta11$f}{Getingen}
+    \mel{Jazzgossen}
 \end{center}
+\begin{lyrics}
 Å så kommer det en geting, \\
 genom luften som ett reaplan. \\
 Å hen åker på en snyting, \\
 mitt under röda kran. \\
 Å hen trillar ner i magen, \\
-med ett jätte plask, \\
-jätte plask, jätteplask. \\
+med ett jätteplask, \\
+jätteplask, jätteplask. \\
 Å så blir en lite dragen, \\
 men pigg och rask, \\
 pigg och rask, pigg och rask. 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta11$g. Kalla små nubbar\\ 
-\mel{Kalle på spången}
-\textit{Försångare / \textbf{Alla}}
+    \songtitle{$\delta11$g}{Kalla små nubbar} 
+    \mel{Kalle på spången}
+    \instruction{\physicalonly{Försångare/\textbf{Alla}}\digitalonly{F: Försångare\\A: Alla}}
 \end{center}
-Vad är det som gör \\
-att en skojare trivs? \\
-\textbf{Jo, kalla, kalla, kalla, kalla \\
+\begin{lyrics}
+\forsangare{Vad är det som gör \\
+att en skojare trivs?} \\
+\alla{Jo, kalla, kalla, kalla, kalla \\
 små nubbar. \\}
-Vad är det som först \\
-uppå festen väl givs? \\
-\textbf{Jo, kalla, kalla, kalla, kalla \\
+\forsangare{Vad är det som först \\
+uppå festen väl givs?} \\
+\alla{Jo, kalla, kalla, kalla, kalla \\
 små nubbar. \\}
-Dom skänker oss alla \\
+\forsangare{Dom skänker oss alla \\
 ett solljust humör, \\
 och även för kroppen \\
 stor nytta dom gör. \\
 Men skall en ta nubbar \\
 så regel dom bör \\
-va' kalla. \\
-\textbf{Mycket kalla.\\}
+va' kalla.} \\
+\alla{Mycket kalla.\\}
 Ja, kalla. \\
-\textbf{Mycket kalla.\\
+\alla{Mycket kalla.\\
 Ja, kalla, kalla, kalla, kalla \\
 små nubbar. }
+\end{lyrics}
 
 \nysida{4}{12}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta12$a. Mod i barm\\ 
-\mel{Kungssången}
+    \songtitle{$\delta12$a}{Mod i barm} 
+    \mel{Kungssången}
 \end{center}
+\begin{lyrics}
 Ur svenska hjärtans djup en sup, \\
 en samfälld och en enkel sup \\
 som ger oss mod i barm. \\
@@ -1034,10 +1115,12 @@ I prima äktsvensk alkohol \\
 för svenska folkets höga mål \\
 vi höjer nu vår första skål, \\
 vi ungdoms främsta vän.
+\end{lyrics}
 \begin{center}
-\Large $\delta12$b. Oh Besinna\\ 
-\mel{Oh, Susanna}
+    \songtitle{$\delta12$b}{Oh Besinna} 
+    \mel{Oh, Susanna}
 \end{center}
+\begin{lyrics}
 Smuttans ungar har just runnit ner \\
 uti magens boudoir. \\
 Kommer inte genast något mer, \\
@@ -1045,10 +1128,12 @@ Höres magens kommentar. \\
 Oh besinna, den saken är ju klar, \\
 både tarmvred, magsår och kolik \\
 dunstar bort med lite sprit. 
+\end{lyrics}
 \begin{center}
-\Large $\delta12$c. Mera järn\\ 
-\mel{Milord}
+    \songtitle{$\delta12$c}{Mera järn} 
+    \mel{Milord}
 \end{center}
+\begin{lyrics}
 Vi vill ha mera järn, \\
 vi vill ha flera järn, \\
 ett litet rostfritt, oböjt, \\
@@ -1057,23 +1142,26 @@ Och vi ska böja järn, \\
 och vi ska kröka järn \\
 så att vi har det \\
 flytande i morgon kväll.
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta12$d. Vem kan kröka\\ 
-\mel{Vem kan segla}
+    \songtitle{$\delta12$d}{Vem kan kröka} 
+    \mel{Vem kan segla}
 \end{center}
+\begin{lyrics}
 Vem kan kröka förutan krök? \\
 Vem kan gå utan vingel? \\
 Vem kan skala en stor gul lök, \\
 utan att fälla tårar? 
+\end{lyrics}
 \vspace{40pt}
 \begin{center}
-\Large $\delta12$e. Vem kan hugga\\ 
-\mel{Vem kan segla}
+    \songtitle{$\delta12$e}{Vem kan hugga} 
+    \mel{Vem kan segla}
 \end{center}
+\begin{lyrics}
 Vem kan hugga sig själv i knät? \\
 Vem kan slå sig på tummen? \\
 Vem kan skära i vännen sin, \\
@@ -1093,70 +1181,80 @@ Jag kan ragla förutan vin, \\
 Och visst var jag nykter om våren, \\
 men ej skilja på kron och gin, \\
 efter den elfte tåren.
+\end{lyrics}
 
 \nysida{4}{13}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta13$a. Var redo!\\ 
-\mel{Ur vägen}
+    \songtitle{$\delta13$a}{Var redo!} 
+    \mel{Ur vägen}
 \end{center}
+\begin{lyrics}
 $\|$: Var redo, var redo, \\
 För nu skall supen tas :$\|$\\
-Den gör gott åt kroppen ock åt själen, \\
+Den gör gott åt kroppen och åt själen, \\
 känns ifrån hjässan långt ned i hälen. \\
 Kling, klang, kling, klang, \\
 nu börjar vårt kalas. 
+\end{lyrics}
+\digitalonly{\auth{C.M. Bellman}}
 \vspace{20pt}
 \begin{center}
-\Large $\delta13$b. Till supen så tager en sill\\ 
-\mel{Daggstänkta berg}
+    \songtitle{$\delta13$b}{Till supen så tager en sill} 
+    \mel{Daggstänkta berg}
 \end{center}
+\begin{lyrics}
 Till supen så tager en sill, sill, sill, \\
 men också ansjovis om en vill, vill, vill. \\
 $\|$: Och om en är oviss om sillen är ansjovis, \\
 så tar en bara några supar till, till, till. :$\|$
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\delta13$c. Vi går över ån\\ 
-\mel{Daggstänkta berg}
+    \songtitle{$\delta13$c}{Vi går över ån} 
+    \mel{Daggstänkta berg}
 \end{center}
+\begin{lyrics}
 Vi går över ån efter sprit, fallera!\\
 Men efter vatten går vi ej en bit, fallera!\\
-Ja sup kära bröder\\
-fast näsan är röder,\\
+Ja sup kära vänner\\
+fast näsan den ränner,\\
 en gång så blir den ack va vit, fallera!
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta13$d. Sänkta Lucia\\ 
-\mel{Sankta Lucia}
+    \songtitle{$\delta13$d}{Sänkta Lucia} 
+    \mel{Sankta Lucia}
 \end{center}
+\begin{lyrics}
 Huvet slåt kopparslag, ögonen svider,\\
 i magen obehag, natten den lider.\\
 Då genom strupen går\\
 hembränt en liten tår.\\
 Vördat vare vårat brännvin,\\
 vördat vårt brännvin.
+\end{lyrics}
 \vspace{40pt}
 \begin{center}
-\Large $\delta13$e. Lundströms kök\\ 
-\mel{Ska det verkligen behövas någon melodi?}
+    \songtitle{$\delta13$e}{Lundströms kök} 
+    \mel{Ska det verkligen behövas någon melodi?}
 \end{center}
+\begin{lyrics}
 Trrrrrretton kärringar i Lundströms kök, \\
 i Lundströms kök, i Lundströms kök. \\
 Alla var de fulla utom en som söp, \\
 en som söp sig full, skål! 
+\end{lyrics}
 
 \nysida{4}{14}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta14$a. Solen\\ 
-\mel{Camptown Ladies}
+    \songtitle{$\delta14$a}{Solen} 
+    \mel{Camptown Ladies}
 \end{center}
+\begin{lyrics}
 Solen den går upp och ner, doda, doda! \\
 Jag ska aldrig supa mer, hej doda dej! \\
 Hej doda dej, hej doda dej! \\
@@ -1164,16 +1262,20 @@ Jag ska aldrig supa mer, hej doda dej!
 \vspace{5pt} \\
 Men detta var ju inte sant, doda, doda! \\
 I morgon gör jag likadant, hej doda dej! 
+\end{lyrics}
 \vspace{10pt}
 \begin{center}
-\Large $\delta14$b. Korta solen\\ 
+    \songtitle{$\delta14$b}{Korta solen} 
 \end{center}
+\begin{lyrics}
 Solen den går upp och ner, snapsen den går ner!
+\end{lyrics}
 \vspace{25pt}
 \begin{center}
-\Large $\delta14$c. Old Janx Spirit\\ 
-\mel{When Johnny Comes Marching Home}
+    \songtitle{$\delta14$c}{Old Janx Spirit} 
+    \mel{When Johnny Comes Marching Home}
 \end{center}
+\begin{lyrics}
 Oh don't give me none more of that \\
 Old Janx Spirit! \\
 No, don't you give me none more of that \\
@@ -1184,17 +1286,16 @@ my eyes will fry \\
 and I may die. \\
 Won't you pour me one more \\
 of that sinful Old Janx Spirit. 
-\begin{flushright}
-\textit{Gruvarbetarsång från Orion}
-\end{flushright}
+\end{lyrics}
+\auth{Gruvarbetarsång från Orion}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta14$d. Självmördarvisan\\ 
-\mel{Hej tomtegubbar}
+    \songtitle{$\delta14$d}{Självmördarvisan} 
+    \mel{Hej tomtegubbar}
 \end{center}
+\begin{lyrics}
 Hej, tomtegubbar, vrid på gasen \\
 och ta er själva av daga. \\
 Rödsprit vi hällt i alla glasen \\
@@ -1203,43 +1304,49 @@ Av akvavit en får kolik \\
 och alla tomtar skola-sto-lik. \\
 Hej, tomtegubbar, vrid på gasen \\
 och ta er själva av daga. 
+\end{lyrics}
 \vspace{55pt}
 \begin{center}
-\Large $\delta14$e Hörapparaten\\ 
-\mel{Jenka}
+    \songtitle{$\delta14$e}{Hörapparaten} 
+    \mel{Jenka}
 \end{center}
+\begin{lyrics}
 Brännvin, öl, och gammal finkel \\
 gör att jag jag nu ser i vinkel. \\
 Därför hamnar inte supen (alt. maten) \\
 uti strupen utan i min hörapparat. \\
+\end{lyrics}
 
 \nysida{4}{15}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta15$a. Göken\\ 
-\mel{Räven raskar över isen}
+    \songtitle{$\delta15$a}{Göken} 
+    \mel{Räven raskar över isen}
 \end{center}
+% TODO: Digitalize Lyrics 
 \vspace{-10pt}
+\begin{lyrics}
 \begin{table}[!h]
 \begin{tabularx}{0.85\textwidth}{l l}
-\textbf{\small Osquar:} &\small Och nubben kallas också göken. \\
+\physicalonly{\textbf{\small Osquar:}}\digitalonly{Ett bord:} &\small Och nubben kallas också göken. \\
  &\small Och nubben kallas också göken. \\
  &\small Säg, får jag lov, säg, får jag lov, \\
- &\small att byta byxor med fröken? \\
+ &\small att byta byxor i kröken? \\
 &\\
-\textbf{\small Osqulda:} &\small Nej, det går inte alls, min herre, \\ 
- &\small det går inte alls, min herre. \\
- &\small För jag har, för jag har \\
- &\small inga byxor dessvärre. 
+\physicalonly{\textbf{\small Osqulda:}}\digitalonly{Ett annat bord:} &\small Nej, det går inte alls, mitt herrskap, \\ 
+ &\small det går inte alls, mitt herrskap. \\
+ &\small För se ni har, för se ni har \\
+ &\small ju inga byxor dessvärre. 
 \end{tabularx}
 \end{table}
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\delta15$b. Magen brummar\\ 
-\mel{Broder Jakob}
-\textit{Kanon}
+    \songtitle{$\delta15$b}{Magen brummar} 
+    \mel{Broder Jakob\digitalonly{\\Kanon}}
+    \textit{Kanon} % Not parsed by JSON parser
 \end{center}
+\begin{lyrics}
 Magen brummar. \\
 Jag försummar \\
 hälla dit \\
@@ -1248,14 +1355,15 @@ Nu så ska vi dricka, \\
 så att vi får hicka. \\
 Mera sprit. \\
 Akvavit. 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta15$c. Gammalt brännvin\\ 
-\mel{Gubben Noak}
+    \songtitle{$\delta15$c}{Gammalt brännvin} 
+    \mel{Gubben Noak}
 \end{center}
+\begin{lyrics}
 Gammalt brännvin, \\
 gammalt brännvin \\
 finnes i vårt krus. \\
@@ -1273,34 +1381,39 @@ rinna starka supar. \\
 Ge åt kroppen, \\
 ge åt själen \\
 kraft och frejdigt hopp! 
+\end{lyrics}
 \vspace{50pt}
 \begin{center}
-\Large $\delta15$d. Månen (En gång i månan)\\
-\mel{Mors lilla Olle}
+    \songtitle{$\delta15$d}{Månen (En gång i månan)}
+    \mel{Mors lilla Olle}
 \end{center}
+\begin{lyrics}
 En gång i månan är månen full, \\
 men aldrig jag sett henom ramla omkull. \\
 Stum av beundran hur mycket hen tål, \\
 höja vi glasen och dricka hens skål. 
+\end{lyrics}
 
 \nysida{4}{16}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta16$a. Raj-Raj\\ 
-\mel{Kväsarvalsen}
+    \songtitle{$\delta16$a}{Raj-Raj} 
+    \mel{Kväsarvalsen}
 \end{center}
+\begin{lyrics}
 Ingen har det så bra som jag, \\
 nej, ingen har det så bra som jag, \\
 förutom min vän som, så vitt jag vet, \\
 ligger i sprit uppå Riksmuseet. 
 \vspace{5pt}\\
 Raj-raj-raj... 
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\delta16$b. Tjugotre\\ 
-\mel{Amanda Lundbom}
+    \songtitle{$\delta16$b}{Tjugotre} 
+    \mel{Amanda Lundbom}
 \end{center}
+\begin{lyrics}
 Tjugotre är Bäska Droppar, \\
 bom-faderia, bomfaderaderalla. \\
 skänker liv åt döda kroppar, \\
@@ -1320,17 +1433,16 @@ Bäska Droppar nyttja' han, \\
 Bom-faderi, faderallanlej, Hugg i! \\
 och Lazarus spratt till, minsann, \\
 bom-faderi faderallanlej. 
-\begin{flushright}
-\textit{Carl Nisser, E-80}
-\end{flushright}
+\end{lyrics}
+\auth{Carl Nisser, E-80}
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta16$c. Vikingen\\ 
-\mel{When Johnny Comes Marching Home}
+    \songtitle{$\delta16$c}{Vikingen} 
+    \mel{When Johnny Comes Marching Home}
 \end{center}
+\begin{lyrics}
 En viking älskar livets vand, \\
 hurra, hurra! \\
 Det hastigt i hens svalg försvann, \\
@@ -1346,14 +1458,13 @@ som lik, sig lik. \\
 Och sen när vi vaknar, vi sjunger en bit, \\
 och korkar upp skånes akvavit. \\
 Skål för alla vikingar som kom hit. 
-\begin{flushright}
-\textit{Sångarstriden 1981}
-\end{flushright}
-\newpage\setlength{\oddsidemargin}{-0.37in}
-\begin{center}
-\Large $\delta16$d. Feministvikingen\\ 
-\mel{When Johnny Comes Marching Home}
+\end{lyrics}
+\auth{Sångarstriden 1981}
+\newpage\begin{center}
+    \songtitle{$\delta16$d}{Feministvikingen} 
+    \mel{When Johnny Comes Marching Home}
 \end{center}
+\begin{lyrics}
 En viking viker tvätten själv,\\
 hurra, hurra!\\ 
 Ordet viking härstammar\\ 
@@ -1369,17 +1480,16 @@ vad bra, vad bra! \\
 Mjödet prioriteras sist,\\
 Kök och städ blir aldrig trist,\\ 
 För vår viking han är feminist! 
+\end{lyrics}
 
-\begin{flushright}
-\textit{Hittad av Linn Odelius, F-15}
-\end{flushright}
+\auth{Hittad av Linn Odelius, F-15}
 \nysida{4}{17}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\delta17$a. Uti min mage\\ 
-\mel{Uti vår hage}
+    \songtitle{$\delta17$a}{Uti min mage} 
+    \mel{Uti vår hage}
 \end{center}
+\begin{lyrics}
 Uti min mage en längtan mig tär. \\
 Kom hjärtans fröjd. \\
 Där råder en hunger som ropar så här: \\
@@ -1402,14 +1512,15 @@ Kom Renat och Aqua Vitae. \\
 Kom OP och allt vad sprit e'. \\
 Kom ljuva Genever. \\
 Kom Överste. 
+\end{lyrics}
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\delta17$b. Då verka lätt\\ 
-\mel{Dover Calais}
+    \songtitle{$\delta17$b}{Då verka lätt} 
+    \mel{Dover Calais}
 \end{center}
+\begin{lyrics}
 När jag tar mig en sup \\
 blir jag intressant och djup. \\
 Allting som är svårt \\
@@ -1419,6 +1530,7 @@ All min rädsla går bort \\
 med en grogg av någon sort. \\
 Allting som är svårt \\
 kan då verka lätt! 
+\end{lyrics}
 \vspace{40pt}
 \begin{figure}[!h]
 \centering

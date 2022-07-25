@@ -1,0 +1,4 @@
+Denna mapp innehåller filer som "injiceras" i de sånglistor som parsern genererar.
+Filerna gås igenom i bokstavsordning och läggs till sist i respektive kapitel om inte ändelsen är ".first.json", i vilket fall de läggs till först i kapitlet.
+
+Tanken är att detta endast ska användas för gamla sigma-kapitel som inte finns på det nya, maskinläsbara formatet, men undertecknad har inte orkat implementera inläsning av Vetiquette, Ordningsregler och Supregler, och har därför valt denna fantastiskt fula lösning.

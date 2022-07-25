@@ -1,4 +1,4 @@
-\documentclass[a6paper,10pt]{article}
+\documentclass[a6paper, 10pt, twoside]{article}
 %\usepackage[T1]{fontenc}
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,9 +7,10 @@
 \usepackage{wrapfig}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{sidspaltHack}
-\newcommand{\mel}[1]{\small\textbf{\textit{mel. #1 \\}}}
+\usepackage{digital}
 
 \setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.47in}
 \setlength{\textwidth}{215pt}
 
 \pagestyle{empty}
@@ -17,12 +18,14 @@
 \begin{document}
 \nysida{10}{1}
 \noindent
-\huge{K$\kappa$ Fina visor}
+\chaptertitlenobr{K$\kappa$}{Fina visor}
+\small
 \begin{center}
-\Large $\kappa1$. Festen skall börjas \\ 
+\songtitle{$\kappa1$}{Festen skall börjas} 
 \mel{Vårvindar friska}
 \end{center}
-\small Festen skall börjas, kråset ska smörjas\\
+\begin{lyrics}
+Festen skall börjas, kråset ska smörjas\\
 magen skall få det som den vill ha.\\
 Glasen står fulla, låt sången rulla.\\
 Glädjen skall vara gäst här i da.
@@ -32,6 +35,7 @@ glöm alla sorger, var bara ung.\\
 Glöm morgondagen.\\
 Tänk blott på magen.\\
 Skål alla vänner! Hej och gutår!
+\end{lyrics}
 \vfill
 \begin{figure}[!h]
 \centering
@@ -39,12 +43,12 @@ Skål alla vänner! Hej och gutår!
 \end{figure}
 
 \nysida{10}{2}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa2$. Festvisa \\ 
+\songtitle{$\kappa2$}{Festvisa} 
 \mel{Sjösala vals}
 \end{center}
+\begin{lyrics}
 Årets första fest sker på klassiskt manér,\\
 känn hur glädjen spritter uti kroppen med väldig fart.\\
 Börja lätt med ölen ty den går alltid ner,\\
@@ -55,12 +59,12 @@ om kryddan bränner strupen finns bättre destillat.\\
 Ty punschen kommer ljuv och sval,\\
 läskar ända in i märgen.\\
 Nu ska vi roa oss kungligt till klockan fem.
-\begin{flushright}
-\textit{n$\emptyset$llespexet 2004}%ø
-\end{flushright}
+\end{lyrics}
+\auth{n$\emptyset$llespexet 2004}
 \begin{center}
-\Large $\kappa3$. Sjösala vals \\ 
+\songtitle{$\kappa3$}{Sjösala vals} 
 \end{center}
+\begin{lyrics}
 Rönnerdahl han skuttar med ett skratt ur sin säng.\\
 Solen står på Orrberget. Sunnanvind brusar.\\
 Rönnerdahl han valsar över Sjösala äng.\\
@@ -77,7 +81,6 @@ under vita skjortan som viftar kring vadorna.\\
 Lycklig som en lärka uti majsolens sken,\\
 sjunger han för ekorr'n, som gungar på gren!
 \nysida{10}{3}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 - Kurre, kurre, kurre! Nu dansar Rönnerdahl!\\
 Koko! Och göken ropar uti hans gröna dal\\
@@ -106,20 +109,21 @@ och ekorren och finken och vårens första gök\\
 och blommorna, de blommor som redan \\
 slagit ut på ängen!\\
 Gullviva, mandelblom, kattfot och blå viol. 
-\begin{flushright}
-\textit{Evert Taube}
-\end{flushright}
+\end{lyrics}
+\auth{Evert Taube}
+% TODO: There is a bug where if \nysida is called within the lyrics environment, it stops having an effect after \end{lyrics}
+% Hence we need to renew the sidspaltindex here.
+\sidindex{10}{3}
 
 \nysida{10}{4}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa4$. Änglamark \\ 
+\songtitle{$\kappa4$}{Änglamark} 
 \end{center}
+\begin{lyrics}
 Kalla den änglamarken eller himlajorden om du vill,\\
 jorden vi ärvde och lunden den gröna.\\
-Vildrosor och blåklockor \\
-och lindblommor och kamomill.\\
+Vildrosor och blåklockor \physicalonly{\\}och lindblommor och kamomill.\\
 Låt dem få leva, de är ju så sköna.
 \vspace{5pt}\\
 Låt barnen dansa som änglar kring lönn och alm,\\
@@ -134,23 +138,21 @@ brusa alltjämt mellan fjällar och gran och fur!
 \vspace{5pt}\\
 Kalla den änglamarken eller himlajorden om du vill,\\
 jorden vi ärvde och lunden den gröna.\\
-Vildrosor och blåklockor \\
-och lindblommor och kamomill.\\
+Vildrosor och blåklockor \physicalonly{\\}och lindblommor och kamomill.\\
 Låt dem få leva, de är ju så sköna.
-\begin{flushright}
-\textit{Evert Taube}
-\end{flushright}
+\end{lyrics}
+\auth{Evert Taube}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.4\textwidth]{eagle.png}
 \end{figure}
 
 \nysida{10}{5}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\kappa5$. Fritiof och Carmencita \\ 
+\songtitle{$\kappa5$}{Fritiof och Carmencita} 
 \end{center}
+\begin{lyrics}
 Samborombon, en liten by förutan gata, \\
 den ligger inte långt från Rio de la Plata. \\
 Nästan i kanten av den blåa Atlanten \\
@@ -184,7 +186,6 @@ Säg, Carmencita, det är ändå blott med mig, \\
 säg, som du vill dansa tango. 
 
 \newpage
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 Nej Fritiof, ni förstår musik, \\
 men jag tror inte ni kan stå i en butik \\
@@ -203,22 +204,21 @@ Men min kärlek gör dig rik, \\
 skaffa mig ett jobb i er butik. \\
 Och när vi blir gifta söta ungar skall vi få, \\
 som kan dansa tango.
-\begin{flushright}
-\textit{Evert Taube}
-\end{flushright}
+\end{lyrics}
+\auth{Evert Taube}
 	    
 \nysida{10}{6}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\kappa6$. Än en gång däran \\ 
+\songtitle{$\kappa6$}{Än en gång däran} 
 \end{center}
+\begin{lyrics}
 Än en gång däran, bröder,\\
 än en gång däran,\\
 följom den urgamla seden.\\
 In till sista man, bröder,\\
 in till sista man,\\
-trotsa vi hatet och vreden. \\
+trotsa vi hatet och vreden. \\\digitalonly{\\}
 Blankare vapen sågs aldrig i en här\\
 än dessa glasen, kamrater i gevär!\\
 Än en gång däran, bröder,\\
@@ -230,40 +230,41 @@ livet är så kort,\\
 lek det ej bort, nej var redo!\\
 Kämpa mot allt torrt, systrar,\\
 kämpa mot allt torrt.\\
-Tänk på de gamla som skredo\\
+Tänk på de gamla som skredo\\\digitalonly{\\}
 fram utan tvekan i floder av champagne.\\
 Stärkta från början av brännvin från vårt land.\\
 Kämpa mot allt torrt, systrar,\\
 kämpa mot allt torrt.\\
 Svenska hjärtans djup - här är din sup! 
-\begin{flushright}
-\textit{Evert Taube}
-\end{flushright}
+\end{lyrics}
+\auth{Evert Taube}
 
 \nysida{10}{7}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa7$. En liten blå förgätmigej \\ 
-\small\textit{Sjungs knästående för serveringspersonalen}
+\songtitle{$\kappa7$}{En liten blå förgätmigej}
+\small{\instruction{Sjungs knästående för serveringspersonalen}}
 \end{center}
+\begin{lyrics}
 Hur gärna ville jag ej vara,\\
 en liten blå förgätmigej,\\
 en liten blå förgätmigej.\\
 Då skulle jag för dig förklara\\
 hur innerligt jag älskar dig!
+\end{lyrics}
 \vspace{30pt}
 \begin{center}
-\Large $\kappa8$. Längtan till landet \\ 
-\small\textit{Noter till blandad kör finns i notkapitlet}
+\songtitle{$\kappa8$}{Längtan till landet} 
+\sheetmusicnotice{Noter till blandad kör finns i notkapitlet}
 \end{center}
+\begin{lyrics}
 Vintern rasat ut bland våra fjällar,\\
 drivans blommor smälta ned och dö.\\
 Himlen ler i vårens ljusa kvällar,\\
 solen kysser liv i skog och sjö.
 \vspace{5pt}\\
 $\|$: Snart är sommarn här i purpurvågor,\\
-guldbelagda, azur skiftande,\\
+guldbelagda, azurskiftande,\\
 ligga ängarne i dagens lågor,\\
 och i lunden dansa källorne :$\|$
 \vspace{5pt}\\
@@ -276,17 +277,16 @@ $\|$: Se dem än som i min barndoms stunder,\\
 följa bäckens dans till klarnad sjö,\\
 trastens sång i furuskogens lunder,\\
 vattenfågelns lek kring fjärd och ö. :$\|$
-\begin{flushright}
-\textit{H. Sätherberg}
-\end{flushright}
+\end{lyrics}
+\auth{H. Sätherberg}
 
 \nysida{10}{9}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\kappa9$. Balladen om Herr Fredrik Åkare och den söta fröken Cecilia Lind\\ 
+\songtitle{$\kappa9$}{Balladen om Herr Fredrik Åkare och den söta fröken Cecilia Lind} 
 \mel{Monday morning}
 \end{center}
+\begin{lyrics}
 Från Öckerö loge hörs dragspel och bas\\
 och fullmånen lyser som var den av glas.\\
 Där dansar Fredrik Åkare kind emot kind\\
@@ -316,16 +316,15 @@ Och stjärnorna vandra och timmarna fly\\
 och Fredrik är gammal men månen är ny.\\
 Ja, Fredrik är gammal men kärlek är blind.\\
 Åh, kyss mig igen, sa Cecilia Lind.
-\begin{flushright}
-\textit{Text: Cornelis Vreeswijk}
-\end{flushright}
+\end{lyrics}
+\auth{Text: Cornelis Vreeswijk}
 
 \nysida{10}{10}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa10$. Hårgalåten\\ 
+\songtitle{$\kappa10$}{Hårgalåten} 
 \end{center}
+\begin{lyrics}
 Spelaren drog fiol'n ur lådan och\\
 lyfte stråken högt mot söndagsolens kula.\\
 Då blev det fart i Hårgafolket,\\
@@ -334,7 +333,7 @@ de glömde Gud och hela världen.
 Dansen gick på äng och backar\\
 högt upp på Hårgaåsens topp.\\
 De slet ut båd skor och klackar,\\
-aldrig fick den på dansen stopp.
+aldrig fick en på dansen stopp.
 \vspace{5pt}\\
 Varifrån kommer du som spelar\\
 säg vem har lärt dig detta spel, det vilda, det galna.\\
@@ -355,13 +354,14 @@ Hejda din stråke spelare innan \\
 vi dansar liv och själ och alla ben ur kroppen.\\
 Nej inte slutar hen sin dans \\
 förr'n de allesammans faller döda.
+\end{lyrics}
 
 \nysida{10}{11}
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 \begin{center}
-\Large $\kappa11$. En dansk aquavit \\ 
+\songtitle{$\kappa11$}{En dansk aquavit} 
 \end{center}
+\begin{lyrics}
 Ren som en jomfru\\
 og stærk som en bejler,\\
 hed som det hjærte,\\
@@ -371,15 +371,15 @@ Kølig som kilden,\\
 der vårhimlen spejler:\\
 $\|$: sådan min ven,\\
 er en dansk aquavit. :$\|$ 
-\begin{flushright}
-\textit{Hans Hartvig Seedorf}
-\end{flushright}
+\end{lyrics}
+\auth{Hans Hartvig Seedorf}
 \begin{center}
-\Large $\kappa12$. Trink, trink \\ 
+\songtitle{$\kappa12$}{Trink, trink} 
 \end{center}
-Trink, trink, Brüderlein trink\\
+\begin{lyrics}
+Trink, trink, Brüderlein\digitalonly{/Schwesterlein} trink\\
 Lasset die Sorgen zu Haus\\
-Trink, trink, Bruderlein trink\\
+Trink, trink, Brüderlein\digitalonly{/Schwesterlein} trink\\
 Bald ist das Leben aus
 \vspace{5pt}\\
 $\|$: Meide den Kummer und meide den Schmerz\\
@@ -387,7 +387,7 @@ Dann ist das Leben ein Schertz :$\|$
 \vspace{5pt}\\
 Trink... etc.
 \vspace{5pt}\\
-$\||$: Meide die Weiber und meide das Bier\\
+$\|$: Meide die Weiber und meide das Bier\\
 Dann wird ein Sportsman aus dir :$\|$
 \vspace{5pt}\\
 Trink... etc.
@@ -399,13 +399,14 @@ Trink... etc.
 \vspace{5pt}\\
 $\|$: Kauf dir ein Auto, fahr gegen ein Baum\\
 Dann wird das Leben ein Traum :$\|$
+\end{lyrics}
 \nysida{10}{13}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa13$a. Smedsvisan \\
-\small\textit{Noter finns i notkapitlet}
+\songtitle{$\kappa13$a}{Smedsvisan\digitalonly{ (Smedsvisa från uppland)}}
+\sheetmusicnotice{Noter finns i notkapitlet}
 \end{center}
+\begin{lyrics}
 En gång i min ungdom älskade jag\\
 en mänska med rena och sköna behag.\\
 Hen lovfte mig tro, i lust och i nöd\\
@@ -422,7 +423,7 @@ Ett smittande skratt, en lustiger sång\\
 vi älskade sommaren lång.
 \vspace{5pt}\\
 Hej hopp faderi faderalladerej!\\
-Hej hopp faderi faderalladerej!\\\
+Hej hopp faderi faderalladerej!\\
 Ett smittande skratt, en lustiger sång\\
 vi älskade sommaren lång.
 \vspace{5pt}\\
@@ -442,25 +443,26 @@ Den mänskan hen kommer aldrig igen,\\
 hen är hos sin nyfunne vän.
 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 Hej hopp faderi faderalladerej!\\
 Hej hopp faderi faderalladerej!\\
 Den mänskan hen kommer aldrig igen,\\
 men sången den trallar jag än. 
-\begin{flushright}
-\textit{Daniel Helldén}
-\end{flushright}
+\end{lyrics}
+\auth{Daniel Helldén}
 %\vspace{40pt}
 \begin{center}
-\Large $\kappa13$b. Korta smedsvisan \\
+\songtitle{$\kappa13$b}{Korta smedsvisan}
 \end{center}
+\begin{lyrics}
 En gång i min ungdom älskade jag - \\
 Sa tack och adjö och försvann!
+\end{lyrics}
 \vspace{20pt}
 \begin{center}
-\Large $\kappa14$. Balladen om ett kärlekspar \\
+\songtitle{$\kappa14$}{Balladen om ett kärlekspar}
 \end{center}
+\begin{lyrics}
 Två studenter på teknis \\
 satt i skolan hand i hand. \\
 Som epsilon och delta, \\
@@ -479,7 +481,6 @@ var lyckan invariant. \\
 Och beloppet av deras kärlek \\
 var en enda stor konstant. \\
 \nysida{10}{14}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 Kärlekens kurva, \\
 en approximation \\
@@ -517,7 +518,6 @@ och satt aldrig i en bar. \\
 Men i andras ögon var de \\
 ett kärlekspar. 
 \newpage
-\setlength{\oddsidemargin}{-0.37in}
 \noindent
 Deras lycka kom till toppen, \\
 tangenten böjdes ner, \\
@@ -536,16 +536,17 @@ Anonyma mänskor var de, \\
 de var ordet som blev kvar. \\
 Men tiden glömmer aldrig \\
 detta kärlekspar.
-\begin{flushright}
-\textit{Tomi Ylinen, F-01}
-\end{flushright}
+\end{lyrics}
+\auth{Tomi Ylinen, F-01}
+% TODO: Sidindex-bugg, see TODO for Sjösala vals.
+\sidindex{10}{14}
 
 \nysida{10}{15}
-\setlength{\oddsidemargin}{-0.47in}
 \noindent
 \begin{center}
-\Large $\kappa15$. Stad i ljus \\
+\songtitle{$\kappa15$}{Stad i ljus}
 \end{center}
+\begin{lyrics}
 Min resa var mot solen, \\
 långt bortom alla slutna rum. \\
 Där allting är oändligt, \\
@@ -554,8 +555,8 @@ och alla gränser har förevigt suddats ut.
 Jag ville se miraklet, \\
 och höra ord som föder liv. \\
 Bli buren av en styrka, \\ 
-som bara växer när jag anat mitt motiv.
-\vspace{5pt} \\
+som bara växer när jag anat mitt motiv. % TODO: This line-break does not follow guidelines.
+\physicalonly{\vspace{5pt}} \\
 Stad i ljus, i ett land utan namn. \\
 Ge mig liv, där allting föds på nytt.
 \vspace{5pt} \\
@@ -566,7 +567,8 @@ och då är resan slut, det enda som vi minns.
 \vspace{5pt} \\
 $\|$: Stad i ljus, i ett land utan namn. \\
 Ge mig liv, där allting föds på nytt. :$\|$
-
+\digitalonly{\\\\\\Sjunges vid slutet av fkm*-aktiviteter}
+\end{lyrics}
 
 
 \end{document}
