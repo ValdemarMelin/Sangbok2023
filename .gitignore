@@ -1,12 +1,19 @@
 .vscode
+
+# LaTeX
 *.log
 *.aux
-*.pyc
 *.synctex.gz
 
+# Parser
+*.pyc
 __pycache__
 out.json
 
+# Comparison tools
 *.pdf-*.png
 *.diff.png
 cmp
+
+# Sheet music
+.mscbackup
