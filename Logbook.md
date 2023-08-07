@@ -9,7 +9,7 @@
   - 23.4 FSN
   - 23.5 Sov Läraren
 - Nya låtar:
-  - Delta 16d - Nykteristvikingen
+  - Delta 16e - Nykteristvikingen
 - Ändrade låtar:
   - Det är långt bort till Alba Nova - enligt författarens begäran.
 - Tog bort innehall2.tex för att förenkla layouten.
