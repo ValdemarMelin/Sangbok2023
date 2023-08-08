@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install pylatexenc
         run: sudo pip3 install pylatexenc
       - name: Run JSON converter (experimental)
         run: python3 main.py
         working-directory: parser
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: out.json
           path: parser/out.json
