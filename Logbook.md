@@ -1,4 +1,19 @@
 # Loggbok
+
+## Uppdateringar 2023:
+- Vanliga årliga uppdateringar
+- Sigma (Visor vi minns):
+  - 23.1 Hej Toast
+  - 23.2 Här på Konsulatet
+  - 23.3 Golvcheck
+  - 23.4 FSN
+  - 23.5 Sov Läraren
+- Nya låtar:
+  - Delta 16e - Nykteristvikingen
+- Ändrade låtar:
+  - Det är långt bort till Alba Nova - enligt författarens begäran.
+- Tog bort innehall2.tex för att förenkla layouten.
+
 ## Uppdateringar 2022:
 Vanliga årliga uppdateringar samt:'
 - Sigma (Visor vi minns)

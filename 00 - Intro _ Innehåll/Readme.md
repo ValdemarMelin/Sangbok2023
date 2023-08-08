@@ -1,2 +1,0 @@
-# Innehållsförteckning
-Innehållsbiten är pga. bekvämlighet delat i två filer; [innehåll.tex](innehåll.tex) och [innehåll2.tex](innehåll2.tex). Om något i innehållsförteckningen ska ändras så ändra i dessa filer. Dessa är inkluderade i [intro-innehåll.tex](intro-innehåll.tex). Om antalet sidor i [innehåll.tex](innehåll.tex) och [innehåll2.tex](innehåll2.tex) ändras kan \includepdf-kommandona i [innehåll.tex](intro-innehåll.tex) behöva ändras.
